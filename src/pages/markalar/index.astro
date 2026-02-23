@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Container from "../../components/ui/Container.astro";
+import Card from "../../components/ui/Card.astro";
+
+import { brands } from "../../data/brands";
+import { featuredBrands } from "../../config/featuredBrands";
+
+const featured = brands.filter(b => featuredBrands.includes(b.slug));
+const allSorted = brands
+  .filter(b => !featuredBrands.includes(b.slug))
+  .sort((a, b) => a.name.localeCompare(b.name, "tr"));
+
+---
+
+<BaseLayout title="Türkiye TV Panel Markaları Listesi | Pasifik Display">
+
+  <Container class="py-12">
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">
+      TV Panel Markaları
+    </h1>
+
+    <!-- Featured Brands -->
+    <section class="mb-12">
+      <h2 class="text-xl font-semibold mb-6">
+        Öne Çıkan Markalar
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {featured.map(brand => (
+          <a href={`/markalar/${brand.slug}/`}>
+            <Card class="p-4 hover:shadow-md transition">
+              <div class="font-semibold">{brand.name}</div>
+              <div class="text-sm text-gray-500">
+                {brand.modelCount} model
+              </div>
+            </Card>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- A-Z List -->
+    <section>
+      <h2 class="text-xl font-semibold mb-6">
+        Tüm Markalar (A–Z)
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {allSorted.map(brand => (
+          <a href={`/markalar/${brand.slug}/`}>
+            <Card class="p-4 hover:shadow-md transition">
+              <div class="font-semibold">{brand.name}</div>
+              <div class="text-sm text-gray-500">
+                {brand.modelCount} model
+              </div>
+            </Card>
+          </a>
+        ))}
+      </div>
+    </section>
+
+  </Container>
+
+</BaseLayout>
