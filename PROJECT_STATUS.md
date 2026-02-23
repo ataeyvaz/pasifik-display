@@ -19,7 +19,31 @@
 - [ ] ESLint kurulumu
 - [ ] Prettier kurulumu
 - [ ] Strict TS kontrolü (astro check)
+ DATA-0.1: data/raw/ klasöründe kaynak bazlı ham JSON çıktıları tutulacak:
 
+data/raw/zeroteknik/brands.json
+
+data/raw/zeroteknik/models-by-brand.json
+
+data/raw/solobu/brands-led-tv.json
+
+data/raw/solobu/products-by-brand.json
+
+ DATA-0.2: TV-only kuralı data pipeline’da uygulanacak (monitör hiçbir aşamada içeri girmeyecek).
+
+ DATA-0.3: Normalize script: data/normalized/brands.json, data/normalized/models/*.json, data/normalized/panels/*.json
+
+ DATA-0.4: Kaynak önceliği (senin yazdığın “kaynak öncelikleri” satırına bağlanır):
+
+Solobu = “panel ürünleri / SKU / stok gibi e-ticaret sinyali”
+
+Zeroteknik = “marka slug / model listesi (uyumluluk/servis referansı)”
+
+ DATA-0.5: Tek komutla çalıştırma:
+
+python tools/scrape/run_all.py → raw üretir
+
+python tools/normalize/run.py → normalized üretir
 ---
 
 ## 🎨 PHASE 1 — Design System
@@ -80,6 +104,8 @@
 - [ ] featuredBrands.ts oluşturuldu
 - [ ] Featured marka sırası manuel yönetilebilir
 - [ ] Featured marka sistemi veri modelinden bağımsız çalışıyor
+ SERIAL-3.1: “Kamera ile seri/model okuma” (OCR/Barkod) → web’de client-side kütüphane ile (ör: Barcode + OCR). Bu Phase 3 çünkü UI/SEO çekirdek oturmadan bunu eklemek projeyi dağıtır.
+
 
 ---
 
