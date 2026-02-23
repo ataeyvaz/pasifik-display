@@ -1,0 +1,20 @@
+---
+type Tone = "success" | "warning" | "danger" | "neutral";
+
+type Props = {
+  tone?: Tone;
+  class?: string;
+};
+
+const { tone = "neutral", class: className = "" } = Astro.props;
+
+const tones = {
+  success: "bg-green-50 text-green-700 border-green-200",
+  warning: "bg-amber-50 text-amber-700 border-amber-200",
+  danger: "bg-red-50 text-red-600 border-red-200",
+  neutral: "bg-gray-100 text-gray-700 border-gray-300"
+};
+---
+<span class={`inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded border ${tones[tone]} ${className}`}>
+  <slot />
+</span>

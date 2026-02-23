@@ -1,0 +1,27 @@
+---
+type Row = { label: string; value: string; mono?: boolean };
+
+type Props = {
+  caption: string;
+  rows: Row[];
+};
+
+const { caption, rows } = Astro.props;
+---
+<div class="overflow-x-auto">
+  <table class="min-w-full text-sm">
+    <caption class="sr-only">{caption}</caption>
+    <tbody class="divide-y divide-gray-200">
+      {rows.map((r, idx) => (
+        <tr class={idx % 2 === 1 ? "bg-gray-50" : ""}>
+          <th scope="row" class="text-left font-medium text-gray-700 py-3 px-4 w-48">
+            {r.label}
+          </th>
+          <td class={`py-3 px-4 text-gray-900 ${r.mono ? "font-mono" : ""}`}>
+            {r.value}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

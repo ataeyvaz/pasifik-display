@@ -1,0 +1,22 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+};
+
+const { title, description, canonical, noindex = false } = Astro.props;
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+{canonical ? <link rel="canonical" href={canonical} /> : null}
+{noindex ? <meta name="robots" content="noindex,follow" /> : null}
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />

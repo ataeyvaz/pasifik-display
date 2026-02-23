@@ -1,0 +1,25 @@
+﻿---
+import Container from "../ui/Container.astro";
+import Button from "../ui/Button.astro";
+---
+<header class="sticky top-0 z-50 bg-white shadow-nav">
+  <Container as="div" class="h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a href="/" class="font-bold text-gray-900 tracking-tight">Pasifik Display</a>
+      <span class="hidden sm:inline text-xs text-gray-500">TV & Monitör Panel Kataloğu</span>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-6">
+      <a class="text-sm font-medium text-gray-700 hover:text-primary-500 transition-colors" href="/markalar">Markalar</a>
+      <a class="text-sm font-medium text-gray-700 hover:text-primary-500 transition-colors" href="/demo/model">Model Demo</a>
+      <a class="text-sm font-medium text-gray-700 hover:text-primary-500 transition-colors" href="/iletisim">İletişim</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="/ara" class="hidden sm:inline-flex items-center gap-2 text-sm px-3 py-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition" aria-label="Arama">
+         <span class="hidden md:inline">Arama</span>
+      </a>
+      <Button href="#" variant="whatsapp" size="sm" class="whitespace-nowrap"> WhatsApp</Button>
+    </div>
+  </Container>
+</header>

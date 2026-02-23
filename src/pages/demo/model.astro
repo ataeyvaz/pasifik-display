@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Container from "../../components/ui/Container.astro";
+import Card from "../../components/ui/Card.astro";
+import Button from "../../components/ui/Button.astro";
+import Badge from "../../components/ui/Badge.astro";
+import Breadcrumb from "../../components/seo/Breadcrumb.astro";
+import SpecTable from "../../components/ui/SpecTable.astro";
+
+const model = {
+  brand: "Samsung",
+  modelCode: "UA55AU8000",
+  fullName: "Samsung UA55AU8000 55'' Smart TV 4K",
+  size: 55,
+  year: 2022,
+  notes: "Bu modelde 2 farklı panel varyasyonu bulunabilir. Sipariş öncesi seri numaranızı doğrulayın."
+};
+
+const panels = [
+  { code: "BN95-05843A", manufacturer: "BOE", size: 55, type: "VA", resolution: "3840Ã—2160", backlight: "DLED", stock: "instock" },
+  { code: "LM550WF5-SSB3", manufacturer: "AUO", size: 55, type: "IPS", resolution: "3840Ã—2160", backlight: "DLED", stock: "limited" },
+  { code: "LC550EQY-SHA1", manufacturer: "LG Display", size: 55, type: "OLED", resolution: "3840Ã—2160", backlight: "OLED", stock: "out" }
+];
+
+function stockTone(s) {
+  if (s === "instock") return { tone: "success", label: "â— Stokta Var" };
+  if (s === "limited") return { tone: "warning", label: "â— Sınırlı Stok" };
+  return { tone: "danger", label: "â— Stokta Yok" };
+}
+
+const specRows = [
+  { label: "Marka", value: model.brand },
+  { label: "Model", value: model.modelCode, mono: true },
+  { label: "Ekran Boyutu", value: `${model.size} inch` },
+  { label: "Yıl", value: String(model.year) },
+  { label: "Not", value: "Bazı üretim partilerinde farklı panel bulunabilir." }
+];
+
+const crumbs = [
+  { label: "Ana Sayfa", href: "/" },
+  { label: "Markalar", href: "/markalar" },
+  { label: model.brand, href: `/markalar/${model.brand.toLowerCase()}` },
+  { label: model.modelCode }
+];
+---
+<BaseLayout
+  title={`${model.modelCode} Panel Kodu | ${model.brand} ${model.size}'' | Pasifik Panel`}
+  description={`${model.modelCode} için uyumlu panel kodları ve teknik bilgiler. Stok durumu ve teklif alma seçenekleri.`}
+>
+  <section class="bg-white border-b border-gray-200">
+    <Container as="div" class="py-8">
+      <Breadcrumb items={crumbs} />
+      <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+        {model.brand} {model.modelCode} TV Panel
+      </h1>
+      <p class="mt-2 text-gray-600">{model.fullName}</p>
+    </Container>
+  </section>
+
+  <Container as="div" class="py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-8 space-y-8">
+        <div class="p-4 rounded-r-lg text-sm bg-amber-50 border-l-4 border-amber-400 text-amber-900">
+          <div class="font-semibold">â„¹ Ã–nemli Not</div>
+          <div class="mt-1">{model.notes}</div>
+        </div>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-900">Uyumlu Paneller</h2>
+          <div class="mt-4 grid grid-cols-1 gap-4">
+            {panels.map((p) => {
+              const st = stockTone(p.stock);
+              return (
+                <Card class="p-5 hover:shadow-md hover:border-blue-200 transition-all duration-200">
+                  <div class="flex items-start justify-between gap-4">
+                    <div>
+                      <div class="font-mono text-sm text-gray-900">{p.code}</div>
+                      <div class="mt-1 text-sm text-gray-600">
+                        {p.manufacturer} â€¢ {p.size}" â€¢ {p.type} â€¢ {p.resolution} â€¢ {p.backlight}
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-end gap-2">
+                      <Badge tone={st.tone}>{st.label}</Badge>
+                      <Button href="#" variant="primary" size="sm">Teklif Al</Button>
+                    </div>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-900">Teknik Özellikler</h2>
+          <Card class="mt-4 p-0">
+            <SpecTable caption={`${model.modelCode} Model Teknik Özellikleri`} rows={specRows} />
+          </Card>
+        </section>
+      </div>
+
+      <aside class="lg:col-span-4">
+        <div class="lg:sticky lg:top-24 space-y-4">
+          <Card class="p-5 bg-primary-100 border-primary-100">
+            <div class="text-sm font-semibold text-gray-900">Panel için teklif alın</div>
+            <div class="mt-2 text-sm text-gray-700">Hızlıca WhatsApp’tan yazın veya arayın.</div>
+            <div class="mt-4 flex flex-col gap-2">
+              <Button href="#" variant="whatsapp">ğŸ’¬ WhatsApp</Button>
+              <Button href="#" variant="secondary">ğŸ“ Ara</Button>
+              <Button href="#" variant="ghost" class="border border-gray-200">ğŸ“§ E-posta Gönder</Button>
+            </div>
+          </Card>
+        </div>
+      </aside>
+    </div>
+  </Container>
+</BaseLayout>
