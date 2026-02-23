@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Container from "../../components/ui/Container.astro";
+import type { Tone } from "../../components/ui/Badge.astro";
 import Card from "../../components/ui/Card.astro";
 import Button from "../../components/ui/Button.astro";
 import Badge from "../../components/ui/Badge.astro";
 import Breadcrumb from "../../components/seo/Breadcrumb.astro";
 import SpecTable from "../../components/ui/SpecTable.astro";
+
 
 const model = {
   brand: "Samsung",
@@ -22,10 +24,12 @@ const panels = [
   { code: "LC550EQY-SHA1", manufacturer: "LG Display", size: 55, type: "OLED", resolution: "3840Ã—2160", backlight: "OLED", stock: "out" }
 ];
 
-function stockTone(s) {
-  if (s === "instock") return { tone: "success", label: "â— Stokta Var" };
-  if (s === "limited") return { tone: "warning", label: "â— Sınırlı Stok" };
-  return { tone: "danger", label: "â— Stokta Yok" };
+type StockToneResult = { tone: Tone; label: string };
+
+function stockTone(s: string): StockToneResult {
+  if (s === "instock") return { tone: "success", label: "● Stokta Var" };
+  if (s === "limited") return { tone: "warning", label: "● Sınırlı Stok" };
+  return { tone: "danger", label: "● Stokta Yok" };
 }
 
 const specRows = [
@@ -44,7 +48,7 @@ const crumbs = [
 ];
 ---
 <BaseLayout
-  title={`${model.modelCode} Panel Kodu | ${model.brand} ${model.size}'' | Pasifik Panel`}
+  title={`${model.modelCode} Panel Kodu | ${model.brand} ${model.size}'' | Pasifik Display`}
   description={`${model.modelCode} için uyumlu panel kodları ve teknik bilgiler. Stok durumu ve teklif alma seçenekleri.`}
 >
   <section class="bg-white border-b border-gray-200">

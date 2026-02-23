@@ -46,6 +46,15 @@
 - [ ] Model detay sayfası (SEO kritik)
 - [ ] Panel detay sayfası
 - [ ] Arama sayfası (noindex)
+### Marka Listeleme Geliştirmeleri
+
+- [ ] Sadece TV modelleri (monitor desteği tamamen kaldırıldı)
+- [ ] "Öne Çıkan Markalar" bölümü eklendi
+- [ ] Öne çıkan marka listesi config dosyasından yönetiliyor
+- [ ] A–Z marka listesi featured markalardan bağımsız çalışıyor
+- [ ] Mobilde featured markalar yatay scroll
+- [ ] Featured marka listesi genişletilebilir (3–5 marka eklenebilir yapı)
+
 
 ---
 
@@ -58,6 +67,19 @@
 - [ ] getStaticPaths implementasyonu
 - [ ] Sitemap oluşturma
 - [ ] robots.txt endpoint
+
+### TV-Only Veri Politikası
+
+- [ ] screenType alanı kaldırıldı veya sabitlendi (tv only)
+- [ ] Monitor verileri sistemden çıkarıldı
+- [ ] Veri import aşamasında monitor filtreleme eklendi
+- [ ] URL yapısı sadece TV mantığına göre güncellendi
+
+### Featured Brand Config
+
+- [ ] featuredBrands.ts oluşturuldu
+- [ ] Featured marka sırası manuel yönetilebilir
+- [ ] Featured marka sistemi veri modelinden bağımsız çalışıyor
 
 ---
 
@@ -80,6 +102,21 @@
 - [ ] Pagination sistemi
 - [ ] Pagefind arama entegrasyonu
 - [ ] JSON → API abstraction layer
+
+### Seri / Model Tanıma Sistemi
+
+- [ ] Marka bazlı model format kuralları tanımlandı
+- [ ] Regex tabanlı format doğrulama sistemi
+- [ ] Model numarası örnek gösterim UI
+- [ ] Hatalı format için kullanıcı uyarı sistemi
+- [ ] Manuel giriş fallback mekanizması
+
+### Kamera ile Okuma (Gelecek Özellik)
+
+- [ ] Barcode scan (mobil uyumlu)
+- [ ] OCR ile model/seri okuma (deneysel)
+- [ ] Okunan verinin otomatik form doldurması
+- [ ] Kullanıcı onay mekanizması
 
 ---
 
@@ -109,6 +146,9 @@
 - Model sayfası SEO motorudur.
 - Encoding hataları tekrar yaşanmamalı.
 - Commit atmadan önce test zorunlu.
+- Sistem sadece TV panelleri üzerine kuruludur.
+- Featured marka listesi stratejik olarak üstte sabitlenmiştir.
+- Seri/model tanıma sistemi çekirdek mimariye entegre edilmeden modüler olarak geliştirilmelidir.
 
 ---
 
