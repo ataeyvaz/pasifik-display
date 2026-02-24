@@ -17,7 +17,7 @@ Z_BRANDS = RAW / "zeroteknik" / "brands.json"
 Z_MODELS = RAW / "zeroteknik" / "models-by-brand.json"
 
 S_PRODUCTS = RAW / "solobu" / "products-by-brand.json"
-S_BRANDS = RAW / "solobu" / "brands-led-tv.json"   # opsiyonel: sadece kontrol amaçlı
+S_BRANDS = RAW / "solobu" / "brands-led-tv.json"   # optional
 
 
 # ------------------------------------------------------------
@@ -31,7 +31,6 @@ FEATURED_BRANDS = [
 TV_ONLY_RULE = True  # roadmap: sadece TV
 
 
-# Solobu ürün başlıklarından model token yakalama (heuristic)
 MODEL_TOKEN_RE = re.compile(r"\b([A-Z0-9]{3,}[A-Z0-9\/\-]{0,})\b")
 
 
@@ -39,7 +38,19 @@ MODEL_TOKEN_RE = re.compile(r"\b([A-Z0-9]{3,}[A-Z0-9\/\-]{0,})\b")
 # Helpers
 # ------------------------------------------------------------
 def read_json(p: Path) -> Any:
-    return json.loads(p.read_text(encoding="utf-8"))
+    """
+    Bazı TR sitelerinden gelen json dosyaları UTF-8 değil (cp1254 vb.) olabiliyor.
+    Bu yüzden birkaç encoding deneyip ilk başarılıyı kullanıyoruz.
+    """
+    encodings = ["utf-8", "utf-8-sig", "cp1254", "latin-1"]
+    last_err = None
+    for enc in encodings:
+        try:
+            txt = p.read_text(encoding=enc)
+            return json.loads(txt)
+        except Exception as e:
+            last_err = e
+    raise RuntimeError(f"JSON read failed for {p}. Last error: {last_err}")
 
 
 def write_json(p: Path, data: Any) -> None:
@@ -59,13 +70,11 @@ def slugify_tr(text: str) -> str:
 
 
 def extract_models_from_solobu_title(title: str) -> List[str]:
-    # Başlıktaki olası model kodlarını yakala
     tokens = MODEL_TOKEN_RE.findall((title or "").upper())
 
-    # Çöp kelimeler (genişletilebilir)
     bad = {
         "LED", "TV", "EKRAN", "PANEL", "DEGISIMI", "DEĞİŞİMİ", "DEGİSİMİ",
-        "INCH", "INC", "EKRANI", "EKRANİ", "KODU", "KATALOĞU", "KATALOGU"
+        "INCH", "INC", "EKRANI", "KODU", "KATALOGU", "KATALOĞU"
     }
 
     out: List[str] = []
@@ -75,14 +84,12 @@ def extract_models_from_solobu_title(title: str) -> List[str]:
             continue
         if t2 in bad:
             continue
-        # Çok genel kısa token'ları ele (örn: "55", "4K")
         if re.fullmatch(r"\d{1,3}", t2):
             continue
         if t2.startswith("HTTP"):
             continue
         out.append(t2)
 
-    # uniq preserve order
     seen = set()
     uniq = []
     for x in out:
@@ -108,7 +115,6 @@ def main() -> None:
     print(f"OUT folder  : {OUT}")
     print()
 
-    # Existence check
     print("FILES:")
     print("Z_BRANDS  :", Z_BRANDS, "->", debug_print_exists(Z_BRANDS))
     print("Z_MODELS  :", Z_MODELS, "->", debug_print_exists(Z_MODELS))
@@ -116,7 +122,6 @@ def main() -> None:
     print("S_BRANDS  :", S_BRANDS, "->", debug_print_exists(S_BRANDS), "(optional)")
     print()
 
-    # Read
     if not Z_BRANDS.exists() or not Z_MODELS.exists() or not S_PRODUCTS.exists():
         raise SystemExit("❌ Raw dosyalar bulunamadı. data/raw/ altında yolları kontrol et.")
 
@@ -124,7 +129,6 @@ def main() -> None:
     z_models_by_brand = read_json(Z_MODELS)
     s_products_by_brand = read_json(S_PRODUCTS)
 
-    # Type checks
     print("TYPES:")
     print("z_brands type:", type(z_brands), "len:", (len(z_brands) if hasattr(z_brands, "__len__") else "n/a"))
     print("z_models_by_brand type:", type(z_models_by_brand))
@@ -135,7 +139,6 @@ def main() -> None:
         print("s_products_by_brand keys:", len(s_products_by_brand.keys()))
     print()
 
-    # Validate expected structure
     if not isinstance(z_brands, list):
         raise SystemExit("❌ zeroteknik/brands.json beklenen formatta değil (list olmalı).")
     if not isinstance(z_models_by_brand, dict):
@@ -143,13 +146,11 @@ def main() -> None:
     if not isinstance(s_products_by_brand, dict):
         raise SystemExit("❌ solobu/products-by-brand.json beklenen formatta değil (dict olmalı).")
 
-    # Map brands
     z_brand_map: Dict[str, Dict[str, Any]] = {}
     for b in z_brands:
         if isinstance(b, dict) and "slug" in b:
             z_brand_map[str(b["slug"])] = b
 
-    # Solobu: parse only /urun/ items and extract models from titles
     solobu_models_by_brand: Dict[str, Set[str]] = {}
     solobu_product_urls_by_brand: Dict[str, List[str]] = {}
 
@@ -166,26 +167,22 @@ def main() -> None:
             url = str(it.get("url", "") or "")
             title = str(it.get("title", "") or "")
 
-            # only product pages
             if "/urun/" not in url:
                 continue
 
             urls.append(url)
 
-            # extract model codes from title
             for m in extract_models_from_solobu_title(title):
                 models.add(m)
 
         solobu_models_by_brand[str(brand_slug)] = models
         solobu_product_urls_by_brand[str(brand_slug)] = urls
 
-    # Union of brands
     all_brand_slugs = set(z_brand_map.keys()) | set(s_products_by_brand.keys())
     print("BRANDS UNION:", len(all_brand_slugs), "brands found")
     if len(all_brand_slugs) == 0:
         raise SystemExit("❌ Brand listesi 0 çıktı. Raw dosyaların içeriği boş veya format farklı.")
 
-    # Build models_out_by_brand (merged Z + inferred Solobu)
     models_out_by_brand: Dict[str, List[Dict[str, Any]]] = {}
 
     for slug in sorted(all_brand_slugs):
@@ -199,14 +196,12 @@ def main() -> None:
 
         merged: Dict[str, Dict[str, Any]] = {}
 
-        # Zeroteknik models
         for mc in z_list:
             mc = str(mc).strip()
             if not mc:
                 continue
             merged[mc] = {"sources": {"zeroteknik": True, "solobu": False}}
 
-        # Solobu inferred models
         for mc in sorted(s_set):
             mc = str(mc).strip()
             if not mc:
@@ -219,7 +214,6 @@ def main() -> None:
                     "note": "Solobu başlığından otomatik çıkarım"
                 }
 
-        # Output list
         out_list: List[Dict[str, Any]] = []
         for mc, obj in merged.items():
             out_list.append({
@@ -231,11 +225,9 @@ def main() -> None:
                 **obj
             })
 
-        # Sort: zeroteknik first, then modelCode
         out_list.sort(key=lambda x: (not x["sources"]["zeroteknik"], x["modelCode"]))
         models_out_by_brand[slug] = out_list
 
-    # Build brands_out with exact modelCount from merged list
     brands_out: List[Dict[str, Any]] = []
     for slug in sorted(all_brand_slugs):
         z = z_brand_map.get(slug)
@@ -255,11 +247,9 @@ def main() -> None:
             }
         })
 
-    # Final safety
     if len(brands_out) == 0:
         raise SystemExit("❌ brands_out boş çıktı. Script raw datayı okuyamıyor veya union 0.")
 
-    # Write outputs
     OUT.mkdir(parents=True, exist_ok=True)
     write_json(OUT / "brands.json", brands_out)
     write_json(OUT / "models-by-brand.json", models_out_by_brand)

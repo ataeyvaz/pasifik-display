@@ -4,50 +4,55 @@ import Container from "../../../components/ui/Container.astro";
 import Card from "../../../components/ui/Card.astro";
 
 import { getAllBrands } from "../../../lib/data/brands";
-import { getModelsByBrand, getAllBrandSlugs } from "../../../lib/data/models";
+import { getAllBrandSlugs, getModelsByBrand } from "../../../lib/data/models";
 
-export function getStaticPaths() {
-  const slugs = getAllBrandSlugs();
-  return slugs.map((brand) => ({ params: { brand } }));
+export async function getStaticPaths() {
+  return getAllBrandSlugs().map((slug) => ({
+    params: { brand: slug },
+  }));
 }
 
 const { brand } = Astro.params;
+const brandSlug = String(brand);
 
 const brands = getAllBrands();
-const brandObj = brands.find(b => b.slug === brand);
+const b = brands.find((x) => x.slug === brandSlug);
 
-if (!brandObj) {
-  return Astro.redirect("/markalar");
+if (!b) {
+  throw new Error(`Brand not found: ${brandSlug}`);
 }
 
-const models = getModelsByBrand(brand);
----
-<BaseLayout title={`${brandObj.name} TV Modelleri | Pasifik Display`}>
-  <Container as="main" class="py-10">
-    <h1 class="text-3xl font-bold text-gray-900">{brandObj.name} TV Modelleri</h1>
-    <p class="mt-2 text-gray-600 text-sm">
-      Toplam {models.length} model listeleniyor.
-    </p>
+const models = getModelsByBrand(brandSlug);
 
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {models.slice(0, 120).map((m) => (
+const pageTitle = `${b.name} TV Modelleri | Pasifik Display`;
+const pageDesc = `${b.name} için TV model listesi. Toplam ${models.length} model.`;
+---
+
+<BaseLayout title={pageTitle} description={pageDesc}>
+  <Container as="div" class="py-10">
+    <h1 class="text-3xl font-bold text-gray-900">{b.name} TV Modelleri</h1>
+    <p class="mt-2 text-gray-600">Toplam {models.length} model listeleniyor.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      {models.map((m) => (
         <Card class="p-5">
           <div class="font-semibold text-gray-900">{m.modelCode}</div>
+
           <div class="mt-1 text-xs text-gray-500">
-            Kaynak: {m.sources.zeroteknik ? "ZeroTeknik" : ""}{m.sources.solobu ? (m.sources.zeroteknik ? " + Solobu" : "Solobu") : ""}
+            Kaynak:
+            {" "}
+            {m.sources.zeroteknik ? "ZeroTeknik" : ""}
+            {m.sources.zeroteknik && m.sources.solobu ? " + " : ""}
+            {m.sources.solobu ? "Solobu" : ""}
+            {!m.sources.zeroteknik && !m.sources.solobu ? "Bilinmiyor" : ""}
           </div>
-          <a class="mt-3 inline-block text-sm text-blue-600 hover:underline"
-             href={`/markalar/${brandObj.slug}/${m.slug}/`}>
+
+          <a class="mt-3 inline-flex text-blue-600 hover:underline text-sm"
+             href={`/markalar/${b.slug}/${m.slug}/`}>
             Model detayı →
           </a>
         </Card>
       ))}
     </div>
-
-    {models.length > 120 && (
-      <p class="mt-6 text-sm text-gray-500">
-        Not: Performans için ilk 120 model gösteriliyor. (Pagination Phase 2)
-      </p>
-    )}
   </Container>
 </BaseLayout>

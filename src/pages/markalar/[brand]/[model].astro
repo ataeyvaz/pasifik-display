@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Container from "../../../components/ui/Container.astro";
+import Card from "../../../components/ui/Card.astro";
+
+import { getAllBrands } from "../../../lib/data/brands";
+import { getAllModelPaths, getModelByBrandAndSlug } from "../../../lib/data/models";
+
+export async function getStaticPaths() {
+  return getAllModelPaths().map((p) => ({
+    params: { brand: p.brand, model: p.model },
+  }));
+}
+
+const { brand, model } = Astro.params;
+const brandSlug = String(brand);
+const modelSlug = String(model);
+
+const brands = getAllBrands();
+const b = brands.find((x) => x.slug === brandSlug);
+
+const m = getModelByBrandAndSlug(brandSlug, modelSlug);
+
+if (!b || !m) {
+  // Astro SSG: fallback yoksa 404 olur, ama tip kontrol için
+  throw new Error(`Model not found: ${brandSlug}/${modelSlug}`);
+}
+
+const pageTitle = `${b.name} ${m.modelCode} | Pasifik Display`;
+---
+
+<BaseLayout title={pageTitle} description={`${b.name} ${m.modelCode} için panel ve teknik bilgi demo sayfası.`}>
+  <Container as="div" class="py-10">
+    <div class="text-sm text-gray-500 mb-2">
+      <a href="/markalar" class="hover:underline">Markalar</a>
+      <span class="mx-2">›</span>
+      <a href={`/markalar/${b.slug}/`} class="hover:underline">{b.name}</a>
+      <span class="mx-2">›</span>
+      <span class="text-gray-900 font-medium">{m.modelCode}</span>
+    </div>
+
+    <h1 class="text-3xl font-bold text-gray-900">{b.name} {m.modelCode}</h1>
+    <p class="mt-2 text-gray-600">
+      Kaynak: {m.sources?.zeroteknik ? "ZeroTeknik" : "Solobu (çıkarım)"} • TV-only
+    </p>
+
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2">
+        <Card class="p-6">
+          <h2 class="text-xl font-semibold text-gray-900">Uyumlu Panel Bilgisi</h2>
+          <p class="mt-2 text-gray-600">
+            Panel entegrasyonu (panel code / uyumluluk) Phase-2’de bağlanacak.
+          </p>
+        </Card>
+
+        <Card class="p-6 mt-6">
+          <h2 class="text-xl font-semibold text-gray-900">Teknik Notlar</h2>
+          <ul class="mt-3 list-disc pl-5 text-gray-600 space-y-1">
+            <li>Bu sayfa şu an demo/iskelet.</li>
+            <li>Sonraki adım: panel veri modeli + model↔panel ilişki.</li>
+            <li>Dış link yok: tüm veri local JSON’dan geliyor.</li>
+          </ul>
+        </Card>
+      </div>
+
+      <div>
+        <Card class="p-6">
+          <h2 class="text-lg font-semibold text-gray-900">Hızlı İletişim</h2>
+          <p class="mt-2 text-gray-600">Panel için teklif almak istersen:</p>
+          <div class="mt-4 space-y-2">
+            <a class="block text-center rounded-lg bg-green-600 text-white py-2 font-semibold hover:bg-green-700" href="#">
+              WhatsApp
+            </a>
+            <a class="block text-center rounded-lg border border-gray-300 text-gray-900 py-2 font-semibold hover:bg-gray-50" href="#">
+              Ara
+            </a>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </Container>
+</BaseLayout>
