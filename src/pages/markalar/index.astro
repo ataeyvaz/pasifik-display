@@ -3,15 +3,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Container from "../../components/ui/Container.astro";
 import Card from "../../components/ui/Card.astro";
 
-import { brands } from "../../data/brands";
-import { featuredBrands } from "../../config/featuredBrands";
+import { getAllBrands, getFeaturedBrands } from "../../lib/data/brands";
 
-const featured = brands.filter(b => featuredBrands.includes(b.slug));
+const brands = getAllBrands();
+const featured = getFeaturedBrands(15);
+
+const featuredSlugs = new Set(featured.map(b => b.slug));
 const allSorted = brands
-  .filter(b => !featuredBrands.includes(b.slug))
-  .sort((a, b) => a.name.localeCompare(b.name, "tr"));
-
+  .filter(b => !featuredSlugs.has(b.slug))
+  .sort((a,b) => a.name.localeCompare(b.name, "tr"));
 ---
+
 
 <BaseLayout title="Türkiye TV Panel Markaları Listesi | Pasifik Display">
 

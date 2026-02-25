@@ -1,0 +1,162 @@
+[
+  {
+    "brand": "arcelik",
+    "modelCode": "32A650",
+    "query": "Arçelik 32A650",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "arcelik",
+    "modelCode": "32A680",
+    "query": "Arçelik 32A680",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "arcelik",
+    "modelCode": "40A650",
+    "query": "Arçelik 40A650",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "arcelik",
+    "modelCode": "40A680",
+    "query": "Arçelik 40A680",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "arcelik",
+    "modelCode": "43A650",
+    "query": "Arçelik 43A650",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "beko",
+    "modelCode": "4654",
+    "query": "Beko 4654",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "beko",
+    "modelCode": "8965",
+    "query": "Beko 8965",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "beko",
+    "modelCode": "B24L",
+    "query": "Beko B24L",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "beko",
+    "modelCode": "B40K",
+    "query": "Beko B40K",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  },
+  {
+    "brand": "beko",
+    "modelCode": "KVKK",
+    "query": "Beko KVKK",
+    "productUrl": "https://www.nuks.com.tr/hakkimizda.html",
+    "title": "Hakkımızda",
+    "stockOut": false,
+    "panels": [],
+    "models": [],
+    "debug": {
+      "panelBlockHit": false,
+      "modelBlockHit": false,
+      "panelBlockSample": "",
+      "modelBlockSample": ""
+    }
+  }
+]
