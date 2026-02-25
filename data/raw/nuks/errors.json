@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "brand": "arcelik",
+    "modelCode": "32A650",
+    "query": "Arçelik 32A650",
+    "reason": "search_js_gate"
+  },
+  {
+    "brand": "arcelik",
+    "modelCode": "32A680",
+    "query": "Arçelik 32A680",
+    "reason": "search_js_gate"
+  }
+]

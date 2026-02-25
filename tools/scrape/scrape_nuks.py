@@ -25,25 +25,14 @@ BASE = "https://www.nuks.com.tr"
 HEADERS = {
     "User-Agent": "PasifikDisplayBot/0.1 (offline-scrape; local use)",
     "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Connection": "keep-alive",
 }
 
-# Panel tokenları: 6916L-1455B, ST5461D11-3, LC420DUN-PG-P1 vb.
 PANEL_TOKEN_RE = re.compile(r"\b[A-Z0-9][A-Z0-9\-_/]{4,}\b")
-
-# Model kodları: 42PFK6309/12, UE40J5270, 32HD7300 vb.
-MODEL_CODE_RE = re.compile(r"\b[A-Z0-9]{2,}[A-Z]*[0-9]{2,}[A-Z0-9]*(/[0-9]{1,2})?\b", re.IGNORECASE)
-
-# Etiketli blokları yakalamak için (asıl fix burada)
-RE_PANEL_BLOCK = re.compile(
-    r"(?:PANEL\s*NUMARALARI|PANEL\s*KOD(?:LARI)?|UYUMLU\s*PANEL(?:LER)?|PANEL\s*NO)\s*:\s*(.+?)(?=(?:KULLANILDIĞI|KULLANILACAK|KULLANIM|KUTU|UYARI|NOT|$))",
-    re.IGNORECASE | re.DOTALL,
+MODEL_CODE_RE = re.compile(
+    r"\b[A-Z0-9]{2,}[A-Z]*[0-9]{2,}[A-Z0-9]*(/[0-9]{1,2})?\b", re.IGNORECASE
 )
-RE_MODEL_BLOCK = re.compile(
-    r"(?:KULLANILDIĞI\s*MODELLER|UYUMLU\s*MODELLER|KULLANILDIĞI\s*TV\s*MODELLERİ|UYUMLU\s*TV\s*MODELLERİ)\s*:\s*(.+?)(?=(?:PANEL|KUTU|UYARI|NOT|$))",
-    re.IGNORECASE | re.DOTALL,
-)
-
-BLACKLIST = {"LED", "TV", "HZ", "HD", "UHD", "4K", "FULL", "SMART", "INCH", "REV", "COF"}
 
 def read_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -72,12 +61,9 @@ class Brand:
 
 def load_brand_maps() -> Tuple[Dict[str, Brand], Dict[str, Dict[str, str]]]:
     brands = read_json(BRANDS_JSON)
-    brand_by_slug: Dict[str, Brand] = {}
-    for b in brands:
-        brand_by_slug[b["slug"]] = Brand(slug=b["slug"], name=b["name"])
+    brand_by_slug: Dict[str, Brand] = {b["slug"]: Brand(slug=b["slug"], name=b["name"]) for b in brands}
 
     models_by_brand = read_json(MODELS_BY_BRAND_JSON)
-    # brandSlug -> MODEL_CODE_UPPER -> modelSlug
     map_code_to_slug: Dict[str, Dict[str, str]] = {}
     for brand_slug, items in models_by_brand.items():
         m: Dict[str, str] = {}
@@ -91,62 +77,40 @@ def load_brand_maps() -> Tuple[Dict[str, Brand], Dict[str, Dict[str, str]]]:
     return brand_by_slug, map_code_to_slug
 
 def http_get(url: str, session: requests.Session, timeout: int = 25) -> str:
-    r = session.get(url, headers=HEADERS, timeout=timeout)
+    r = session.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
     r.raise_for_status()
-
-    # ✅ NUKS bazen encoding'i yanlış gönderebiliyor, güvenli fix:
-    if not r.encoding:
-        r.encoding = "utf-8"
     return r.text
+
+def detect_js_gate_or_rate_limit(html: str) -> Optional[str]:
+    t = html.lower()
+    # Çok hızlı arama / bekleme ekranı
+    if "çok hızlı arama" in t or "bekleyiniz" in t and "saniye" in t:
+        return "rate_limit"
+    # Cloudflare / JS required tarzı
+    if "checking your browser" in t or "enable javascript" in t or "cloudflare" in t:
+        return "js_gate"
+    return None
 
 def find_product_url_from_search(html: str) -> Optional[str]:
     soup = BeautifulSoup(html, "lxml")
-
-    # arama sonuçlarında ilk .html ürün linki genelde yeterli
     for a in soup.select('a[href*=".html"]'):
-        href = a.get("href") or ""
+        href = (a.get("href") or "").strip()
+        if not href:
+            continue
         if href.startswith("/"):
             href = BASE + href
-        if href.startswith(BASE) and href.endswith(".html"):
-            return href
-
-    # fallback
-    for a in soup.find_all("a"):
-        href = a.get("href") or ""
-        if ".html" in href:
-            if href.startswith("/"):
-                href = BASE + href
-            if href.startswith(BASE):
-                return href
+        if href.startswith(BASE) and ".html" in href:
+            # bazı linklerde query olabilir, yine de olur
+            return href.split("#")[0]
     return None
 
-def _extract_tokens(text: str) -> Tuple[List[str], List[str]]:
-    """
-    Metinden panel token ve model code ayıklar.
-    """
-    panels: set[str] = set()
-    models: set[str] = set()
+def _extract_from_line(line: str, panels: set[str], models: set[str]):
+    for tok in PANEL_TOKEN_RE.findall(line.upper()):
+        panels.add(tok.replace("_", "-"))
+    for mc in re.finditer(MODEL_CODE_RE, line.upper()):
+        models.add(mc.group(0).upper())
 
-    # Panel tokenlar
-    for tok in PANEL_TOKEN_RE.findall(text.upper()):
-        tok = tok.replace("_", "-").strip()
-        if tok in BLACKLIST:
-            continue
-        if len(tok) < 6:
-            continue
-        if not any(ch.isdigit() for ch in tok):
-            continue
-        panels.add(tok)
-
-    # Model kodlar
-    for mc in re.finditer(MODEL_CODE_RE, text.upper()):
-        m = mc.group(0).strip().upper()
-        if len(m) >= 5 and any(ch.isdigit() for ch in m):
-            models.add(m)
-
-    return sorted(panels), sorted(models)
-
-def parse_nuks_page(html: str) -> Dict:
+def parse_nuks_page(html: str, debug: bool = False) -> Dict:
     soup = BeautifulSoup(html, "lxml")
 
     title = ""
@@ -156,76 +120,83 @@ def parse_nuks_page(html: str) -> Dict:
     if not title and soup.title:
         title = soup.title.get_text(" ", strip=True)
 
-    # Daha “tek parça” metin: regex blok yakalamada daha iyi
     full_text = soup.get_text("\n", strip=True)
     lower_text = full_text.lower()
+
     stock_out = ("stok tükendi" in lower_text) or ("stokta yok" in lower_text)
 
     panels: set[str] = set()
     models: set[str] = set()
 
-    # ✅ 1) Etiketli bloklardan yakala (asıl kritik)
-    panel_blocks = []
-    for m in RE_PANEL_BLOCK.finditer(full_text):
-        blk = m.group(1)
-        panel_blocks.append(blk)
-        p_list, _ = _extract_tokens(blk)
-        panels.update(p_list)
+    lines = [ln.strip() for ln in full_text.split("\n") if ln.strip()]
 
-    model_blocks = []
-    for m in RE_MODEL_BLOCK.finditer(full_text):
-        blk = m.group(1)
-        model_blocks.append(blk)
-        _, m_list = _extract_tokens(blk)
-        models.update(m_list)
+    # 1) Başlık yakala → ALT SATIRLARA BAK (asıl fix burada)
+    trigger_panel_headers = ("uyumlu panel", "uyumlu panel kod", "uyumlu panel kodları", "panel kod", "panel kodları", "panel numara")
+    trigger_model_headers = ("uyumlu televizyon", "uyumlu tv", "uyumlu model", "uyumlu televizyon modelleri", "uyumlu tv modelleri")
 
-    # ✅ 2) Eğer blok yoksa fallback: sayfanın tamamından çıkar (daha gürültülü ama boş dönmez)
-    if not panels:
-        p_list, _ = _extract_tokens(full_text)
-        panels.update(p_list)
+    for i, ln in enumerate(lines):
+        l = ln.lower()
 
-    if not models:
-        _, m_list = _extract_tokens(full_text)
-        models.update(m_list)
+        if any(h in l for h in trigger_panel_headers):
+            # başlığın altındaki birkaç satırda kodlar listeleniyor
+            for j in range(i, min(i + 8, len(lines))):
+                _extract_from_line(lines[j], panels, models)
 
-    # Title fallback (bazı panel kodları başlıkta geçer)
+        if any(h in l for h in trigger_model_headers):
+            for j in range(i, min(i + 12, len(lines))):
+                _extract_from_line(lines[j], panels, models)
+
+    # 2) DOM üzerinden: heading sonrası blok tarama (h2/h3/h4)
+    def scan_after_heading(needle: str, take: int):
+        for tag in soup.find_all(["h2", "h3", "h4", "strong"]):
+            txt = tag.get_text(" ", strip=True).lower()
+            if needle in txt:
+                # heading'den sonra gelen kardeşlerden bir süre topla
+                cur = tag
+                steps = 0
+                while cur and steps < take:
+                    cur = cur.find_next()
+                    if not cur:
+                        break
+                    t = cur.get_text(" ", strip=True)
+                    if t:
+                        _extract_from_line(t, panels, models)
+                    steps += 1
+
+    scan_after_heading("uyumlu panel", 40)
+    scan_after_heading("uyumlu televizyon", 60)
+    scan_after_heading("uyumlu tv", 60)
+
+    # 3) Fallback: başlıktan panel benzeri token
     if title:
-        p_list, m_list = _extract_tokens(title)
-        panels.update(p_list)
-        models.update(m_list)
+        _extract_from_line(title, panels, models)
 
-    # Temizlik: blacklist + çok genel olanları at
-    panels = {
-        p for p in panels
-        if p not in BLACKLIST
-        and any(ch.isdigit() for ch in p)
-        and len(p) >= 6
-    }
-    models = {m for m in models if len(m) >= 5 and any(ch.isdigit() for ch in m)}
+    # Temizlik
+    blacklist = {"LED", "TV", "HZ", "HD", "UHD", "4K", "FULL", "SMART", "INCH"}
+    panels = {p for p in panels if p not in blacklist and any(ch.isdigit() for ch in p) and len(p) >= 6}
+    models = {m for m in models if any(ch.isdigit() for ch in m) and len(m) >= 5}
 
-    # Debug: ilk 250 karakter blok örnekleri (issue olursa hızlı görürüz)
-    dbg = {
-        "panelBlockHit": bool(panel_blocks),
-        "modelBlockHit": bool(model_blocks),
-        "panelBlockSample": (panel_blocks[0][:250] if panel_blocks else ""),
-        "modelBlockSample": (model_blocks[0][:250] if model_blocks else ""),
-    }
+    if debug:
+        print("DEBUG title:", title)
+        print("DEBUG panels sample:", sorted(list(panels))[:10])
+        print("DEBUG models sample:", sorted(list(models))[:10])
 
     return {
         "title": title,
         "stockOut": bool(stock_out),
         "panels": sorted(panels),
         "models": sorted(models),
-        "debug": dbg,
     }
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-brands", type=int, default=0, help="0=all")
     ap.add_argument("--max-models-per-brand", type=int, default=0, help="0=all")
-    ap.add_argument("--sleep", type=float, default=1.25)
+    ap.add_argument("--sleep", type=float, default=2.0, help="Her isteğin arasına bekleme (NUKS rate-limit için 6-10 öneririm)")
     ap.add_argument("--only-featured", action="store_true")
-    ap.add_argument("--debug", action="store_true", help="items.json içine debug alanı ekler")
+    ap.add_argument("--debug", action="store_true")
+    ap.add_argument("--save-html", action="store_true")
+    ap.add_argument("--retry", type=int, default=2, help="rate-limit/js-gate olursa kaç kere denesin")
     args = ap.parse_args()
 
     brand_by_slug, code_to_slug = load_brand_maps()
@@ -244,6 +215,10 @@ def main():
     out_items: List[Dict] = []
     errors: List[Dict] = []
 
+    html_dir = RAW_DIR / "html"
+    if args.save_html:
+        html_dir.mkdir(parents=True, exist_ok=True)
+
     print("=== NUKS scrape (offline) ===")
     print("Project root:", ROOT)
     print("Output     :", RAW_DIR)
@@ -256,46 +231,78 @@ def main():
 
         for mc in model_codes:
             q = f"{b.name} {mc}"
-            url = f"{BASE}/?search={requests.utils.quote(q)}"
-            try:
-                html = http_get(url, session)
-                product_url = find_product_url_from_search(html)
-                if not product_url:
-                    errors.append({"brand": b.slug, "modelCode": mc, "query": q, "reason": "no_result"})
-                    continue
 
-                p_html = http_get(product_url, session)
-                parsed = parse_nuks_page(p_html)
+            # NUKS aramada bazen "/" sorun çıkarabiliyor
+            q_clean = q.replace("/", " ")
+            search_url = f"{BASE}/?search={requests.utils.quote(q_clean)}"
 
-                item = {
-                    "brand": b.slug,
-                    "modelCode": mc,
-                    "query": q,
-                    "productUrl": product_url,
-                    "title": parsed["title"],
-                    "stockOut": parsed["stockOut"],
-                    "panels": parsed["panels"],
-                    "models": parsed["models"],
-                }
-                if args.debug:
-                    item["debug"] = parsed.get("debug", {})
+            attempt = 0
+            while True:
+                attempt += 1
+                try:
+                    html = http_get(search_url, session)
+                    gate = detect_js_gate_or_rate_limit(html)
+                    if gate == "rate_limit":
+                        # çok hızlı arama: bekle ve retry
+                        wait_s = max(8.0, args.sleep * 4)
+                        print(f"WARN {b.slug} {mc}  rate_limit → wait {wait_s:.1f}s (attempt {attempt})")
+                        time.sleep(wait_s)
+                        if attempt <= args.retry:
+                            continue
+                    if gate == "js_gate":
+                        print(f"WARN {b.slug} {mc}  search_js_gate (attempt {attempt})")
+                        # js gate'de retry çoğu zaman işe yaramaz; yine de kısa bekle
+                        time.sleep(max(6.0, args.sleep * 3))
+                        if attempt <= args.retry:
+                            continue
+                        errors.append({"brand": b.slug, "modelCode": mc, "query": q, "reason": "search_js_gate"})
+                        break
 
-                out_items.append(item)
+                    product_url = find_product_url_from_search(html)
+                    if not product_url:
+                        errors.append({"brand": b.slug, "modelCode": mc, "query": q, "reason": "no_result"})
+                        break
 
-                print(f"OK  {b.slug} {mc}  panels={len(parsed['panels'])} models={len(parsed['models'])}")
+                    p_html = http_get(product_url, session)
+                    parsed = parse_nuks_page(p_html, debug=args.debug)
 
-            except Exception as e:
-                errors.append({"brand": b.slug, "modelCode": mc, "query": q, "reason": str(e)})
-                print(f"ERR {b.slug} {mc}  {e}")
+                    if args.save_html:
+                        safe = f"{b.slug}__{mc}".replace("/", "_").replace("\\", "_")
+                        (html_dir / f"{safe}.html").write_text(p_html, encoding="utf-8")
+
+                    out_items.append(
+                        {
+                            "brand": b.slug,
+                            "modelCode": mc,
+                            "query": q,
+                            "productUrl": product_url,
+                            "title": parsed["title"],
+                            "stockOut": parsed["stockOut"],
+                            "panels": parsed["panels"],
+                            "models": parsed["models"],
+                        }
+                    )
+
+                    print(f"OK  {b.slug} {mc}  panels={len(parsed['panels'])} models={len(parsed['models'])}")
+                    break
+
+                except Exception as e:
+                    msg = str(e)
+                    print(f"ERR {b.slug} {mc}  {msg}")
+                    if attempt <= args.retry:
+                        time.sleep(max(6.0, args.sleep * 3))
+                        continue
+                    errors.append({"brand": b.slug, "modelCode": mc, "query": q, "reason": msg})
+                    break
 
             time.sleep(args.sleep)
 
     write_json(RAW_DIR / "items.json", out_items)
     write_json(RAW_DIR / "errors.json", errors)
 
-    # hızlı özet
     with_panels = sum(1 for it in out_items if it.get("panels"))
     with_models = sum(1 for it in out_items if it.get("models"))
+
     print("\nDONE ✅")
     print("-", RAW_DIR / "items.json", f"(items: {len(out_items)}, with_panels: {with_panels}, with_models: {with_models})")
     print("-", RAW_DIR / "errors.json", f"(errors: {len(errors)})")

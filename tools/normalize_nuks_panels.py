@@ -4,85 +4,89 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Dict, List, Set
 
 ROOT = Path(__file__).resolve().parents[1]
-
 RAW_ITEMS = ROOT / "data" / "raw" / "nuks" / "items.json"
+
 OUT_PANELS = ROOT / "data" / "normalized" / "panels.json"
 OUT_MAP = ROOT / "data" / "normalized" / "model-panel-map.json"
 
-def read_json(path: Path, default: Any) -> Any:
-    if not path.exists():
-        return default
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+PANEL_TOKEN_RE = re.compile(r"\b[A-Z0-9][A-Z0-9\-_/]{4,}\b")
 
-def write_json(path: Path, data: Any) -> None:
+def read_json(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+def write_json(path: Path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="\n") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
-def norm_panel_code(s: str) -> str:
-    s = (s or "").strip()
-    s = re.sub(r"\s+", " ", s)
-    return s.replace("_", "-")
+def normalize_panel_code(s: str) -> str:
+    s = (s or "").strip().upper().replace("_", "-")
+    s = re.sub(r"\s+", "", s)
+    return s
 
-def norm_model_code(s: str) -> str:
-    return (s or "").strip().upper()
+def normalize_model_code(s: str) -> str:
+    s = (s or "").strip().upper()
+    s = re.sub(r"\s+", "", s)
+    return s
 
-def main() -> None:
-    items = read_json(RAW_ITEMS, [])
+def main():
+    if not RAW_ITEMS.exists():
+        print("ERR: items.json not found:", RAW_ITEMS)
+        return
 
-    panels_out: Dict[str, Dict[str, Any]] = {}
-    map_out: Dict[str, List[str]] = {}
+    items = read_json(RAW_ITEMS)
+
+    panels_index: Dict[str, Dict] = {}
+    mapping: Dict[str, Dict[str, List[str]]] = {}  # brand -> modelCode -> [panelCodes]
 
     for it in items:
-        if not isinstance(it, dict):
+        brand = str(it.get("brand") or "").strip()
+        model_code = normalize_model_code(str(it.get("modelCode") or ""))
+
+        raw_panels = it.get("panels") or []
+        # bazen parse listesi boşsa yine de title/description içinde token olabilir
+        if (not raw_panels) and it.get("title"):
+            raw_panels = PANEL_TOKEN_RE.findall(str(it.get("title")).upper())
+
+        panel_codes = [normalize_panel_code(p) for p in raw_panels if p]
+        panel_codes = sorted({p for p in panel_codes if any(ch.isdigit() for ch in p) and len(p) >= 6})
+
+        if not brand or not model_code:
+            continue
+        if not panel_codes:
             continue
 
-        brand = (it.get("brand") or "").strip()
-        product_url = (it.get("productUrl") or "").strip()
-        stock_out = bool(it.get("stockOut"))
+        mapping.setdefault(brand, {})
+        mapping[brand].setdefault(model_code, [])
+        # merge unique
+        merged = set(mapping[brand][model_code])
+        merged.update(panel_codes)
+        mapping[brand][model_code] = sorted(merged)
 
-        panels = it.get("panels") or []
-        models = it.get("models") or []
-
-        if not isinstance(panels, list) or not isinstance(models, list):
-            continue
-
-        panels = [norm_panel_code(p) for p in panels if isinstance(p, str) and p.strip()]
-        models = [norm_model_code(m) for m in models if isinstance(m, str) and m.strip()]
-
-        # panel kayıtları
-        for p in panels:
-            pid = p.lower()
-            if pid not in panels_out:
-                panels_out[pid] = {
-                    "id": pid,
-                    "panelCode": p,
+        # panels index (basit)
+        for pc in panel_codes:
+            if pc not in panels_index:
+                panels_index[pc] = {
+                    "code": pc,
                     "source": "nuks",
-                    "brandHint": brand,
-                    "stockOutAtScrape": stock_out,
-                    "exampleUrl": product_url,
+                    "seenInBrands": sorted({brand}),
                 }
+            else:
+                seen = set(panels_index[pc].get("seenInBrands") or [])
+                seen.add(brand)
+                panels_index[pc]["seenInBrands"] = sorted(seen)
 
-        # model -> panel map
-        for m in models:
-            if m not in map_out:
-                map_out[m] = []
-            for p in panels:
-                if p not in map_out[m]:
-                    map_out[m].append(p)
+    panels_out = [panels_index[k] for k in sorted(panels_index.keys())]
 
-    write_json(OUT_PANELS, list(panels_out.values()))
-    write_json(OUT_MAP, map_out)
+    write_json(OUT_PANELS, panels_out)
+    write_json(OUT_MAP, mapping)
 
     print("OK ✅")
     print("-", OUT_PANELS, f"(panels: {len(panels_out)})")
-    print("-", OUT_MAP, f"(mappings: {len(map_out)})")
-    print()
-    print("NOTE: Runtime'da NUKS'a BAĞIMLILIK YOK (offline normalize çıktısı).")
+    print("-", OUT_MAP, f"(mappings: {sum(len(v) for v in mapping.values())})")
+    print("\nNOTE: Runtime'da NUKS'a BAĞIMLILIK YOK (offline normalize çıktısı).")
 
 if __name__ == "__main__":
     main()
