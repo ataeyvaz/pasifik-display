@@ -1,82 +1,166 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import Container from "../../../components/ui/Container.astro";
-import Card from "../../../components/ui/Card.astro";
+import { getBrandBySlug, getModel, getModelsForBrand, getPanelsForModel, getAllBrands } from "../../../lib/data";
 
-import { getAllBrands } from "../../../lib/data/brands";
-import { getAllModelPaths, getModelByBrandAndSlug } from "../../../lib/data/models";
-
+/**
+ * Dynamic model route için gerekli
+ * - Production build: tüm brand + tüm model path'leri üretilir
+ * - Dev: performans için limit uygulanır ama HER BRAND'den örnek alınır (Philips/LG/TCL 404 olmaz)
+ */
 export async function getStaticPaths() {
-  return getAllModelPaths().map((p) => ({
-    params: { brand: p.brand, model: p.model },
-  }));
+  const paths: { params: { brand: string; model: string } }[] = [];
+
+  const brands = getAllBrands();
+
+  // DEV mod: her brand'den ilk N model
+  const DEV_MODELS_PER_BRAND = 8; // istersen 5 yap
+  // PROD mod: tam üretim
+  const isDev = import.meta.env.DEV;
+
+  for (const b of brands) {
+    const models = getModelsForBrand(b.slug);
+
+    const slice = isDev ? models.slice(0, DEV_MODELS_PER_BRAND) : models;
+
+    for (const m of slice) {
+      paths.push({
+        params: { brand: b.slug, model: m.slug },
+      });
+    }
+  }
+
+  return paths;
 }
 
-const { brand, model } = Astro.params;
-const brandSlug = String(brand);
-const modelSlug = String(model);
+const brandSlug = Astro.params.brand;
+const modelSlug = Astro.params.model;
 
-const brands = getAllBrands();
-const b = brands.find((x) => x.slug === brandSlug);
-
-const m = getModelByBrandAndSlug(brandSlug, modelSlug);
-
-if (!b || !m) {
-  // Astro SSG: fallback yoksa 404 olur, ama tip kontrol için
-  throw new Error(`Model not found: ${brandSlug}/${modelSlug}`);
+if (!brandSlug || !modelSlug) {
+  return new Response("Not found", { status: 404 });
 }
 
-const pageTitle = `${b.name} ${m.modelCode} | Pasifik Display`;
+const brand = getBrandBySlug(brandSlug);
+const model = getModel(brandSlug, modelSlug);
+
+if (!brand || !model) {
+  return new Response("Not found", { status: 404 });
+}
+
+const panels = getPanelsForModel(brandSlug, modelSlug);
+
+const canonical = `/markalar/${brandSlug}/${modelSlug}/`;
+const title = `Pasifik Display | ${brand.name} ${model.modelCode}`;
+const description =
+  `Pasifik Display TV & Panel kataloğu. ${brand.name} ${model.modelCode} modeli için panel uyumluluğu ve teknik notlar.`;
 ---
 
-<BaseLayout title={pageTitle} description={`${b.name} ${m.modelCode} için panel ve teknik bilgi demo sayfası.`}>
-  <Container as="div" class="py-10">
-    <div class="text-sm text-gray-500 mb-2">
-      <a href="/markalar" class="hover:underline">Markalar</a>
-      <span class="mx-2">›</span>
-      <a href={`/markalar/${b.slug}/`} class="hover:underline">{b.name}</a>
-      <span class="mx-2">›</span>
-      <span class="text-gray-900 font-medium">{m.modelCode}</span>
-    </div>
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
+      <ol class="flex flex-wrap gap-2">
+        <li class="flex items-center gap-2">
+          <a class="hover:text-slate-800" href="/">Ana Sayfa</a>
+          <span class="opacity-40">/</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <a class="hover:text-slate-800" href="/markalar/">Markalar</a>
+          <span class="opacity-40">/</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <a class="hover:text-slate-800" href={`/markalar/${brand.slug}/`}>{brand.name}</a>
+          <span class="opacity-40">/</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <a class="hover:text-slate-800" href={canonical}>{model.modelCode}</a>
+        </li>
+      </ol>
+    </nav>
 
-    <h1 class="text-3xl font-bold text-gray-900">{b.name} {m.modelCode}</h1>
-    <p class="mt-2 text-gray-600">
-      Kaynak: {m.sources?.zeroteknik ? "ZeroTeknik" : "Solobu (çıkarım)"} • TV-only
-    </p>
+    <header class="mt-4">
+      <h1 class="text-3xl font-semibold tracking-tight text-slate-900">
+        {brand.name} {model.modelCode}
+      </h1>
 
-    <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- ✅ vendor yok -->
+      <p class="mt-2 text-base text-slate-600">Pasifik Display</p>
+    </header>
+
+    <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
       <div class="lg:col-span-2">
-        <Card class="p-6">
-          <h2 class="text-xl font-semibold text-gray-900">Uyumlu Panel Bilgisi</h2>
-          <p class="mt-2 text-gray-600">
-            Panel entegrasyonu (panel code / uyumluluk) Phase-2’de bağlanacak.
-          </p>
-        </Card>
+        <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h2 class="text-xl font-semibold text-slate-900">Uyumlu Panel Bilgisi</h2>
+              <p class="mt-1 text-sm text-slate-600">
+                Panel veritabanı doğrulanmış kayıtlarla büyütülecek.
+              </p>
+            </div>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+              {panels.length} kayıt
+            </span>
+          </div>
 
-        <Card class="p-6 mt-6">
-          <h2 class="text-xl font-semibold text-gray-900">Teknik Notlar</h2>
-          <ul class="mt-3 list-disc pl-5 text-gray-600 space-y-1">
-            <li>Bu sayfa şu an demo/iskelet.</li>
-            <li>Sonraki adım: panel veri modeli + model↔panel ilişki.</li>
-            <li>Dış link yok: tüm veri local JSON’dan geliyor.</li>
+          {panels.length === 0 ? (
+            <div class="mt-5 rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4">
+              <p class="text-sm text-slate-700">Bu model için henüz panel kaydı yok.</p>
+              <p class="mt-2 text-xs text-slate-500">Kayıt eklendikçe burada otomatik görünecek.</p>
+            </div>
+          ) : (
+            <div class="mt-5 overflow-hidden rounded-xl border border-slate-200">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 text-left text-slate-600">
+                  <tr>
+                    <th class="px-4 py-3 font-medium">Panel Kodu</th>
+                    <th class="px-4 py-3 font-medium">Güven</th>
+                    <th class="px-4 py-3 font-medium">Not</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {panels.map((p) => (
+                    <tr class="border-t border-slate-200">
+                      <td class="px-4 py-3 font-mono text-slate-900">{p.panelCode}</td>
+                      <td class="px-4 py-3">
+                        <span class="inline-flex rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-700">
+                          {p.confidence ?? "medium"}
+                        </span>
+                      </td>
+                      <td class="px-4 py-3 text-slate-700">{p.note ?? "-"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+
+        <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 class="text-xl font-semibold text-slate-900">Teknik Notlar</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700">
+            <li>Bu sayfa offline katalog yapısına göre çalışır.</li>
+            <li>Panel eşleştirme verileri doğrulandıkça güncellenecektir.</li>
+            <li>Dış site isteği yapılmaz (tamamen local JSON).</li>
           </ul>
-        </Card>
+        </section>
       </div>
 
-      <div>
-        <Card class="p-6">
-          <h2 class="text-lg font-semibold text-gray-900">Hızlı İletişim</h2>
-          <p class="mt-2 text-gray-600">Panel için teklif almak istersen:</p>
-          <div class="mt-4 space-y-2">
-            <a class="block text-center rounded-lg bg-green-600 text-white py-2 font-semibold hover:bg-green-700" href="#">
+      <aside class="lg:col-span-1">
+        <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <h3 class="text-base font-semibold text-slate-900">Hızlı İletişim</h3>
+          <p class="mt-2 text-sm text-slate-600">Panel için teklif almak istersen:</p>
+
+          <div class="mt-4 flex flex-col gap-2">
+            <a class="rounded-xl bg-emerald-600 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-emerald-700"
+               href="/iletisim/">
               WhatsApp
             </a>
-            <a class="block text-center rounded-lg border border-gray-300 text-gray-900 py-2 font-semibold hover:bg-gray-50" href="#">
+
+            <a class="rounded-xl border border-slate-200 px-4 py-2 text-center text-sm font-semibold text-slate-800 hover:bg-slate-50"
+               href="/iletisim/">
               Ara
             </a>
           </div>
-        </Card>
-      </div>
+        </section>
+      </aside>
     </div>
-  </Container>
+  </section>
 </BaseLayout>
