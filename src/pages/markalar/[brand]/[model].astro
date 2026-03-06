@@ -1,25 +1,21 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { getBrandBySlug, getModel, getModelsForBrand, getPanelsForModel, getAllBrands } from "../../../lib/data";
+import {
+  getBrandBySlug,
+  getModel,
+  getModelsForBrand,
+  getPanelsForModel,
+  getAllBrands
+} from "../../../lib/data";
 
-/**
- * Dynamic model route için gerekli
- * - Production build: tüm brand + tüm model path'leri üretilir
- * - Dev: performans için limit uygulanır ama HER BRAND'den örnek alınır (Philips/LG/TCL 404 olmaz)
- */
 export async function getStaticPaths() {
   const paths: { params: { brand: string; model: string } }[] = [];
-
   const brands = getAllBrands();
-
-  // DEV mod: her brand'den ilk N model
-  const DEV_MODELS_PER_BRAND = 8; // istersen 5 yap
-  // PROD mod: tam üretim
   const isDev = import.meta.env.DEV;
+  const DEV_MODELS_PER_BRAND = 8;
 
   for (const b of brands) {
     const models = getModelsForBrand(b.slug);
-
     const slice = isDev ? models.slice(0, DEV_MODELS_PER_BRAND) : models;
 
     for (const m of slice) {
@@ -49,9 +45,9 @@ if (!brand || !model) {
 const panels = getPanelsForModel(brandSlug, modelSlug);
 
 const canonical = `/markalar/${brandSlug}/${modelSlug}/`;
-const title = `Pasifik Display | ${brand.name} ${model.modelCode}`;
+const title = `${brand.name} ${model.modelCode} TV Panel Değişimi | İstanbul Ümraniye Servisi`;
 const description =
-  `Pasifik Display TV & Panel kataloğu. ${brand.name} ${model.modelCode} modeli için panel uyumluluğu ve teknik notlar.`;
+  `${brand.name} ${model.modelCode} televizyon modeli için panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri hizmetleri. Pasifik Display Teknik Servis İstanbul Ümraniye Tepeüstü merkezlidir.`;
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
@@ -76,37 +72,86 @@ const description =
       </ol>
     </nav>
 
-    <header class="mt-4">
-      <h1 class="text-3xl font-semibold tracking-tight text-slate-900">
-        {brand.name} {model.modelCode}
+    <header class="mt-4 max-w-4xl">
+      <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+        İstanbul Ümraniye Tepeüstü Teknik Servis
+      </p>
+
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        {brand.name} {model.modelCode} TV Panel Değişimi
       </h1>
 
-      <!-- ✅ vendor yok -->
-      <p class="mt-2 text-base text-slate-600">Pasifik Display</p>
+      <p class="mt-4 text-base leading-8 text-slate-600">
+        {brand.name} {model.modelCode} televizyon modelinde ekran kırılması,
+        görüntü gitmesi, panel çatlağı, arka aydınlatma arızası ve kart kaynaklı
+        sorunlarda teknik servis desteği verilmektedir. Pasifik Display Teknik Servis,
+        İstanbul Ümraniye Tepeüstü merkezli olarak Anadolu Yakası başta olmak üzere
+        İstanbul genelinden cihaz kabul etmektedir.
+      </p>
     </header>
 
     <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
-      <div class="lg:col-span-2">
-        <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div class="flex items-start justify-between gap-4">
-            <div>
-              <h2 class="text-xl font-semibold text-slate-900">Uyumlu Panel Bilgisi</h2>
-              <p class="mt-1 text-sm text-slate-600">
-                Panel veritabanı doğrulanmış kayıtlarla büyütülecek.
+      <div class="lg:col-span-2 space-y-6">
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-semibold text-slate-900">Bu Model İçin Verilen Hizmetler</h2>
+
+          <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">Panel Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Ekran kırılması, panel çatlağı veya görüntü kaybı sorunlarında
+                panel değişimi hizmeti sunulmaktadır.
               </p>
             </div>
-            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
-              {panels.length} kayıt
-            </span>
+
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">LED Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Ses var görüntü yok, karanlık ekran ve arka aydınlatma problemlerinde
+                LED değişimi yapılmaktadır.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">LED Reflektör Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Parlak leke, ışık izi ve aydınlatma dengesizliği sorunlarında
+                LED reflektör onarımı yapılmaktadır.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">TV PSU Tamiri veya Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Güç kartı arızalarında teknik kontrol sonrası PSU tamiri veya
+                değişimi uygulanmaktadır.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 p-4 md:col-span-2">
+              <h3 class="font-semibold text-slate-900">TV Anakart Tamiri veya Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Açılmama, görüntü vermeme, HDMI sorunları ve anakart kaynaklı
+                arızalarda tamir veya değişim hizmeti verilmektedir.
+              </p>
+            </div>
           </div>
+        </section>
+
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-semibold text-slate-900">Uyumlu Panel Bilgisi</h2>
 
           {panels.length === 0 ? (
-            <div class="mt-5 rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4">
-              <p class="text-sm text-slate-700">Bu model için henüz panel kaydı yok.</p>
-              <p class="mt-2 text-xs text-slate-500">Kayıt eklendikçe burada otomatik görünecek.</p>
+            <div class="mt-4 rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-4">
+              <p class="text-sm text-slate-700">
+                Bu model için doğrulanmış panel kaydı henüz eklenmemiştir.
+              </p>
+              <p class="mt-2 text-sm text-slate-600">
+                Panel uygunluğu, arıza tipi ve cihaz durumu teknik inceleme sonrası netleştirilebilir.
+              </p>
             </div>
           ) : (
-            <div class="mt-5 overflow-hidden rounded-xl border border-slate-200">
+            <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200">
               <table class="w-full text-sm">
                 <thead class="bg-slate-50 text-left text-slate-600">
                   <tr>
@@ -133,30 +178,67 @@ const description =
           )}
         </section>
 
-        <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <h2 class="text-xl font-semibold text-slate-900">Teknik Notlar</h2>
-          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-700">
-            <li>Bu sayfa offline katalog yapısına göre çalışır.</li>
-            <li>Panel eşleştirme verileri doğrulandıkça güncellenecektir.</li>
-            <li>Dış site isteği yapılmaz (tamamen local JSON).</li>
-          </ul>
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-semibold text-slate-900">Servis Süreci</h2>
+          <p class="mt-4 text-sm leading-8 text-slate-600">
+            Müşteriler cihazlarını servis merkezimize getirebilir. Yerinde servis,
+            yol ve servis ücreti için önceden iletişim kurulması gerekmektedir.
+            İşlem öncesinde model, arıza tipi ve parça durumu değerlendirilir.
+          </p>
         </section>
       </div>
 
-      <aside class="lg:col-span-1">
-        <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <h3 class="text-base font-semibold text-slate-900">Hızlı İletişim</h3>
-          <p class="mt-2 text-sm text-slate-600">Panel için teklif almak istersen:</p>
+      <aside class="space-y-6">
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">İletişim</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            WhatsApp, telefon ve konum bilgileri netleştiğinde bu alana eklenecek.
+          </p>
 
-          <div class="mt-4 flex flex-col gap-2">
-            <a class="rounded-xl bg-emerald-600 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-emerald-700"
-               href="/iletisim/">
-              WhatsApp
+          <div class="mt-5 space-y-3">
+            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
+              WhatsApp: Buraya numara eklenecek
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
+              Telefon: Buraya telefon numarası eklenecek
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
+              Konum: Buraya Google Maps linki eklenecek
+            </div>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">Servis Bölgeleri</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600">
+            Ümraniye, Kadıköy, Üsküdar, Çekmeköy, Maltepe, Sancaktepe,
+            Samandıra, Sultanbeyli ve yakın çevre bölgelerden servis talepleri
+            değerlendirilmektedir.
+          </p>
+        </section>
+
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">Geri Dön</h3>
+          <div class="mt-4 flex flex-col gap-3">
+            <a
+              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+              href={`/markalar/${brand.slug}/`}
+            >
+              ← {brand.name} modelleri
             </a>
 
-            <a class="rounded-xl border border-slate-200 px-4 py-2 text-center text-sm font-semibold text-slate-800 hover:bg-slate-50"
-               href="/iletisim/">
-              Ara
+            <a
+              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+              href="/hizmetler/"
+            >
+              Hizmetler
+            </a>
+
+            <a
+              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+              href="/iletisim/"
+            >
+              İletişim
             </a>
           </div>
         </section>

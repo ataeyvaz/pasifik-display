@@ -1,35 +1,75 @@
 ﻿---
-import Container from "../ui/Container.astro";
+const year = new Date().getFullYear();
 ---
-<footer class="bg-gray-900 text-gray-400 text-sm mt-16">
-  <Container as="div" class="py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<footer class="mt-16 border-t border-slate-200 bg-slate-50">
+  <div class="mx-auto max-w-6xl px-4 py-12">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
       <div>
-        <div class="font-bold text-white">Pasifik Display</div>
-        <p class="mt-2 text-gray-400">TV ve monitör panel kodları, uyumlu modeller ve teknik referans bilgileri.</p>
+        <h2 class="text-lg font-semibold text-slate-900">
+          Pasifik Display Teknik Servis
+        </h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          İstanbul Ümraniye Tepeüstü merkezli teknik servisimiz; TV panel değişimi,
+          LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri
+          hizmetleri sunmaktadır.
+        </p>
       </div>
 
       <div>
-        <div class="font-semibold text-white">Hızlı Erişim</div>
-        <ul class="mt-3 space-y-2">
-          <li><a class="hover:text-white" href="/markalar">Markalar</a></li>
-          <li><a class="hover:text-white" href="/demo/model">Model Demo</a></li>
-          <li><a class="hover:text-white" href="/iletisim">İletişim</a></li>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-900">
+          Hızlı Linkler
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm text-slate-600">
+          <li>
+            <a href="/" class="hover:text-slate-900">Ana Sayfa</a>
+          </li>
+          <li>
+            <a href="/hizmetler/" class="hover:text-slate-900">Hizmetler</a>
+          </li>
+          <li>
+            <a href="/markalar/" class="hover:text-slate-900">Markalar</a>
+          </li>
+          <li>
+            <a href="/iletisim/" class="hover:text-slate-900">İletişim</a>
+          </li>
         </ul>
       </div>
 
       <div>
-        <div class="font-semibold text-white">İletişim</div>
-        <ul class="mt-3 space-y-2">
-          <li> 0xxx xxx xx xx</li>
-          <li> info@pasifikdisplay.com</li>
-          <li> WhatsApp ile yazın</li>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-900">
+          Hizmetler
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm text-slate-600">
+          <li>Panel değişimi</li>
+          <li>LED değişimi</li>
+          <li>LED reflektör değişimi</li>
+          <li>TV PSU tamiri veya değişimi</li>
+          <li>TV anakart tamiri veya değişimi</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-slate-900">
+          Servis Bölgeleri
+        </h3>
+        <ul class="mt-4 space-y-3 text-sm text-slate-600">
+          <li><a href="/istanbul-tv-servisi/" class="hover:text-slate-900">İstanbul TV Servisi</a></li>
+          <li><a href="/umraniye-tv-servisi/" class="hover:text-slate-900">Ümraniye TV Servisi</a></li>
+          <li><a href="/kadikoy-tv-servisi/" class="hover:text-slate-900">Kadıköy TV Servisi</a></li>
+          <li><a href="/uskudar-tv-servisi/" class="hover:text-slate-900">Üsküdar TV Servisi</a></li>
+          <li><a href="/cekmekoy-tv-servisi/" class="hover:text-slate-900">Çekmeköy TV Servisi</a></li>
+          <li><a href="/maltepe-tv-servisi/" class="hover:text-slate-900">Maltepe TV Servisi</a></li>
+          <li><a href="/sancaktepe-tv-servisi/" class="hover:text-slate-900">Sancaktepe TV Servisi</a></li>
+          <li><a href="/sultanbeyli-tv-servisi/" class="hover:text-slate-900">Sultanbeyli TV Servisi</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="mt-10 pt-6 border-t border-gray-800 text-xs text-gray-500">
-       {new Date().getFullYear()} Pasifik Display  Tüm haklar saklıdır.
+    <div class="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-500">
+      <p>
+        © {year} Pasifik Display Teknik Servis. Tüm hakları saklıdır.
+      </p>
     </div>
-  </Container>
+  </div>
 </footer>

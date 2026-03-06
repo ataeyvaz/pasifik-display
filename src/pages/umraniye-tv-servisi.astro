@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Ümraniye TV Servisi | Panel Değişimi ve TV Tamiri | Pasifik Display Teknik Servis";
+const description =
+  "Ümraniye Tepeüstü merkezli TV servis hizmeti. Panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri için Pasifik Display Teknik Servis.";
+const canonical = "/umraniye-tv-servisi/";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <section class="mx-auto max-w-5xl px-4 py-12">
+    <header class="max-w-3xl">
+      <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+        Ümraniye / Tepeüstü
+      </p>
+
+      <h1 class="text-4xl font-bold tracking-tight text-slate-900">
+        Ümraniye TV Servisi
+      </h1>
+
+      <p class="mt-4 text-lg leading-8 text-slate-600">
+        Pasifik Display Teknik Servis, Ümraniye Tepeüstü merkezli olarak televizyon
+        panel değişimi ve elektronik tamir hizmetleri vermektedir. Ümraniye ve yakın
+        çevreden cihaz kabul edilmektedir.
+      </p>
+    </header>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-slate-900">Panel Değişimi</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          Ekran kırılması, panel çatlağı, görüntü kaybı ve panel arızalarında
+          model uygunluğu kontrol edilerek panel değişimi hizmeti verilmektedir.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-slate-900">LED ve Reflektör İşlemleri</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          Karanlık ekran, ışık dengesizliği ve parlak leke gibi sorunlarda
+          LED değişimi ve LED reflektör onarımı yapılmaktadır.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-slate-900">PSU Tamiri</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          Güç kartı arızalarında televizyon hiç açılmayabilir veya düzensiz
+          çalışabilir. Bu tür durumlarda PSU tamiri veya değişimi yapılır.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-slate-900">Anakart Tamiri</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          Anakart kaynaklı açılmama, görüntü vermeme ve port arızalarında
+          tamir veya değişim hizmeti sunulmaktadır.
+        </p>
+      </article>
+    </div>
+
+    <div class="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+      <h2 class="text-2xl font-semibold text-slate-900">Bölge Bilgisi</h2>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        Ümraniye başta olmak üzere Tepeüstü, Dudullu, Yukarı Dudullu, Alemdağ,
+        Çakmak, Atakent ve çevre bölgelerden servis talepleri değerlendirilmektedir.
+        Müşteriler cihazlarını servis noktasına bırakabilir. Yerinde servis için
+        önceden iletişim kurulması gerekmektedir.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/iletisim/" class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+          İletişime Geç
+        </a>
+        <a href="/hizmetler/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-white">
+          Hizmetleri Gör
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "İletişim | Pasifik Display Teknik Servis";
+const description =
+  "Pasifik Display Teknik Servis iletişim sayfası. İstanbul Ümraniye Tepeüstü merkezli TV panel değişimi, LED değişimi, PSU ve anakart tamiri hizmetleri.";
+const canonical = "/iletisim/";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <section class="mx-auto max-w-5xl px-4 py-12">
+    <header class="max-w-3xl">
+      <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+        Pasifik Display Teknik Servis
+      </p>
+
+      <h1 class="text-4xl font-bold tracking-tight text-slate-900">
+        İletişim
+      </h1>
+
+      <p class="mt-4 text-lg leading-8 text-slate-600">
+        İstanbul Ümraniye Tepeüstü merkezli teknik servisimiz ile iletişime geçerek
+        TV panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri
+        ve TV anakart tamiri hakkında bilgi alabilirsiniz.
+      </p>
+    </header>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-semibold text-slate-900">İletişim Bilgileri</h2>
+
+        <div class="mt-5 space-y-4">
+          <div class="rounded-2xl border border-slate-200 p-4">
+            <p class="text-sm font-semibold text-slate-900">WhatsApp</p>
+            <p class="mt-2 text-sm text-slate-600">Buraya WhatsApp numarası eklenecek</p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 p-4">
+            <p class="text-sm font-semibold text-slate-900">Telefon</p>
+            <p class="mt-2 text-sm text-slate-600">Buraya telefon numarası eklenecek</p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 p-4">
+            <p class="text-sm font-semibold text-slate-900">Konum</p>
+            <p class="mt-2 text-sm text-slate-600">
+              İstanbul / Ümraniye / Tepeüstü
+            </p>
+            <p class="mt-2 text-sm text-slate-500">
+              Buraya Google Maps linki eklenecek
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-2xl font-semibold text-slate-900">Servis Bilgilendirmesi</h2>
+
+        <div class="mt-5 space-y-4 text-sm leading-8 text-slate-600">
+          <p>
+            Müşteriler cihazlarını servis merkezine getirebilirler.
+          </p>
+
+          <p>
+            Yerinde servis, yol ve servis ücreti için önceden iletişim kurulması gerekmektedir.
+          </p>
+
+          <p>
+            Servis bölgeleri arasında Ümraniye, Kadıköy, Üsküdar, Çekmeköy,
+            Maltepe, Sancaktepe, Samandıra, Sultanbeyli ve yakın çevre yer almaktadır.
+          </p>
+
+          <p>
+            Panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri
+            ve TV anakart tamiri hizmetleri verilmektedir.
+          </p>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="/hizmetler/"
+            class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+          >
+            Hizmetler
+          </a>
+
+          <a
+            href="/markalar/"
+            class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+          >
+            Marka ve Modeller
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>

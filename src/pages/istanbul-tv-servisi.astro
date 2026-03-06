@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "İstanbul TV Servisi | Panel ve LED Değişimi | Pasifik Display Teknik Servis";
+const description =
+  "İstanbul genelinde TV panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri hizmetleri. Pasifik Display Teknik Servis Ümraniye Tepeüstü merkezlidir.";
+const canonical = "/istanbul-tv-servisi/";
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <section class="mx-auto max-w-5xl px-4 py-12">
+    <header class="max-w-3xl">
+      <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+        İstanbul Genelinde Hizmet
+      </p>
+
+      <h1 class="text-4xl font-bold tracking-tight text-slate-900">
+        İstanbul TV Servisi
+      </h1>
+
+      <p class="mt-4 text-lg leading-8 text-slate-600">
+        Pasifik Display Teknik Servis, İstanbul Ümraniye Tepeüstü merkezli olarak
+        TV panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri
+        ve TV anakart tamiri hizmetleri sunmaktadır.
+      </p>
+    </header>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-slate-900">Hangi Arızalarda Destek Veriyoruz?</h2>
+        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-600">
+          <li>Ekran kırılması ve panel çatlağı</li>
+          <li>Ses var görüntü yok sorunu</li>
+          <li>Karanlık ekran ve arka aydınlatma arızaları</li>
+          <li>Işık lekesi ve reflektör problemleri</li>
+          <li>Güç kartı arızaları</li>
+          <li>Anakart kaynaklı açılmama ve görüntü sorunları</li>
+        </ul>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-semibold text-slate-900">Servis Kapsamı</h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600">
+          İstanbul’un farklı bölgelerinden müşteriler cihazlarını servis noktasına
+          getirebilir. Yerinde servis taleplerinde yol durumu, mesafe ve servis ücreti
+          için önceden iletişim kurulması gerekmektedir.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+      <h2 class="text-2xl font-semibold text-slate-900">Öne Çıkan Bölgeler</h2>
+      <p class="mt-4 text-sm leading-8 text-slate-600">
+        Ümraniye, Kadıköy, Üsküdar, Çekmeköy, Maltepe, Sancaktepe, Samandıra,
+        Sultanbeyli, Ataşehir, Kartal, Pendik ve çevre bölgelerden talepler
+        değerlendirilmektedir.
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/umraniye-tv-servisi/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-white">
+          Ümraniye TV Servisi
+        </a>
+        <a href="/kadikoy-tv-servisi/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-white">
+          Kadıköy TV Servisi
+        </a>
+        <a href="/iletisim/" class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+          İletişime Geç
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

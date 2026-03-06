@@ -197,3 +197,27 @@ Bir sonraki adım: Model detay sayfası
 NUKS scraping’in “core değil / experimental” olduğu kararı
 
 Model detay sayfasının henüz yok/404 olduğu (Phase 1’in ana işi)
+
+## UI / Servis Sitesi Bitirme Planı
+
+### Aşama 1 — Temizlik
+- Üst alanı daha profesyonel hale getirme
+- Butonları tek stile bağlama
+- Boşluk / padding düzeni
+- Font hiyerarşisini düzeltme
+- Kartları daha kurumsal gösterme
+
+### Aşama 2 — Güven Veren Servis Görünümü
+- Ana sayfaya güçlü hero alanı
+- “Neden bizi tercih etmelisiniz” bölümü
+- Hizmet kartları
+- Servis bölgeleri bölümü
+- WhatsApp çağrı alanı
+- Cihaz getirme / yerinde servis notu
+
+### Aşama 3 — Kurumsal Cila
+- Renk sistemi netleştirme
+- İkonlar
+- Küçük görsel bloklar
+- Daha düzenli footer
+- Mobil görünüm ince ayarı
