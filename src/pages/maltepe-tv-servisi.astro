@@ -1,24 +1,107 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "Maltepe TV Servisi | Panel Değişimi | Pasifik Display";
-const description = "Maltepe TV teknik servis hizmeti.";
+const title = "Maltepe TV Servisi | Panel ve LED Değişimi | Pasifik Display Teknik Servis";
+const description =
+  "Maltepe bölgesine yönelik TV panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri hizmetleri. Pasifik Display Teknik Servis Ümraniye Tepeüstü merkezlidir.";
 const canonical = "/maltepe-tv-servisi/";
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
+  <section class="mx-auto max-w-6xl px-4 py-12">
+    <header class="max-w-4xl">
+      <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+        İstanbul / Maltepe
+      </p>
 
-<section class="mx-auto max-w-5xl px-4 py-12">
+      <h1 class="text-4xl font-bold tracking-tight text-slate-900">
+        Maltepe TV Servisi
+      </h1>
 
-<h1 class="text-4xl font-bold text-slate-900">
-Maltepe TV Servisi
-</h1>
+      <p class="mt-4 text-lg leading-8 text-slate-600">
+        Maltepe bölgesinden gelen televizyon arızaları için panel değişimi,
+        LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri
+        hizmetleri verilmektedir. Servis merkezimiz Ümraniye Tepeüstü bölgesindedir.
+      </p>
+    </header>
 
-<p class="mt-4 text-lg text-slate-600">
-Maltepe ve çevresinde televizyon panel değişimi ve
-televizyon tamiri hizmetleri sunulmaktadır.
-</p>
+    <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div class="space-y-6 lg:col-span-2">
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-semibold text-slate-900">Verilen Hizmetler</h2>
+          <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">Panel Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Ekran kırılması, panel çatlağı ve görüntü bozulmalarında panel değişimi yapılmaktadır.
+              </p>
+            </div>
 
-</section>
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">LED Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Arka aydınlatma ve karanlık ekran problemlerinde LED değişimi uygulanır.
+              </p>
+            </div>
 
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">LED Reflektör Değişimi</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Parlak leke ve ışık dengesizliği sorunlarında reflektör işlemleri yapılır.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 p-4">
+              <h3 class="font-semibold text-slate-900">PSU ve Anakart Tamiri</h3>
+              <p class="mt-2 text-sm leading-7 text-slate-600">
+                Güç kartı ve anakart kaynaklı açılmama, görüntü vermeme gibi arızalarda işlem yapılır.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-semibold text-slate-900">Servis Süreci</h2>
+          <p class="mt-4 text-sm leading-8 text-slate-600">
+            Müşteriler cihazlarını servis merkezimize teslim edebilir. Yerinde servis taleplerinde
+            yol ve servis ücreti için önceden iletişim kurulması gerekmektedir.
+          </p>
+        </section>
+
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-2xl font-semibold text-slate-900">Bölge Bilgisi</h2>
+          <p class="mt-4 text-sm leading-8 text-slate-600">
+            Maltepe, Küçükyalı, Altayçeşme, İdealtepe, Cevizli ve yakın çevreden gelen
+            servis talepleri değerlendirilmektedir.
+          </p>
+        </section>
+      </div>
+
+      <aside class="space-y-6">
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">İletişim</h3>
+          <div class="mt-4 space-y-3">
+            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
+              WhatsApp: Buraya numara eklenecek
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
+              Telefon: Buraya telefon numarası eklenecek
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
+              Konum: Buraya Google Maps linki eklenecek
+            </div>
+          </div>
+        </section>
+
+        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-slate-900">Hızlı Linkler</h3>
+          <div class="mt-4 flex flex-col gap-3">
+            <a href="/hizmetler/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50">Hizmetler</a>
+            <a href="/markalar/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50">Marka ve Modeller</a>
+            <a href="/iletisim/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50">İletişim</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </section>
 </BaseLayout>
