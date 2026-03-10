@@ -1,34 +1,42 @@
 ﻿---
-import Header from "../components/site/Header.astro";
 import Footer from "../components/site/Footer.astro";
-import MetaTags from "../components/seo/MetaTags.astro";
-
-type Props = {
-  title: string;
-  description?: string;
-  canonical?: string;
-  noindex?: boolean;
-};
 
 const {
-  title,
-  description = "TV ve monitör panel kodları, uyumlu modeller ve teknik referans bilgileri.",
+  title = "Pasifik Display Teknik Servis",
+  description = "Pasifik Display Teknik Servis",
   canonical,
-  noindex = false,
 } = Astro.props;
+
+const canonicalAbs =
+  canonical && Astro.site ? new URL(canonical, Astro.site).href : canonical;
 ---
+
 <!doctype html>
 <html lang="tr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <MetaTags title={title} description={description} canonical={canonical} noindex={noindex} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    {canonicalAbs ? <link rel="canonical" href={canonicalAbs} /> : null}
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {canonicalAbs ? <meta property="og:url" content={canonicalAbs} /> : null}
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
   </head>
-  <body>
-    <Header />
-    <main class="min-h-[60vh]">
+
+  <body class="min-h-screen bg-white text-slate-900">
+    <main>
       <slot />
     </main>
+
     <Footer />
   </body>
 </html>

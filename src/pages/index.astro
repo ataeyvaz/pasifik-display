@@ -3,157 +3,198 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const title = "Pasifik Display Teknik Servis | TV Panel Değişimi İstanbul Ümraniye";
 const description =
-  "Pasifik Display Teknik Servis İstanbul Ümraniye Tepeüstü merkezli TV tamir servisidir. Panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri hizmetleri verilmektedir. Anadolu Yakası ve İstanbul geneline hizmet sunulmaktadır.";
+  "Pasifik Display Teknik Servis İstanbul Ümraniye Tepeüstü merkezli TV tamir servisidir. Panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri hizmetleri verilmektedir.";
 const canonical = "/";
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
-  <section class="mx-auto max-w-6xl px-4 py-12">
-    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
-      <div>
-        <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
-          İstanbul Ümraniye Tepeüstü
+  <section class="border-b border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-16 lg:py-20">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="mb-4 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+            İstanbul / Ümraniye / Tepeüstü
+          </p>
+
+          <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            TV Panel Değişimi ve
+            <span class="block">Teknik Servis Hizmetleri</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Pasifik Display Teknik Servis olarak televizyon panel değişimi, LED değişimi,
+            LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri hizmetleri sunuyoruz.
+            İstanbul genelinden cihaz kabul edilmektedir.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/iletisim/"
+              class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+            >
+              İletişime Geç
+            </a>
+
+            <a
+              href="/hizmetler/"
+              class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+            >
+              Hizmetleri İncele
+            </a>
+
+            <a
+              href="/markalar/"
+              class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+            >
+              Marka ve Modeller
+            </a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <p class="text-sm font-semibold text-slate-900">Panel Değişimi</p>
+              <p class="mt-2 text-sm text-slate-600">Kırık ekran ve panel arızalarında çözüm</p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <p class="text-sm font-semibold text-slate-900">LED Onarımı</p>
+              <p class="mt-2 text-sm text-slate-600">Arka aydınlatma ve ışık sorunları</p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <p class="text-sm font-semibold text-slate-900">Kart Tamiri</p>
+              <p class="mt-2 text-sm text-slate-600">PSU ve anakart işlemleri</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm lg:p-8">
+          <div class="grid grid-cols-1 gap-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-5">
+              <h2 class="text-xl font-semibold text-slate-900">Verdiğimiz Hizmetler</h2>
+              <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-600">
+                <li>• Panel değişimi</li>
+                <li>• LED değişimi</li>
+                <li>• LED reflektör değişimi</li>
+                <li>• TV PSU tamiri veya değişimi</li>
+                <li>• TV anakart tamiri veya değişimi</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 bg-white p-5">
+              <h2 class="text-xl font-semibold text-slate-900">Servis Bölgeleri</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Ümraniye, Kadıköy, Üsküdar, Çekmeköy, Maltepe, Sancaktepe,
+                Sultanbeyli, Ataşehir ve yakın çevre bölgelerden servis talepleri değerlendirilmektedir.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 bg-white p-5">
+              <h2 class="text-xl font-semibold text-slate-900">Servis Notu</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-600">
+                Müşteriler cihazlarını servis merkezimize getirebilir.
+                Yerinde servis için önceden iletişim kurulması gerekmektedir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <div class="mb-8 max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wide text-slate-500">
+        Neler Yapıyoruz?
+      </p>
+      <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900">
+        Televizyon Arızalarında Profesyonel Çözüm
+      </h2>
+      <p class="mt-4 text-base leading-8 text-slate-600">
+        Model bazlı servis sayfalarımız ve hizmet içeriklerimiz sayesinde,
+        televizyonunuzla ilgili doğru bilgiye daha hızlı ulaşabilirsiniz.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">Panel Değişimi</h3>
+        <p class="mt-3 text-sm leading-7 text-slate-600">
+          Ekran kırılması, iç panel çatlağı, görüntü gitmesi ve dikey/yatay çizgi sorunlarında panel değişimi yapılır.
         </p>
+      </div>
 
-        <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-          Pasifik Display Teknik Servis
-        </h1>
-
-        <p class="mt-4 text-lg leading-8 text-slate-600">
-          TV panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri
-          ve TV anakart tamiri hizmetleri sunuyoruz. Ümraniye Tepeüstü merkezli
-          teknik servisimiz, Anadolu Yakası başta olmak üzere İstanbul genelinden
-          cihaz kabul etmektedir.
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">LED ve Reflektör İşlemleri</h3>
+        <p class="mt-3 text-sm leading-7 text-slate-600">
+          Karanlık ekran, parlak leke ve ışık dengesizliği gibi problemler için LED ve reflektör işlemleri uygulanır.
         </p>
+      </div>
 
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a
-            href="/hizmetler/"
-            class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
-          >
-            Hizmetleri İncele
-          </a>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold text-slate-900">PSU ve Anakart Tamiri</h3>
+        <p class="mt-3 text-sm leading-7 text-slate-600">
+          Açılmama, görüntü vermeme, enerji sorunu ve port arızalarında kart tamiri veya değişim hizmeti verilir.
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <section class="border-y border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <a href="/istanbul-tv-servisi/" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:bg-slate-50">
+          <h3 class="font-semibold text-slate-900">İstanbul TV Servisi</h3>
+          <p class="mt-2 text-sm text-slate-600">İstanbul genel servis kapsamı</p>
+        </a>
+
+        <a href="/umraniye-tv-servisi/" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:bg-slate-50">
+          <h3 class="font-semibold text-slate-900">Ümraniye TV Servisi</h3>
+          <p class="mt-2 text-sm text-slate-600">Merkez servis bölgesi</p>
+        </a>
+
+        <a href="/kadikoy-tv-servisi/" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:bg-slate-50">
+          <h3 class="font-semibold text-slate-900">Kadıköy TV Servisi</h3>
+          <p class="mt-2 text-sm text-slate-600">Kadıköy ve çevresi için servis</p>
+        </a>
+
+        <a href="/atasehir-tv-servisi/" class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:bg-slate-50">
+          <h3 class="font-semibold text-slate-900">Ataşehir TV Servisi</h3>
+          <p class="mt-2 text-sm text-slate-600">Ataşehir ve yakın bölgeler</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900">
+            Marka ve Model Bazlı Sayfalar
+          </h2>
+          <p class="mt-4 text-base leading-8 text-slate-600">
+            Televizyon markanızı ve modelinizi seçerek ilgili servis sayfasına ulaşabilir,
+            panel değişimi ve teknik servis süreci hakkında bilgi alabilirsiniz.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3 lg:justify-end">
           <a
             href="/markalar/"
-            class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+            class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
           >
-            Marka ve Model Listesi
+            Markalara Git
           </a>
 
           <a
             href="/iletisim/"
             class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
           >
-            İletişim
+            Servis Talebi Oluştur
           </a>
         </div>
       </div>
-
-      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 class="text-xl font-semibold text-slate-900">Verdiğimiz Hizmetler</h2>
-
-        <div class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <div class="rounded-2xl border border-slate-200 p-4">
-            <h3 class="font-semibold text-slate-900">Panel Değişimi</h3>
-            <p class="mt-2 text-sm text-slate-600">
-              Kırık ekran, panel çatlağı ve görüntü kaybı sorunlarında panel değişimi yapılır.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-slate-200 p-4">
-            <h3 class="font-semibold text-slate-900">LED Değişimi</h3>
-            <p class="mt-2 text-sm text-slate-600">
-              Arka aydınlatma arızalarında LED değişimi ve aydınlatma onarımı yapılır.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-slate-200 p-4">
-            <h3 class="font-semibold text-slate-900">LED Reflektör Değişimi</h3>
-            <p class="mt-2 text-sm text-slate-600">
-              Ekranda ışık lekesi ve dengesiz aydınlatma sorunlarında reflektör onarımı yapılır.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-slate-200 p-4">
-            <h3 class="font-semibold text-slate-900">TV PSU Tamiri</h3>
-            <p class="mt-2 text-sm text-slate-600">
-              Güç kartı arızalarında tamir veya kart değişimi hizmeti verilir.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-slate-200 p-4 sm:col-span-2">
-            <h3 class="font-semibold text-slate-900">TV Anakart Tamiri</h3>
-            <p class="mt-2 text-sm text-slate-600">
-              Açılmama, görüntü vermeme, port arızaları ve anakart kaynaklı sorunlarda teknik destek sağlanır.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="border-y border-slate-200 bg-slate-50">
-    <div class="mx-auto max-w-6xl px-4 py-12">
-      <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <div class="rounded-2xl bg-white p-6 shadow-sm">
-          <h2 class="text-lg font-semibold text-slate-900">Servis Bölgeleri</h2>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            Ümraniye, Kadıköy, Üsküdar, Çekmeköy, Maltepe, Sancaktepe,
-            Samandıra, Sultanbeyli, Ataşehir, Kartal, Pendik ve çevre bölgeler
-            başta olmak üzere İstanbul genelinden cihaz kabul edilmektedir.
-          </p>
-        </div>
-
-        <div class="rounded-2xl bg-white p-6 shadow-sm">
-          <h2 class="text-lg font-semibold text-slate-900">Servis Notu</h2>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            Müşteriler cihazlarını servis noktasına getirebilir. Yerinde servis,
-            yol ve servis ücreti için önceden iletişim kurulması gerekmektedir.
-          </p>
-        </div>
-
-        <div class="rounded-2xl bg-white p-6 shadow-sm">
-          <h2 class="text-lg font-semibold text-slate-900">Model Bazlı Arama</h2>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            Marka ve model sayfalarımız üzerinden televizyon modelinizi
-            bularak panel değişimi, LED arızası, PSU ve anakart tamiri için
-            bilgi alabilirsiniz.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-6xl px-4 py-12">
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
-      <a href="/istanbul-tv-servisi/" class="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50">
-        <h2 class="font-semibold text-slate-900">İstanbul TV Servisi</h2>
-        <p class="mt-2 text-sm text-slate-600">
-          İstanbul genelinde TV tamiri ve panel değişimi hizmeti.
-        </p>
-      </a>
-
-      <a href="/umraniye-tv-servisi/" class="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50">
-        <h2 class="font-semibold text-slate-900">Ümraniye TV Servisi</h2>
-        <p class="mt-2 text-sm text-slate-600">
-          Ümraniye ve çevresine özel teknik servis içerikleri.
-        </p>
-      </a>
-
-      <a href="/kadikoy-tv-servisi/" class="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50">
-        <h2 class="font-semibold text-slate-900">Kadıköy TV Servisi</h2>
-        <p class="mt-2 text-sm text-slate-600">
-          Kadıköy bölgesine yönelik TV panel ve LED tamiri hizmeti.
-        </p>
-      </a>
-
-      <a href="/markalar/" class="rounded-2xl border border-slate-200 p-5 hover:bg-slate-50">
-        <h2 class="font-semibold text-slate-900">Marka ve Modeller</h2>
-        <p class="mt-2 text-sm text-slate-600">
-          TV markaları ve model bazlı teknik destek sayfaları.
-        </p>
-      </a>
     </div>
   </section>
 </BaseLayout>

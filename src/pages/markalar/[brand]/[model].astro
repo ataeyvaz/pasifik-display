@@ -51,47 +51,65 @@ const description =
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
-  <section class="mx-auto max-w-6xl px-4 py-10">
-    <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
-      <ol class="flex flex-wrap gap-2">
-        <li class="flex items-center gap-2">
-          <a class="hover:text-slate-800" href="/">Ana Sayfa</a>
-          <span class="opacity-40">/</span>
-        </li>
-        <li class="flex items-center gap-2">
-          <a class="hover:text-slate-800" href="/markalar/">Markalar</a>
-          <span class="opacity-40">/</span>
-        </li>
-        <li class="flex items-center gap-2">
-          <a class="hover:text-slate-800" href={`/markalar/${brand.slug}/`}>{brand.name}</a>
-          <span class="opacity-40">/</span>
-        </li>
-        <li class="flex items-center gap-2">
-          <a class="hover:text-slate-800" href={canonical}>{model.modelCode}</a>
-        </li>
-      </ol>
-    </nav>
+  <section class="border-b border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-10">
+      <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
+        <ol class="flex flex-wrap gap-2">
+          <li class="flex items-center gap-2">
+            <a class="hover:text-slate-800" href="/">Ana Sayfa</a>
+            <span class="opacity-40">/</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <a class="hover:text-slate-800" href="/markalar/">Markalar</a>
+            <span class="opacity-40">/</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <a class="hover:text-slate-800" href={`/markalar/${brand.slug}/`}>{brand.name}</a>
+            <span class="opacity-40">/</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <a class="hover:text-slate-800" href={canonical}>{model.modelCode}</a>
+          </li>
+        </ol>
+      </nav>
 
-    <header class="mt-4 max-w-4xl">
-      <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
-        İstanbul Ümraniye Tepeüstü Teknik Servis
-      </p>
+      <div class="mt-6 max-w-4xl">
+        <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+          İstanbul Ümraniye Tepeüstü Teknik Servis
+        </p>
 
-      <h1 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-        {brand.name} {model.modelCode} TV Panel Değişimi
-      </h1>
+        <h1 class="text-4xl font-bold tracking-tight text-slate-900">
+          {brand.name} {model.modelCode} TV Panel Değişimi
+        </h1>
 
-      <p class="mt-4 text-base leading-8 text-slate-600">
-        {brand.name} {model.modelCode} televizyon modelinde ekran kırılması,
-        görüntü gitmesi, panel çatlağı, arka aydınlatma arızası ve kart kaynaklı
-        sorunlarda teknik servis desteği verilmektedir. Pasifik Display Teknik Servis,
-        İstanbul Ümraniye Tepeüstü merkezli olarak Anadolu Yakası başta olmak üzere
-        İstanbul genelinden cihaz kabul etmektedir.
-      </p>
-    </header>
+        <p class="mt-4 text-lg leading-8 text-slate-600">
+          {brand.name} {model.modelCode} televizyon modelinde ekran kırılması,
+          görüntü gitmesi, panel çatlağı, arka aydınlatma arızası ve kart kaynaklı
+          sorunlarda teknik servis desteği verilmektedir.
+        </p>
 
-    <div class="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
-      <div class="lg:col-span-2 space-y-6">
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="/iletisim/"
+            class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+          >
+            Servis Talebi Oluştur
+          </a>
+
+          <a
+            href={`/markalar/${brand.slug}/`}
+            class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+          >
+            {brand.name} Modellerine Dön
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-12">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div class="space-y-6 lg:col-span-2">
         <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 class="text-2xl font-semibold text-slate-900">Bu Model İçin Verilen Hizmetler</h2>
 
@@ -121,18 +139,10 @@ const description =
             </div>
 
             <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="font-semibold text-slate-900">TV PSU Tamiri veya Değişimi</h3>
+              <h3 class="font-semibold text-slate-900">PSU ve Anakart Tamiri</h3>
               <p class="mt-2 text-sm leading-7 text-slate-600">
-                Güç kartı arızalarında teknik kontrol sonrası PSU tamiri veya
-                değişimi uygulanmaktadır.
-              </p>
-            </div>
-
-            <div class="rounded-2xl border border-slate-200 p-4 md:col-span-2">
-              <h3 class="font-semibold text-slate-900">TV Anakart Tamiri veya Değişimi</h3>
-              <p class="mt-2 text-sm leading-7 text-slate-600">
-                Açılmama, görüntü vermeme, HDMI sorunları ve anakart kaynaklı
-                arızalarda tamir veya değişim hizmeti verilmektedir.
+                Güç kartı ve anakart kaynaklı arızalarda teknik kontrol sonrası
+                tamir veya değişim uygulanmaktadır.
               </p>
             </div>
           </div>
@@ -191,11 +201,7 @@ const description =
       <aside class="space-y-6">
         <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h3 class="text-lg font-semibold text-slate-900">İletişim</h3>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            WhatsApp, telefon ve konum bilgileri netleştiğinde bu alana eklenecek.
-          </p>
-
-          <div class="mt-5 space-y-3">
+          <div class="mt-4 space-y-3">
             <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
               WhatsApp: Buraya numara eklenecek
             </div>
@@ -212,31 +218,28 @@ const description =
           <h3 class="text-lg font-semibold text-slate-900">Servis Bölgeleri</h3>
           <p class="mt-3 text-sm leading-7 text-slate-600">
             Ümraniye, Kadıköy, Üsküdar, Çekmeköy, Maltepe, Sancaktepe,
-            Samandıra, Sultanbeyli ve yakın çevre bölgelerden servis talepleri
-            değerlendirilmektedir.
+            Sultanbeyli, Ataşehir ve yakın çevre bölgelerden servis talepleri değerlendirilmektedir.
           </p>
         </section>
 
         <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-slate-900">Geri Dön</h3>
+          <h3 class="text-lg font-semibold text-slate-900">Hızlı Linkler</h3>
           <div class="mt-4 flex flex-col gap-3">
             <a
-              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
-              href={`/markalar/${brand.slug}/`}
-            >
-              ← {brand.name} modelleri
-            </a>
-
-            <a
-              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
               href="/hizmetler/"
+              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
             >
               Hizmetler
             </a>
-
             <a
+              href={`/markalar/${brand.slug}/`}
               class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+            >
+              {brand.name} Modelleri
+            </a>
+            <a
               href="/iletisim/"
+              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
             >
               İletişim
             </a>
