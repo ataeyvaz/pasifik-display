@@ -15,14 +15,14 @@ const { items } = Astro.props;
         <>
           <li>
             {item.href && !isLast ? (
-              <a class="hover:text-primary-500" href={item.href}>{item.label}</a>
+              <a class="hover:text-slate-700" href={item.href}>{item.label}</a>
             ) : (
               <span class={isLast ? "text-gray-900 font-medium" : ""} aria-current={isLast ? "page" : undefined}>
                 {item.label}
               </span>
             )}
           </li>
-          {!isLast ? <li class="px-1">â€º</li> : null}
+          {!isLast ? <li class="px-1 text-slate-400">&rsaquo;</li> : null}
         </>
       );
     })}

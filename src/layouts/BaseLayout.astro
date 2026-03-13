@@ -1,5 +1,6 @@
-﻿---
+---
 import Footer from "../components/site/Footer.astro";
+import Header from "../components/site/Header.astro";
 
 const {
   title = "Pasifik Display Teknik Servis",
@@ -33,10 +34,10 @@ const canonicalAbs =
   </head>
 
   <body class="min-h-screen bg-white text-slate-900">
+    <Header />
     <main>
       <slot />
     </main>
-
     <Footer />
   </body>
 </html>

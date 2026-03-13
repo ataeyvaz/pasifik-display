@@ -1,26 +1,20 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import {
-  getBrandBySlug,
-  getModel,
-  getModelsForBrand,
-  getPanelsForModel,
-  getAllBrands
-} from "../../../lib/data";
+import Breadcrumb from "../../../components/seo/Breadcrumb.astro";
+import { getBrandBySlug, getModelsForBrand, getAllBrands } from "../../../lib/data";
 
 export async function getStaticPaths() {
-  const paths: { params: { brand: string; model: string } }[] = [];
   const brands = getAllBrands();
-  const isDev = import.meta.env.DEV;
-  const DEV_MODELS_PER_BRAND = 8;
+  const paths: { params: { brand: string; model: string } }[] = [];
 
-  for (const b of brands) {
-    const models = getModelsForBrand(b.slug);
-    const slice = isDev ? models.slice(0, DEV_MODELS_PER_BRAND) : models;
-
-    for (const m of slice) {
+  for (const brand of brands) {
+    const models = getModelsForBrand(brand.slug);
+    for (const model of models) {
       paths.push({
-        params: { brand: b.slug, model: m.slug },
+        params: {
+          brand: brand.slug,
+          model: model.slug,
+        },
       });
     }
   }
@@ -28,224 +22,182 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const brandSlug = Astro.params.brand;
-const modelSlug = Astro.params.model;
+const { brand: brandSlug, model: modelSlug } = Astro.params;
 
 if (!brandSlug || !modelSlug) {
   return new Response("Not found", { status: 404 });
 }
 
 const brand = getBrandBySlug(brandSlug);
-const model = getModel(brandSlug, modelSlug);
-
-if (!brand || !model) {
+if (!brand) {
   return new Response("Not found", { status: 404 });
 }
 
-const panels = getPanelsForModel(brandSlug, modelSlug);
+const allModels = getModelsForBrand(brandSlug);
+const model = allModels.find((m) => m.slug === modelSlug);
+
+if (!model) {
+  return new Response("Not found", { status: 404 });
+}
 
 const canonical = `/markalar/${brandSlug}/${modelSlug}/`;
-const title = `${brand.name} ${model.modelCode} TV Panel Değişimi | İstanbul Ümraniye Servisi`;
-const description =
-  `${brand.name} ${model.modelCode} televizyon modeli için panel değişimi, LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri hizmetleri. Pasifik Display Teknik Servis İstanbul Ümraniye Tepeüstü merkezlidir.`;
+const title = `${model.modelCode} Panel Değişimi | ${brand.name} TV Servis | Pasifik Display`;
+const description = `${brand.name} ${model.modelCode} televizyon için panel değişimi, LED arızası, PSU ve anakart tamiri hizmetleri. İstanbul Ümraniye Tepeüstü - Pasifik Display Teknik Servis.`;
+
+const breadcrumbItems = [
+  { label: "Ana Sayfa", href: "/" },
+  { label: "Markalar", href: "/markalar/" },
+  { label: brand.name, href: `/markalar/${brandSlug}/` },
+  { label: model.modelCode },
+];
+
+const whatsappText = encodeURIComponent(
+  `Merhaba, ${brand.name} ${model.modelCode} modelim için servis hizmeti almak istiyorum.`
+);
+const whatsappHref = `https://wa.me/905444868748?text=${whatsappText}`;
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
+
+  <!-- Breadcrumb -->
+  <div class="mx-auto max-w-6xl px-4 pt-6">
+    <Breadcrumb items={breadcrumbItems} />
+  </div>
+
+  <!-- Hero -->
   <section class="border-b border-slate-200 bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-10">
-      <nav aria-label="Breadcrumb" class="text-sm text-slate-500">
-        <ol class="flex flex-wrap gap-2">
-          <li class="flex items-center gap-2">
-            <a class="hover:text-slate-800" href="/">Ana Sayfa</a>
-            <span class="opacity-40">/</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <a class="hover:text-slate-800" href="/markalar/">Markalar</a>
-            <span class="opacity-40">/</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <a class="hover:text-slate-800" href={`/markalar/${brand.slug}/`}>{brand.name}</a>
-            <span class="opacity-40">/</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <a class="hover:text-slate-800" href={canonical}>{model.modelCode}</a>
-          </li>
-        </ol>
-      </nav>
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
 
-      <div class="mt-6 max-w-4xl">
-        <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
-          İstanbul Ümraniye Tepeüstü Teknik Servis
-        </p>
+        <!-- Sol: Başlık ve bilgi -->
+        <div>
+          <p class="mb-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
+            {brand.name} · Model Bazlı Servis Sayfası
+          </p>
 
-        <h1 class="text-4xl font-bold tracking-tight text-slate-900">
-          {brand.name} {model.modelCode} TV Panel Değişimi
-        </h1>
+          <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+            {brand.name} {model.modelCode}
+          </h1>
 
-        <p class="mt-4 text-lg leading-8 text-slate-600">
-          {brand.name} {model.modelCode} televizyon modelinde ekran kırılması,
-          görüntü gitmesi, panel çatlağı, arka aydınlatma arızası ve kart kaynaklı
-          sorunlarda teknik servis desteği verilmektedir.
-        </p>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            {brand.name} {model.modelCode} modeliniz için panel değişimi, LED arızası,
+            LED reflektör değişimi, PSU tamiri ve anakart tamiri hizmetleri
+            sunulmaktadır. İstanbul genelinden cihaz kabul edilmektedir.
+          </p>
 
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a
-            href="/iletisim/"
-            class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
-          >
-            Servis Talebi Oluştur
-          </a>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L.057 23.428a.75.75 0 0 0 .916.916l5.573-1.467A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.712 9.712 0 0 1-4.953-1.354l-.355-.212-3.678.968.984-3.595-.232-.37A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+              </svg>
+              WhatsApp ile Servis Talebi
+            </a>
 
-          <a
-            href={`/markalar/${brand.slug}/`}
-            class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
-          >
-            {brand.name} Modellerine Dön
-          </a>
+            <a
+              href="/iletisim/"
+              class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+            >
+              İletişim Formu
+            </a>
+          </div>
+        </div>
+
+        <!-- Sağ: Servis kartı -->
+        <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm lg:p-8">
+
+          <!-- Model bilgisi -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-5">
+            <h2 class="text-base font-semibold text-slate-900">Model Bilgisi</h2>
+            <dl class="mt-4 space-y-3 text-sm">
+              <div class="flex items-center justify-between">
+                <dt class="text-slate-500">Marka</dt>
+                <dd class="font-medium text-slate-900">{brand.name}</dd>
+              </div>
+              <div class="flex items-center justify-between">
+                <dt class="text-slate-500">Model Kodu</dt>
+                <dd class="font-mono font-semibold text-slate-900">{model.modelCode}</dd>
+              </div>
+              <div class="flex items-center justify-between">
+                <dt class="text-slate-500">Cihaz Tipi</dt>
+                <dd class="font-medium text-slate-900">Televizyon</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Servis notu -->
+          <div class="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+            <h2 class="text-base font-semibold text-amber-900">Servis Notu</h2>
+            <p class="mt-2 text-sm leading-6 text-amber-800">
+              Panel uyumluluk bilgisi için cihazınızın seri numarasıyla
+              WhatsApp üzerinden iletişime geçiniz. Teknik ekibimiz en kısa
+              sürede bilgi verecektir.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mx-auto max-w-6xl px-4 py-12">
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-      <div class="space-y-6 lg:col-span-2">
-        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 class="text-2xl font-semibold text-slate-900">Bu Model İçin Verilen Hizmetler</h2>
+  <!-- Hizmetler -->
+  <section class="mx-auto max-w-6xl px-4 py-14">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900">
+        {brand.name} {model.modelCode} için Servis Hizmetleri
+      </h2>
+      <p class="mt-2 text-base text-slate-600">
+        Bu model için sunduğumuz teknik servis hizmetleri aşağıda listelenmiştir.
+      </p>
+    </div>
 
-          <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="font-semibold text-slate-900">Panel Değişimi</h3>
-              <p class="mt-2 text-sm leading-7 text-slate-600">
-                Ekran kırılması, panel çatlağı veya görüntü kaybı sorunlarında
-                panel değişimi hizmeti sunulmaktadır.
-              </p>
-            </div>
-
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="font-semibold text-slate-900">LED Değişimi</h3>
-              <p class="mt-2 text-sm leading-7 text-slate-600">
-                Ses var görüntü yok, karanlık ekran ve arka aydınlatma problemlerinde
-                LED değişimi yapılmaktadır.
-              </p>
-            </div>
-
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="font-semibold text-slate-900">LED Reflektör Değişimi</h3>
-              <p class="mt-2 text-sm leading-7 text-slate-600">
-                Parlak leke, ışık izi ve aydınlatma dengesizliği sorunlarında
-                LED reflektör onarımı yapılmaktadır.
-              </p>
-            </div>
-
-            <div class="rounded-2xl border border-slate-200 p-4">
-              <h3 class="font-semibold text-slate-900">PSU ve Anakart Tamiri</h3>
-              <p class="mt-2 text-sm leading-7 text-slate-600">
-                Güç kartı ve anakart kaynaklı arızalarda teknik kontrol sonrası
-                tamir veya değişim uygulanmaktadır.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 class="text-2xl font-semibold text-slate-900">Uyumlu Panel Bilgisi</h2>
-
-          {panels.length === 0 ? (
-            <div class="mt-4 rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-4">
-              <p class="text-sm text-slate-700">
-                Bu model için doğrulanmış panel kaydı henüz eklenmemiştir.
-              </p>
-              <p class="mt-2 text-sm text-slate-600">
-                Panel uygunluğu, arıza tipi ve cihaz durumu teknik inceleme sonrası netleştirilebilir.
-              </p>
-            </div>
-          ) : (
-            <div class="mt-5 overflow-hidden rounded-2xl border border-slate-200">
-              <table class="w-full text-sm">
-                <thead class="bg-slate-50 text-left text-slate-600">
-                  <tr>
-                    <th class="px-4 py-3 font-medium">Panel Kodu</th>
-                    <th class="px-4 py-3 font-medium">Güven</th>
-                    <th class="px-4 py-3 font-medium">Not</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {panels.map((p) => (
-                    <tr class="border-t border-slate-200">
-                      <td class="px-4 py-3 font-mono text-slate-900">{p.panelCode}</td>
-                      <td class="px-4 py-3">
-                        <span class="inline-flex rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-700">
-                          {p.confidence ?? "medium"}
-                        </span>
-                      </td>
-                      <td class="px-4 py-3 text-slate-700">{p.note ?? "-"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </section>
-
-        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 class="text-2xl font-semibold text-slate-900">Servis Süreci</h2>
-          <p class="mt-4 text-sm leading-8 text-slate-600">
-            Müşteriler cihazlarını servis merkezimize getirebilir. Yerinde servis,
-            yol ve servis ücreti için önceden iletişim kurulması gerekmektedir.
-            İşlem öncesinde model, arıza tipi ve parça durumu değerlendirilir.
-          </p>
-        </section>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-slate-900">Panel Değişimi</h3>
+        <p class="mt-3 text-sm leading-7 text-slate-600">
+          Ekran kırılması, iç panel çatlağı, görüntü gitmesi ve dikey/yatay
+          çizgi sorunlarında orijinal veya uyumlu panel değişimi yapılır.
+        </p>
       </div>
 
-      <aside class="space-y-6">
-        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-slate-900">İletişim</h3>
-          <div class="mt-4 space-y-3">
-            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
-              WhatsApp: Buraya numara eklenecek
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
-              Telefon: Buraya telefon numarası eklenecek
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-4 text-sm text-slate-700">
-              Konum: Buraya Google Maps linki eklenecek
-            </div>
-          </div>
-        </section>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-slate-900">LED ve Reflektör</h3>
+        <p class="mt-3 text-sm leading-7 text-slate-600">
+          Karanlık ekran, parlak leke ve ışık dengesizliği gibi problemler için
+          LED şerit değişimi ve reflektör işlemleri uygulanır.
+        </p>
+      </div>
 
-        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-slate-900">Servis Bölgeleri</h3>
-          <p class="mt-3 text-sm leading-7 text-slate-600">
-            Ümraniye, Kadıköy, Üsküdar, Çekmeköy, Maltepe, Sancaktepe,
-            Sultanbeyli, Ataşehir ve yakın çevre bölgelerden servis talepleri değerlendirilmektedir.
-          </p>
-        </section>
-
-        <section class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-slate-900">Hızlı Linkler</h3>
-          <div class="mt-4 flex flex-col gap-3">
-            <a
-              href="/hizmetler/"
-              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
-            >
-              Hizmetler
-            </a>
-            <a
-              href={`/markalar/${brand.slug}/`}
-              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
-            >
-              {brand.name} Modelleri
-            </a>
-            <a
-              href="/iletisim/"
-              class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
-            >
-              İletişim
-            </a>
-          </div>
-        </section>
-      </aside>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-slate-900">PSU ve Anakart</h3>
+        <p class="mt-3 text-sm leading-7 text-slate-600">
+          Açılmama, görüntü vermeme ve enerji sorunlarında güç kartı (PSU) ve
+          anakart tamiri veya değişim hizmeti verilir.
+        </p>
+      </div>
     </div>
   </section>
+
+  <!-- Diğer modeller -->
+  <section class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-10">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold text-slate-900">
+          {brand.name} Diğer Modeller
+        </h2>
+        <a
+          href={`/markalar/${brandSlug}/`}
+          class="text-sm font-medium text-slate-600 hover:text-slate-900"
+        >
+          Tümünü gör →
+        </a>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>

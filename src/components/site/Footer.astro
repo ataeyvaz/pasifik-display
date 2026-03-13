@@ -1,5 +1,8 @@
-﻿---
+---
 const year = new Date().getFullYear();
+const phone = "905444868748";
+const phoneDisplay = "+90 544 486 87 48";
+const whatsappHref = `https://wa.me/${phone}?text=Merhaba%2C%20TV%20servis%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.`;
 ---
 
 <footer class="mt-16 border-t border-slate-200 bg-slate-50">
@@ -14,6 +17,22 @@ const year = new Date().getFullYear();
           LED değişimi, LED reflektör değişimi, TV PSU tamiri ve TV anakart tamiri
           hizmetleri sunmaktadır.
         </p>
+        <div class="mt-4 flex flex-col gap-2">
+          <a
+            href={`tel:${phoneDisplay.replace(/\s/g, "")}`}
+            class="inline-flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900"
+          >
+            📞 {phoneDisplay}
+          </a>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-medium text-emerald-700 hover:text-emerald-900"
+          >
+            💬 WhatsApp ile Yaz
+          </a>
+        </div>
       </div>
 
       <div>
