@@ -1,11 +1,13 @@
 ---
+import SearchBar from './SearchBar.astro';
+
 const phone = "905444868748";
 const whatsappHref = `https://wa.me/${phone}?text=Merhaba%2C%20TV%20servis%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.`;
 ---
 
 <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-    <a href="/" class="flex items-center gap-3">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+    <a href="/" class="flex items-center gap-3 flex-shrink-0">
       <span class="text-2xl font-bold tracking-tight text-slate-900">
         Pasifik Display
       </span>
@@ -14,7 +16,7 @@ const whatsappHref = `https://wa.me/${phone}?text=Merhaba%2C%20TV%20servis%20hak
       </span>
     </a>
 
-    <nav class="hidden items-center gap-8 md:flex">
+    <nav class="hidden items-center gap-8 md:flex flex-shrink-0">
       <a href="/markalar/" class="text-sm font-medium text-slate-700 hover:text-slate-900">
         Markalar
       </a>
@@ -29,14 +31,12 @@ const whatsappHref = `https://wa.me/${phone}?text=Merhaba%2C%20TV%20servis%20hak
       </a>
     </nav>
 
-    <div class="flex items-center gap-3">
-      <a
-        href="/markalar/"
-        class="hidden rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 sm:inline-flex"
-      >
-        Markalar
-      </a>
+    <!-- Arama Kutusu -->
+    <div class="flex-1 hidden md:block">
+      <SearchBar variant="light" />
+    </div>
 
+    <div class="flex items-center gap-3 flex-shrink-0">
       <a
         href={whatsappHref}
         target="_blank"

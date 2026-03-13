@@ -1,0 +1,337 @@
+---
+// src/components/site/SearchBar.astro
+// Header'da kullanım: <SearchBar variant="light" />
+// Koyu arka plan için: <SearchBar /> (varsayılan)
+
+const { variant = "dark" } = Astro.props;
+
+const inputClass = variant === "light"
+  ? "w-full pl-9 pr-9 py-2 text-sm bg-gray-100 text-gray-800 placeholder-gray-400 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white transition-all"
+  : "w-full pl-9 pr-9 py-2 text-sm bg-white/10 text-white placeholder-gray-300 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/40 focus:bg-white/20 transition-all";
+
+const iconClass = variant === "light" ? "text-gray-400" : "text-gray-400";
+const clearClass = variant === "light"
+  ? "absolute inset-y-0 right-2 flex items-center text-gray-400 hover:text-gray-700 hidden"
+  : "absolute inset-y-0 right-2 flex items-center text-gray-400 hover:text-white hidden";
+---
+
+<div id="search-wrapper" class="relative w-full max-w-sm">
+  <div class="relative">
+    <span class={`absolute inset-y-0 left-3 flex items-center pointer-events-none ${iconClass}`}>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+      </svg>
+    </span>
+    <input
+      id="search-input"
+      type="text"
+      placeholder="Model ara: UE55NU7100..."
+      autocomplete="off"
+      spellcheck="false"
+      class={inputClass}
+    />
+    <button id="search-clear" class={clearClass} aria-label="Aramayı temizle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <div
+    id="search-dropdown"
+    class="hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50 max-h-96 overflow-y-auto"
+    style="min-width: 340px;"
+  >
+    <!-- Format tespiti bandı -->
+    <div id="search-format-hint" class="hidden px-4 py-2 bg-blue-50 border-b border-blue-100 text-xs text-blue-700 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2z"/>
+      </svg>
+      <span id="search-format-text"></span>
+    </div>
+
+    <!-- Filtreler -->
+    <div class="px-3 py-2 bg-gray-50 border-b border-gray-100 flex gap-2 flex-wrap items-center">
+      <span class="text-xs text-gray-400">Filtrele:</span>
+      <select id="filter-brand" class="text-xs border border-gray-200 rounded-md px-2 py-1 bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-400">
+        <option value="">Tüm markalar</option>
+      </select>
+      <select id="filter-size" class="text-xs border border-gray-200 rounded-md px-2 py-1 bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-400">
+        <option value="">Tüm boyutlar</option>
+        <option value="24">24"</option>
+        <option value="32">32"</option>
+        <option value="40">40"</option>
+        <option value="43">43"</option>
+        <option value="49">49"</option>
+        <option value="50">50"</option>
+        <option value="55">55"</option>
+        <option value="65">65"</option>
+        <option value="75">75"</option>
+      </select>
+    </div>
+
+    <!-- Sonuçlar -->
+    <ul id="search-results" class="divide-y divide-gray-50"></ul>
+
+    <!-- Boş durum -->
+    <div id="search-empty" class="hidden px-4 py-6 text-center">
+      <div class="text-3xl mb-2">🔍</div>
+      <p class="text-sm font-medium text-gray-700">Sonuç bulunamadı</p>
+      <p class="text-xs text-gray-400 mt-1">Model numarasını veya marka adını deneyin</p>
+    </div>
+
+    <!-- Daha fazla -->
+    <div id="search-more" class="hidden px-4 py-2 bg-gray-50 border-t border-gray-100 text-center">
+      <span class="text-xs text-gray-500"></span>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+var INDEX_URL   = "/search-index.json";
+var MAX_RESULTS = 8;
+var DEBOUNCE_MS = 180;
+
+var BRAND_PATTERNS = {
+  "Samsung":    /^(UE|UN|QE|QN|LS|LH)\d{2}[A-Z]{1,4}\d{3,5}[A-Z0-9]*$/i,
+  "Philips":    /^\d{2,3}(P[UFHML][SKCT]\d{4}|PFL\d{4}|PML\d{4}|FK\d{4}|OLED\d{3})(\/\d{2})?$/i,
+  "LG":         /^(\d{2,3}[A-Z]{2,4}\d{3,5}[A-Z0-9]*|OLED\d{2}[A-Z]\d[A-Z0-9]*)$/i,
+  "Sony":       /^(KD-|KDL-|XR-|KV-)\d{2}[A-Z0-9]+$/i,
+  "Vestel":     /^\d{2}[A-Z]{1,3}\d{4,5}[A-Z]?$/i,
+  "Arcelik":    /^\d{2}[A-Z]\d{3,4}[A-Z0-9]*$/i,
+  "Beko":       /^B\d{2}[A-Z]\d{3,5}[A-Z0-9]*$/i,
+  "Grundig":    /^\d{2}[GV][A-Z]{2}\d{4}[A-Z0-9]*$/i,
+  "Hisense":    /^\d{2}[A-Z]\d[A-Z]{1,3}[A-Z0-9]*$/i,
+  "Toshiba":    /^\d{2}([A-Z]{2}\d[A-Z]\d{2}|[A-Z]\d{4})DT$/i,
+  "TCL":        /^\d{2}[A-Z]\d{2,4}[A-Z0-9]*$/i,
+  "Telefunken": /^\d{2}[A-Z]{2}\d{4}[A-Z]?$/i,
+};
+
+var searchIndex   = null;
+var fuseInstance  = null;
+var debounceTimer = null;
+var activeIndex   = -1;
+
+var input       = document.getElementById("search-input");
+var dropdown    = document.getElementById("search-dropdown");
+var resultsList = document.getElementById("search-results");
+var emptyEl     = document.getElementById("search-empty");
+var moreEl      = document.getElementById("search-more");
+var clearBtn    = document.getElementById("search-clear");
+var formatHint  = document.getElementById("search-format-hint");
+var formatText  = document.getElementById("search-format-text");
+var filterBrand = document.getElementById("filter-brand");
+var filterSize  = document.getElementById("filter-size");
+
+function loadIndex() {
+  if (searchIndex) return Promise.resolve();
+  return fetch(INDEX_URL)
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      searchIndex = data;
+      var brands = [];
+      data.forEach(function(e) {
+        if (brands.indexOf(e.brand) < 0) brands.push(e.brand);
+      });
+      brands.sort().forEach(function(b) {
+        var opt = document.createElement("option");
+        opt.value = b;
+        opt.textContent = b;
+        filterBrand.appendChild(opt);
+      });
+      return loadFuse();
+    })
+    .then(function() { initFuse(); })
+    .catch(function(e) { console.error("Index yuklenemedi:", e); });
+}
+
+function loadFuse() {
+  if (window["Fuse"]) return Promise.resolve();
+  return new Promise(function(resolve, reject) {
+    var s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js";
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+function initFuse() {
+  fuseInstance = new window["Fuse"](searchIndex, {
+    keys: [
+      { name: "modelCode",  weight: 0.7 },
+      { name: "modelLower", weight: 0.7 },
+      { name: "brand",      weight: 0.3 },
+    ],
+    threshold: 0.3,
+    includeScore: true,
+    ignoreLocation: true,
+    minMatchCharLength: 2,
+  });
+}
+
+function detectFormat(query) {
+  if (query.length < 4) return null;
+  var q = query.toUpperCase();
+  var matches = [];
+  Object.keys(BRAND_PATTERNS).forEach(function(brand) {
+    if (BRAND_PATTERNS[brand].test(q)) matches.push(brand);
+  });
+  return matches.length > 0 ? matches : null;
+}
+
+function sizeLabel(size) {
+  if (!size) return "";
+  return '<span class="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-mono">' + size + '"</span>';
+}
+
+function highlight(text, query) {
+  if (!query) return text;
+  var idx = text.toLowerCase().indexOf(query.toLowerCase());
+  if (idx < 0) return text;
+  return text.slice(0, idx) +
+    '<mark class="bg-yellow-100 text-yellow-900 rounded px-0.5">' +
+    text.slice(idx, idx + query.length) +
+    "</mark>" +
+    text.slice(idx + query.length);
+}
+
+function doSearch() {
+  var raw   = input.value.trim();
+  var query = raw.toLowerCase();
+  var brand = filterBrand.value;
+  var size  = filterSize.value;
+
+  clearBtn.classList.toggle("hidden", raw.length === 0);
+
+  if (raw.length < 2 && !brand && !size) {
+    closeDropdown();
+    return;
+  }
+
+  var detected = query.length >= 4 ? detectFormat(raw) : null;
+  if (detected) {
+    formatText.textContent = "Seri no formatı: " + detected.join(", ") + " modeli olabilir";
+    formatHint.classList.remove("hidden");
+  } else {
+    formatHint.classList.add("hidden");
+  }
+
+  var results = [];
+  if (fuseInstance && raw.length >= 2) {
+    results = fuseInstance.search(raw).map(function(r) { return r.item; });
+  } else if (searchIndex) {
+    results = searchIndex.slice();
+  }
+
+  if (brand) results = results.filter(function(r) { return r.brand === brand; });
+  if (size)  results = results.filter(function(r) { return r.size  === size; });
+
+  renderResults(results, raw);
+  openDropdown();
+}
+
+function renderResults(results, query) {
+  resultsList.innerHTML = "";
+  activeIndex = -1;
+  var shown = results.slice(0, MAX_RESULTS);
+
+  if (shown.length === 0) {
+    emptyEl.classList.remove("hidden");
+    moreEl.classList.add("hidden");
+    return;
+  }
+  emptyEl.classList.add("hidden");
+
+  shown.forEach(function(item, i) {
+    var li = document.createElement("li");
+    li.dataset.url = item.url;
+    li.className = "flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-blue-50 transition-colors";
+    li.innerHTML =
+      '<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">' +
+        '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">' +
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>' +
+        "</svg>" +
+      "</div>" +
+      '<div class="flex-1 min-w-0">' +
+        '<div class="flex items-center gap-2">' +
+          '<span class="font-mono text-sm font-semibold text-gray-900">' + highlight(item.modelCode, query) + "</span>" +
+          sizeLabel(item.size) +
+        "</div>" +
+        '<p class="text-xs text-gray-500">' + item.brand + "</p>" +
+      "</div>" +
+      '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">' +
+        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>' +
+      "</svg>";
+    li.addEventListener("click", function() { window.location.href = item.url; });
+    li.addEventListener("mouseenter", function() { setActive(i); });
+    resultsList.appendChild(li);
+  });
+
+  if (results.length > MAX_RESULTS) {
+    moreEl.classList.remove("hidden");
+    var span = moreEl.querySelector("span");
+    if (span) span.textContent = (results.length - MAX_RESULTS) + " sonuç daha — filtreyi daraltın";
+  } else {
+    moreEl.classList.add("hidden");
+  }
+}
+
+function setActive(idx) {
+  var items = resultsList.querySelectorAll("li");
+  items.forEach(function(li, i) { li.classList.toggle("bg-blue-50", i === idx); });
+  activeIndex = idx;
+}
+
+function openDropdown()  { dropdown.classList.remove("hidden"); }
+function closeDropdown() {
+  dropdown.classList.add("hidden");
+  formatHint.classList.add("hidden");
+}
+
+input.addEventListener("keydown", function(e) {
+  var items = resultsList.querySelectorAll("li");
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    setActive(Math.min(activeIndex + 1, items.length - 1));
+  } else if (e.key === "ArrowUp") {
+    e.preventDefault();
+    setActive(Math.max(activeIndex - 1, 0));
+  } else if (e.key === "Enter") {
+    var active = items[activeIndex];
+    if (activeIndex >= 0 && active && active.dataset.url) {
+      window.location.href = active.dataset.url;
+    }
+  } else if (e.key === "Escape") {
+    closeDropdown();
+    input.blur();
+  }
+});
+
+input.addEventListener("focus", function() {
+  loadIndex();
+  if (input.value.trim().length >= 2) openDropdown();
+});
+
+input.addEventListener("input", function() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(doSearch, DEBOUNCE_MS);
+});
+
+filterBrand.addEventListener("change", doSearch);
+filterSize.addEventListener("change", doSearch);
+
+clearBtn.addEventListener("click", function() {
+  input.value = "";
+  clearBtn.classList.add("hidden");
+  closeDropdown();
+  input.focus();
+});
+
+document.addEventListener("click", function(e) {
+  var wrapper = document.getElementById("search-wrapper");
+  if (wrapper && e.target instanceof Node && !wrapper.contains(e.target)) {
+    closeDropdown();
+  }
+});
+</script>
