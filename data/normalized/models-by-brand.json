@@ -67,17 +67,6 @@
       }
     },
     {
-      "id": "arcelik:4654",
-      "brandId": "arcelik",
-      "modelCode": "4654",
-      "slug": "arcelik-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "arcelik:50A650",
       "brandId": "arcelik",
       "modelCode": "50A650",
@@ -144,33 +133,10 @@
       }
     },
     {
-      "id": "arcelik:KVKK",
-      "brandId": "arcelik",
-      "modelCode": "KVKK",
-      "slug": "arcelik-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "arcelik:42PFK6309/12",
       "brandId": "arcelik",
       "modelCode": "42PFK6309/12",
       "slug": "arcelik-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:4310",
-      "brandId": "arcelik",
-      "modelCode": "4310",
-      "slug": "arcelik-4310",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -263,162 +229,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "arcelik:5740",
-      "brandId": "arcelik",
-      "modelCode": "5740",
-      "slug": "arcelik-5740",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:5745",
-      "brandId": "arcelik",
-      "modelCode": "5745",
-      "slug": "arcelik-5745",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:5751",
-      "brandId": "arcelik",
-      "modelCode": "5751",
-      "slug": "arcelik-5751",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:5845",
-      "brandId": "arcelik",
-      "modelCode": "5845",
-      "slug": "arcelik-5845",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:5860",
-      "brandId": "arcelik",
-      "modelCode": "5860",
-      "slug": "arcelik-5860",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:6760",
-      "brandId": "arcelik",
-      "modelCode": "6760",
-      "slug": "arcelik-6760",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:6850",
-      "brandId": "arcelik",
-      "modelCode": "6850",
-      "slug": "arcelik-6850",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:6945",
-      "brandId": "arcelik",
-      "modelCode": "6945",
-      "slug": "arcelik-6945",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:8477",
-      "brandId": "arcelik",
-      "modelCode": "8477",
-      "slug": "arcelik-8477",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:8752",
-      "brandId": "arcelik",
-      "modelCode": "8752",
-      "slug": "arcelik-8752",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:8860",
-      "brandId": "arcelik",
-      "modelCode": "8860",
-      "slug": "arcelik-8860",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:8900",
-      "brandId": "arcelik",
-      "modelCode": "8900",
-      "slug": "arcelik-8900",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:9377",
-      "brandId": "arcelik",
-      "modelCode": "9377",
-      "slug": "arcelik-9377",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "arcelik:A32K",
       "brandId": "arcelik",
       "modelCode": "A32K",
@@ -467,30 +277,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "arcelik:PHILIPS",
-      "brandId": "arcelik",
-      "modelCode": "PHILIPS",
-      "slug": "arcelik-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:SAMSUNG",
-      "brandId": "arcelik",
-      "modelCode": "SAMSUNG",
-      "slug": "arcelik-samsung",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "arcelik:UE40JU6070U",
       "brandId": "arcelik",
       "modelCode": "UE40JU6070U",
@@ -516,17 +302,6 @@
     }
   ],
   "awox": [
-    {
-      "id": "awox:4654",
-      "brandId": "awox",
-      "modelCode": "4654",
-      "slug": "awox-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
     {
       "id": "awox:B224000FH",
       "brandId": "awox",
@@ -616,17 +391,6 @@
       }
     },
     {
-      "id": "awox:KVKK",
-      "brandId": "awox",
-      "modelCode": "KVKK",
-      "slug": "awox-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "awox:U223200",
       "brandId": "awox",
       "modelCode": "U223200",
@@ -650,17 +414,6 @@
     }
   ],
   "axen": [
-    {
-      "id": "axen:4654",
-      "brandId": "axen",
-      "modelCode": "4654",
-      "slug": "axen-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
     {
       "id": "axen:AX24LED09",
       "brandId": "axen",
@@ -770,42 +523,9 @@
         "zeroteknik": true,
         "solobu": false
       }
-    },
-    {
-      "id": "axen:KVKK",
-      "brandId": "axen",
-      "modelCode": "KVKK",
-      "slug": "axen-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
     }
   ],
   "beko": [
-    {
-      "id": "beko:4654",
-      "brandId": "beko",
-      "modelCode": "4654",
-      "slug": "beko-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "beko:8965",
-      "brandId": "beko",
-      "modelCode": "8965",
-      "slug": "beko-8965",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
     {
       "id": "beko:B24L",
       "brandId": "beko",
@@ -822,17 +542,6 @@
       "brandId": "beko",
       "modelCode": "B40K",
       "slug": "beko-b40k",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "beko:KVKK",
-      "brandId": "beko",
-      "modelCode": "KVKK",
-      "slug": "beko-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -936,210 +645,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "beko:5531",
-      "brandId": "beko",
-      "modelCode": "5531",
-      "slug": "beko-5531",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:5533",
-      "brandId": "beko",
-      "modelCode": "5533",
-      "slug": "beko-5533",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:5740",
-      "brandId": "beko",
-      "modelCode": "5740",
-      "slug": "beko-5740",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:6652",
-      "brandId": "beko",
-      "modelCode": "6652",
-      "slug": "beko-6652",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:6750",
-      "brandId": "beko",
-      "modelCode": "6750",
-      "slug": "beko-6750",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:6760",
-      "brandId": "beko",
-      "modelCode": "6760",
-      "slug": "beko-6760",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:8467",
-      "brandId": "beko",
-      "modelCode": "8467",
-      "slug": "beko-8467",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:8477",
-      "brandId": "beko",
-      "modelCode": "8477",
-      "slug": "beko-8477",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:8752",
-      "brandId": "beko",
-      "modelCode": "8752",
-      "slug": "beko-8752",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:8840",
-      "brandId": "beko",
-      "modelCode": "8840",
-      "slug": "beko-8840",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:8850",
-      "brandId": "beko",
-      "modelCode": "8850",
-      "slug": "beko-8850",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:8860",
-      "brandId": "beko",
-      "modelCode": "8860",
-      "slug": "beko-8860",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:8870",
-      "brandId": "beko",
-      "modelCode": "8870",
-      "slug": "beko-8870",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:9682",
-      "brandId": "beko",
-      "modelCode": "9682",
-      "slug": "beko-9682",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:9785",
-      "brandId": "beko",
-      "modelCode": "9785",
-      "slug": "beko-9785",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:9880",
-      "brandId": "beko",
-      "modelCode": "9880",
-      "slug": "beko-9880",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:9890",
-      "brandId": "beko",
-      "modelCode": "9890",
-      "slug": "beko-9890",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "beko:B40L",
       "brandId": "beko",
       "modelCode": "B40L",
@@ -1212,18 +717,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "beko:BEKO",
-      "brandId": "beko",
-      "modelCode": "BEKO",
-      "slug": "beko-beko",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "beko:OB55",
       "brandId": "beko",
       "modelCode": "OB55",
@@ -1240,30 +733,6 @@
       "brandId": "beko",
       "modelCode": "OLED",
       "slug": "beko-oled",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:PHILIPS",
-      "brandId": "beko",
-      "modelCode": "PHILIPS",
-      "slug": "beko-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:SAMSUNG",
-      "brandId": "beko",
-      "modelCode": "SAMSUNG",
-      "slug": "beko-samsung",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -1394,30 +863,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "blaupunkt:PHILIPS",
-      "brandId": "blaupunkt",
-      "modelCode": "PHILIPS",
-      "slug": "blaupunkt-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:SAMSUNG",
-      "brandId": "blaupunkt",
-      "modelCode": "SAMSUNG",
-      "slug": "blaupunkt-samsung",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "blaupunkt:UE40JU6070U",
       "brandId": "blaupunkt",
       "modelCode": "UE40JU6070U",
@@ -1488,32 +933,10 @@
       }
     },
     {
-      "id": "botech:4654",
-      "brandId": "botech",
-      "modelCode": "4654",
-      "slug": "botech-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "botech:65BSE8503",
       "brandId": "botech",
       "modelCode": "65BSE8503",
       "slug": "botech-65bse8503",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "botech:KVKK",
-      "brandId": "botech",
-      "modelCode": "KVKK",
-      "slug": "botech-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -1560,17 +983,6 @@
       "brandId": "finlux",
       "modelCode": "43FX720FA",
       "slug": "finlux-43fx720fa",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "finlux:4654",
-      "brandId": "finlux",
-      "modelCode": "4654",
-      "slug": "finlux-4654",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -1631,130 +1043,9 @@
         "zeroteknik": true,
         "solobu": false
       }
-    },
-    {
-      "id": "finlux:KVKK",
-      "brandId": "finlux",
-      "modelCode": "KVKK",
-      "slug": "finlux-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
     }
   ],
   "grundig": [
-    {
-      "id": "grundig:4654",
-      "brandId": "grundig",
-      "modelCode": "4654",
-      "slug": "grundig-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:6000",
-      "brandId": "grundig",
-      "modelCode": "6000",
-      "slug": "grundig-6000",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:6500",
-      "brandId": "grundig",
-      "modelCode": "6500",
-      "slug": "grundig-6500",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:6950",
-      "brandId": "grundig",
-      "modelCode": "6950",
-      "slug": "grundig-6950",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:7000",
-      "brandId": "grundig",
-      "modelCode": "7000",
-      "slug": "grundig-7000",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:7500",
-      "brandId": "grundig",
-      "modelCode": "7500",
-      "slug": "grundig-7500",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:7880",
-      "brandId": "grundig",
-      "modelCode": "7880",
-      "slug": "grundig-7880",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:8000",
-      "brandId": "grundig",
-      "modelCode": "8000",
-      "slug": "grundig-8000",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:8500",
-      "brandId": "grundig",
-      "modelCode": "8500",
-      "slug": "grundig-8500",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "grundig:KVKK",
-      "brandId": "grundig",
-      "modelCode": "KVKK",
-      "slug": "grundig-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
     {
       "id": "grundig:42PFK6309/12",
       "brandId": "grundig",
@@ -1784,18 +1075,6 @@
       "brandId": "grundig",
       "modelCode": "43PUS6401/12",
       "slug": "grundig-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:4537",
-      "brandId": "grundig",
-      "modelCode": "4537",
-      "slug": "grundig-4537",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -1864,42 +1143,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "grundig:5525",
-      "brandId": "grundig",
-      "modelCode": "5525",
-      "slug": "grundig-5525",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:5537",
-      "brandId": "grundig",
-      "modelCode": "5537",
-      "slug": "grundig-5537",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:5730",
-      "brandId": "grundig",
-      "modelCode": "5730",
-      "slug": "grundig-5730",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "grundig:5900B",
       "brandId": "grundig",
       "modelCode": "5900B",
@@ -1912,202 +1155,10 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "grundig:6535",
-      "brandId": "grundig",
-      "modelCode": "6535",
-      "slug": "grundig-6535",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "grundig:6700B",
       "brandId": "grundig",
       "modelCode": "6700B",
       "slug": "grundig-6700b",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:6730",
-      "brandId": "grundig",
-      "modelCode": "6730",
-      "slug": "grundig-6730",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:6830",
-      "brandId": "grundig",
-      "modelCode": "6830",
-      "slug": "grundig-6830",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:7730",
-      "brandId": "grundig",
-      "modelCode": "7730",
-      "slug": "grundig-7730",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:7810",
-      "brandId": "grundig",
-      "modelCode": "7810",
-      "slug": "grundig-7810",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:7900",
-      "brandId": "grundig",
-      "modelCode": "7900",
-      "slug": "grundig-7900",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:8586",
-      "brandId": "grundig",
-      "modelCode": "8586",
-      "slug": "grundig-8586",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:8589",
-      "brandId": "grundig",
-      "modelCode": "8589",
-      "slug": "grundig-8589",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:8600",
-      "brandId": "grundig",
-      "modelCode": "8600",
-      "slug": "grundig-8600",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:8650",
-      "brandId": "grundig",
-      "modelCode": "8650",
-      "slug": "grundig-8650",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:9750",
-      "brandId": "grundig",
-      "modelCode": "9750",
-      "slug": "grundig-9750",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:9800",
-      "brandId": "grundig",
-      "modelCode": "9800",
-      "slug": "grundig-9800",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:9900",
-      "brandId": "grundig",
-      "modelCode": "9900",
-      "slug": "grundig-9900",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:GRUNDIG",
-      "brandId": "grundig",
-      "modelCode": "GRUNDIG",
-      "slug": "grundig-grundig",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:PHILIPS",
-      "brandId": "grundig",
-      "modelCode": "PHILIPS",
-      "slug": "grundig-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:SAMSUNG",
-      "brandId": "grundig",
-      "modelCode": "SAMSUNG",
-      "slug": "grundig-samsung",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -2138,30 +1189,6 @@
         "solobu": true
       },
       "note": "Solobu başlığından otomatik çıkarım"
-    }
-  ],
-  "hi-level": [
-    {
-      "id": "hi-level:4654",
-      "brandId": "hi-level",
-      "modelCode": "4654",
-      "slug": "hi-level-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "hi-level:KVKK",
-      "brandId": "hi-level",
-      "modelCode": "KVKK",
-      "slug": "hi-level-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
     }
   ],
   "hisense": [
@@ -2243,17 +1270,6 @@
       }
     },
     {
-      "id": "hisense:4654",
-      "brandId": "hisense",
-      "modelCode": "4654",
-      "slug": "hisense-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "hisense:50A4BG",
       "brandId": "hisense",
       "modelCode": "50A4BG",
@@ -2307,41 +1323,6 @@
         "zeroteknik": true,
         "solobu": false
       }
-    },
-    {
-      "id": "hisense:KVKK",
-      "brandId": "hisense",
-      "modelCode": "KVKK",
-      "slug": "hisense-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    }
-  ],
-  "jvc": [
-    {
-      "id": "jvc:4654",
-      "brandId": "jvc",
-      "modelCode": "4654",
-      "slug": "jvc-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "jvc:KVKK",
-      "brandId": "jvc",
-      "modelCode": "KVKK",
-      "slug": "jvc-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
     }
   ],
   "lg": [
@@ -2383,17 +1364,6 @@
       "brandId": "lg",
       "modelCode": "43UT81006LA",
       "slug": "lg-43ut81006la",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "lg:4654",
-      "brandId": "lg",
-      "modelCode": "4654",
-      "slug": "lg-4654",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -2482,17 +1452,6 @@
       "brandId": "lg",
       "modelCode": "49SM8600PLA",
       "slug": "lg-49sm8600pla",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "lg:KVKK",
-      "brandId": "lg",
-      "modelCode": "KVKK",
-      "slug": "lg-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -2932,30 +1891,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "lg:PHILIPS",
-      "brandId": "lg",
-      "modelCode": "PHILIPS",
-      "slug": "lg-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:SAMSUNG",
-      "brandId": "lg",
-      "modelCode": "SAMSUNG",
-      "slug": "lg-samsung",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "lg:UE40JU6070U",
       "brandId": "lg",
       "modelCode": "UE40JU6070U",
@@ -2981,17 +1916,6 @@
     }
   ],
   "next": [
-    {
-      "id": "next:22020",
-      "brandId": "next",
-      "modelCode": "22020",
-      "slug": "next-22020",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
     {
       "id": "next:22020KT",
       "brandId": "next",
@@ -3096,28 +2020,6 @@
       "brandId": "next",
       "modelCode": "43020KT",
       "slug": "next-43020kt",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "next:4654",
-      "brandId": "next",
-      "modelCode": "4654",
-      "slug": "next-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "next:KVKK",
-      "brandId": "next",
-      "modelCode": "KVKK",
-      "slug": "next-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -3252,28 +2154,6 @@
       "brandId": "philips",
       "modelCode": "43PUS7505",
       "slug": "philips-43pus7505",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "philips:4654",
-      "brandId": "philips",
-      "modelCode": "4654",
-      "slug": "philips-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "philips:KVKK",
-      "brandId": "philips",
-      "modelCode": "KVKK",
-      "slug": "philips-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -3665,30 +2545,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "philips:PHILIPS",
-      "brandId": "philips",
-      "modelCode": "PHILIPS",
-      "slug": "philips-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "philips:SAMSUNG",
-      "brandId": "philips",
-      "modelCode": "SAMSUNG",
-      "slug": "philips-samsung",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "philips:UE40JU6070U",
       "brandId": "philips",
       "modelCode": "UE40JU6070U",
@@ -3803,17 +2659,6 @@
       }
     },
     {
-      "id": "profilo:4654",
-      "brandId": "profilo",
-      "modelCode": "4654",
-      "slug": "profilo-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "profilo:50PA515ESG",
       "brandId": "profilo",
       "modelCode": "50PA515ESG",
@@ -3851,17 +2696,6 @@
       "brandId": "profilo",
       "modelCode": "55PA535ESG",
       "slug": "profilo-55pa535esg",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "profilo:KVKK",
-      "brandId": "profilo",
-      "modelCode": "KVKK",
-      "slug": "profilo-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -3996,28 +2830,6 @@
       "brandId": "regal",
       "modelCode": "40R75F01",
       "slug": "regal-40r75f01",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "regal:4654",
-      "brandId": "regal",
-      "modelCode": "4654",
-      "slug": "regal-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "regal:KVKK",
-      "brandId": "regal",
-      "modelCode": "KVKK",
-      "slug": "regal-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -4159,28 +2971,6 @@
       }
     },
     {
-      "id": "samsung:4654",
-      "brandId": "samsung",
-      "modelCode": "4654",
-      "slug": "samsung-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "samsung:KVKK",
-      "brandId": "samsung",
-      "modelCode": "KVKK",
-      "slug": "samsung-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "samsung:42PFK6309/12",
       "brandId": "samsung",
       "modelCode": "42PFK6309/12",
@@ -4269,30 +3059,6 @@
       "brandId": "samsung",
       "modelCode": "50PUK6809/12",
       "slug": "samsung-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:PHILIPS",
-      "brandId": "samsung",
-      "modelCode": "PHILIPS",
-      "slug": "samsung-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:SAMSUNG",
-      "brandId": "samsung",
-      "modelCode": "SAMSUNG",
-      "slug": "samsung-samsung",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -4707,17 +3473,6 @@
       }
     },
     {
-      "id": "sony:4654",
-      "brandId": "sony",
-      "modelCode": "4654",
-      "slug": "sony-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "sony:48A9",
       "brandId": "sony",
       "modelCode": "48A9",
@@ -4803,17 +3558,6 @@
       "sources": {
         "zeroteknik": true,
         "solobu": true
-      }
-    },
-    {
-      "id": "sony:KVKK",
-      "brandId": "sony",
-      "modelCode": "KVKK",
-      "slug": "sony-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
       }
     },
     {
@@ -5249,42 +3993,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "sony:PHILIPS",
-      "brandId": "sony",
-      "modelCode": "PHILIPS",
-      "slug": "sony-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:SAMSUNG",
-      "brandId": "sony",
-      "modelCode": "SAMSUNG",
-      "slug": "sony-samsung",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:SONY",
-      "brandId": "sony",
-      "modelCode": "SONY",
-      "slug": "sony-sony",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "sony:UE40JU6070U",
       "brandId": "sony",
       "modelCode": "UE40JU6070U",
@@ -5310,28 +4018,6 @@
     }
   ],
   "sunny": [
-    {
-      "id": "sunny:4654",
-      "brandId": "sunny",
-      "modelCode": "4654",
-      "slug": "sunny-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "sunny:KVKK",
-      "brandId": "sunny",
-      "modelCode": "KVKK",
-      "slug": "sunny-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
     {
       "id": "sunny:SN24LED09",
       "brandId": "sunny",
@@ -5467,28 +4153,6 @@
   ],
   "tcl": [
     {
-      "id": "tcl:4654",
-      "brandId": "tcl",
-      "modelCode": "4654",
-      "slug": "tcl-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "tcl:KVKK",
-      "brandId": "tcl",
-      "modelCode": "KVKK",
-      "slug": "tcl-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "tcl:42PFK6309/12",
       "brandId": "tcl",
       "modelCode": "42PFK6309/12",
@@ -5585,30 +4249,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "tcl:PHILIPS",
-      "brandId": "tcl",
-      "modelCode": "PHILIPS",
-      "slug": "tcl-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:SAMSUNG",
-      "brandId": "tcl",
-      "modelCode": "SAMSUNG",
-      "slug": "tcl-samsung",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "tcl:UE40JU6070U",
       "brandId": "tcl",
       "modelCode": "UE40JU6070U",
@@ -5690,17 +4330,6 @@
       }
     },
     {
-      "id": "telefunken:4654",
-      "brandId": "telefunken",
-      "modelCode": "4654",
-      "slug": "telefunken-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
       "id": "telefunken:50TU7550UA",
       "brandId": "telefunken",
       "modelCode": "50TU7550UA",
@@ -5771,17 +4400,6 @@
       "brandId": "telefunken",
       "modelCode": "55TU9080UA",
       "slug": "telefunken-55tu9080ua",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "telefunken:KVKK",
-      "brandId": "telefunken",
-      "modelCode": "KVKK",
-      "slug": "telefunken-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -5877,30 +4495,6 @@
       "brandId": "telefunken",
       "modelCode": "50PUK6809/12",
       "slug": "telefunken-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:PHILIPS",
-      "brandId": "telefunken",
-      "modelCode": "PHILIPS",
-      "slug": "telefunken-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:SAMSUNG",
-      "brandId": "telefunken",
-      "modelCode": "SAMSUNG",
-      "slug": "telefunken-samsung",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -6065,28 +4659,6 @@
         "zeroteknik": true,
         "solobu": false
       }
-    },
-    {
-      "id": "toshiba:4654",
-      "brandId": "toshiba",
-      "modelCode": "4654",
-      "slug": "toshiba-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "toshiba:KVKK",
-      "brandId": "toshiba",
-      "modelCode": "KVKK",
-      "slug": "toshiba-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
     }
   ],
   "vestel": [
@@ -6216,28 +4788,6 @@
       "brandId": "vestel",
       "modelCode": "32H8530",
       "slug": "vestel-32h8530",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "vestel:4654",
-      "brandId": "vestel",
-      "modelCode": "4654",
-      "slug": "vestel-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "vestel:KVKK",
-      "brandId": "vestel",
-      "modelCode": "KVKK",
-      "slug": "vestel-kvkk",
       "screenType": "tv",
       "sources": {
         "zeroteknik": true,
@@ -6701,30 +5251,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "vestel:PHILIPS",
-      "brandId": "vestel",
-      "modelCode": "PHILIPS",
-      "slug": "vestel-philips",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:SAMSUNG",
-      "brandId": "vestel",
-      "modelCode": "SAMSUNG",
-      "slug": "vestel-samsung",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "vestel:TVISION",
       "brandId": "vestel",
       "modelCode": "TVISION",
@@ -6759,42 +5285,6 @@
         "solobu": true
       },
       "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:VESTEL",
-      "brandId": "vestel",
-      "modelCode": "VESTEL",
-      "slug": "vestel-vestel",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    }
-  ],
-  "xiaomi": [
-    {
-      "id": "xiaomi:4654",
-      "brandId": "xiaomi",
-      "modelCode": "4654",
-      "slug": "xiaomi-4654",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
-    },
-    {
-      "id": "xiaomi:KVKK",
-      "brandId": "xiaomi",
-      "modelCode": "KVKK",
-      "slug": "xiaomi-kvkk",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": true,
-        "solobu": false
-      }
     }
   ]
 }
