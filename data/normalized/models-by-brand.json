@@ -133,102 +133,6 @@
       }
     },
     {
-      "id": "arcelik:42PFK6309/12",
-      "brandId": "arcelik",
-      "modelCode": "42PFK6309/12",
-      "slug": "arcelik-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:43PUS6262/12",
-      "brandId": "arcelik",
-      "modelCode": "43PUS6262/12",
-      "slug": "arcelik-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:43PUS6401/12",
-      "brandId": "arcelik",
-      "modelCode": "43PUS6401/12",
-      "slug": "arcelik-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:47LA660S",
-      "brandId": "arcelik",
-      "modelCode": "47LA660S",
-      "slug": "arcelik-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:47LB652V",
-      "brandId": "arcelik",
-      "modelCode": "47LB652V",
-      "slug": "arcelik-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:49PUS6561/12",
-      "brandId": "arcelik",
-      "modelCode": "49PUS6561/12",
-      "slug": "arcelik-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:49PUS7909/12",
-      "brandId": "arcelik",
-      "modelCode": "49PUS7909/12",
-      "slug": "arcelik-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:50PUK6809/12",
-      "brandId": "arcelik",
-      "modelCode": "50PUK6809/12",
-      "slug": "arcelik-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "arcelik:A32K",
       "brandId": "arcelik",
       "modelCode": "A32K",
@@ -269,30 +173,6 @@
       "brandId": "arcelik",
       "modelCode": "A43L",
       "slug": "arcelik-a43l",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:UE40JU6070U",
-      "brandId": "arcelik",
-      "modelCode": "UE40JU6070U",
-      "slug": "arcelik-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "arcelik:UE50MU7000U",
-      "brandId": "arcelik",
-      "modelCode": "UE50MU7000U",
-      "slug": "arcelik-ue50mu7000u",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -549,102 +429,6 @@
       }
     },
     {
-      "id": "beko:42PFK6309/12",
-      "brandId": "beko",
-      "modelCode": "42PFK6309/12",
-      "slug": "beko-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:43PUS6262/12",
-      "brandId": "beko",
-      "modelCode": "43PUS6262/12",
-      "slug": "beko-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:43PUS6401/12",
-      "brandId": "beko",
-      "modelCode": "43PUS6401/12",
-      "slug": "beko-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:47LA660S",
-      "brandId": "beko",
-      "modelCode": "47LA660S",
-      "slug": "beko-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:47LB652V",
-      "brandId": "beko",
-      "modelCode": "47LB652V",
-      "slug": "beko-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:49PUS6561/12",
-      "brandId": "beko",
-      "modelCode": "49PUS6561/12",
-      "slug": "beko-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:49PUS7909/12",
-      "brandId": "beko",
-      "modelCode": "49PUS7909/12",
-      "slug": "beko-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:50PUK6809/12",
-      "brandId": "beko",
-      "modelCode": "50PUK6809/12",
-      "slug": "beko-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "beko:B40L",
       "brandId": "beko",
       "modelCode": "B40L",
@@ -739,154 +523,9 @@
         "solobu": true
       },
       "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:UE40JU6070U",
-      "brandId": "beko",
-      "modelCode": "UE40JU6070U",
-      "slug": "beko-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "beko:UE50MU7000U",
-      "brandId": "beko",
-      "modelCode": "UE50MU7000U",
-      "slug": "beko-ue50mu7000u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
     }
   ],
-  "blaupunkt": [
-    {
-      "id": "blaupunkt:42PFK6309/12",
-      "brandId": "blaupunkt",
-      "modelCode": "42PFK6309/12",
-      "slug": "blaupunkt-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:43PUS6262/12",
-      "brandId": "blaupunkt",
-      "modelCode": "43PUS6262/12",
-      "slug": "blaupunkt-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:43PUS6401/12",
-      "brandId": "blaupunkt",
-      "modelCode": "43PUS6401/12",
-      "slug": "blaupunkt-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:47LA660S",
-      "brandId": "blaupunkt",
-      "modelCode": "47LA660S",
-      "slug": "blaupunkt-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:47LB652V",
-      "brandId": "blaupunkt",
-      "modelCode": "47LB652V",
-      "slug": "blaupunkt-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:49PUS6561/12",
-      "brandId": "blaupunkt",
-      "modelCode": "49PUS6561/12",
-      "slug": "blaupunkt-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:49PUS7909/12",
-      "brandId": "blaupunkt",
-      "modelCode": "49PUS7909/12",
-      "slug": "blaupunkt-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:50PUK6809/12",
-      "brandId": "blaupunkt",
-      "modelCode": "50PUK6809/12",
-      "slug": "blaupunkt-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:UE40JU6070U",
-      "brandId": "blaupunkt",
-      "modelCode": "UE40JU6070U",
-      "slug": "blaupunkt-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "blaupunkt:UE50MU7000U",
-      "brandId": "blaupunkt",
-      "modelCode": "UE50MU7000U",
-      "slug": "blaupunkt-ue50mu7000u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    }
-  ],
+  "blaupunkt": [],
   "botech": [
     {
       "id": "botech:24BSE5502",
@@ -1047,102 +686,6 @@
   ],
   "grundig": [
     {
-      "id": "grundig:42PFK6309/12",
-      "brandId": "grundig",
-      "modelCode": "42PFK6309/12",
-      "slug": "grundig-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:43PUS6262/12",
-      "brandId": "grundig",
-      "modelCode": "43PUS6262/12",
-      "slug": "grundig-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:43PUS6401/12",
-      "brandId": "grundig",
-      "modelCode": "43PUS6401/12",
-      "slug": "grundig-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:47LA660S",
-      "brandId": "grundig",
-      "modelCode": "47LA660S",
-      "slug": "grundig-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:47LB652V",
-      "brandId": "grundig",
-      "modelCode": "47LB652V",
-      "slug": "grundig-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:49PUS6561/12",
-      "brandId": "grundig",
-      "modelCode": "49PUS6561/12",
-      "slug": "grundig-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:49PUS7909/12",
-      "brandId": "grundig",
-      "modelCode": "49PUS7909/12",
-      "slug": "grundig-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:50PUK6809/12",
-      "brandId": "grundig",
-      "modelCode": "50PUK6809/12",
-      "slug": "grundig-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "grundig:5900B",
       "brandId": "grundig",
       "modelCode": "5900B",
@@ -1159,30 +702,6 @@
       "brandId": "grundig",
       "modelCode": "6700B",
       "slug": "grundig-6700b",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:UE40JU6070U",
-      "brandId": "grundig",
-      "modelCode": "UE40JU6070U",
-      "slug": "grundig-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "grundig:UE50MU7000U",
-      "brandId": "grundig",
-      "modelCode": "UE50MU7000U",
-      "slug": "grundig-ue50mu7000u",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -1783,46 +1302,10 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "lg:42PFK6309/12",
-      "brandId": "lg",
-      "modelCode": "42PFK6309/12",
-      "slug": "lg-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "lg:42UB820V",
       "brandId": "lg",
       "modelCode": "42UB820V",
       "slug": "lg-42ub820v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:43PUS6262/12",
-      "brandId": "lg",
-      "modelCode": "43PUS6262/12",
-      "slug": "lg-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:43PUS6401/12",
-      "brandId": "lg",
-      "modelCode": "43PUS6401/12",
-      "slug": "lg-43pus6401-12",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -1847,66 +1330,6 @@
       "brandId": "lg",
       "modelCode": "47LB652V",
       "slug": "lg-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:49PUS6561/12",
-      "brandId": "lg",
-      "modelCode": "49PUS6561/12",
-      "slug": "lg-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:49PUS7909/12",
-      "brandId": "lg",
-      "modelCode": "49PUS7909/12",
-      "slug": "lg-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:50PUK6809/12",
-      "brandId": "lg",
-      "modelCode": "50PUK6809/12",
-      "slug": "lg-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:UE40JU6070U",
-      "brandId": "lg",
-      "modelCode": "UE40JU6070U",
-      "slug": "lg-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "lg:UE50MU7000U",
-      "brandId": "lg",
-      "modelCode": "UE50MU7000U",
-      "slug": "lg-ue50mu7000u",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -2449,30 +1872,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "philips:47LA660S",
-      "brandId": "philips",
-      "modelCode": "47LA660S",
-      "slug": "philips-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "philips:47LB652V",
-      "brandId": "philips",
-      "modelCode": "47LB652V",
-      "slug": "philips-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "philips:49PUS6031/12",
       "brandId": "philips",
       "modelCode": "49PUS6031/12",
@@ -2537,30 +1936,6 @@
       "brandId": "philips",
       "modelCode": "55PUS6031/12",
       "slug": "philips-55pus6031-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "philips:UE40JU6070U",
-      "brandId": "philips",
-      "modelCode": "UE40JU6070U",
-      "slug": "philips-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "philips:UE50MU7000U",
-      "brandId": "philips",
-      "modelCode": "UE50MU7000U",
-      "slug": "philips-ue50mu7000u",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -2969,102 +2344,6 @@
         "zeroteknik": true,
         "solobu": false
       }
-    },
-    {
-      "id": "samsung:42PFK6309/12",
-      "brandId": "samsung",
-      "modelCode": "42PFK6309/12",
-      "slug": "samsung-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:43PUS6262/12",
-      "brandId": "samsung",
-      "modelCode": "43PUS6262/12",
-      "slug": "samsung-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:43PUS6401/12",
-      "brandId": "samsung",
-      "modelCode": "43PUS6401/12",
-      "slug": "samsung-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:47LA660S",
-      "brandId": "samsung",
-      "modelCode": "47LA660S",
-      "slug": "samsung-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:47LB652V",
-      "brandId": "samsung",
-      "modelCode": "47LB652V",
-      "slug": "samsung-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:49PUS6561/12",
-      "brandId": "samsung",
-      "modelCode": "49PUS6561/12",
-      "slug": "samsung-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:49PUS7909/12",
-      "brandId": "samsung",
-      "modelCode": "49PUS7909/12",
-      "slug": "samsung-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "samsung:50PUK6809/12",
-      "brandId": "samsung",
-      "modelCode": "50PUK6809/12",
-      "slug": "samsung-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
     },
     {
       "id": "samsung:UE32EH4000",
@@ -3561,42 +2840,6 @@
       }
     },
     {
-      "id": "sony:42PFK6309/12",
-      "brandId": "sony",
-      "modelCode": "42PFK6309/12",
-      "slug": "sony-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:43PUS6262/12",
-      "brandId": "sony",
-      "modelCode": "43PUS6262/12",
-      "slug": "sony-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:43PUS6401/12",
-      "brandId": "sony",
-      "modelCode": "43PUS6401/12",
-      "slug": "sony-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "sony:43X8305C",
       "brandId": "sony",
       "modelCode": "43X8305C",
@@ -3741,54 +2984,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "sony:47LA660S",
-      "brandId": "sony",
-      "modelCode": "47LA660S",
-      "slug": "sony-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:47LB652V",
-      "brandId": "sony",
-      "modelCode": "47LB652V",
-      "slug": "sony-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:49PUS6561/12",
-      "brandId": "sony",
-      "modelCode": "49PUS6561/12",
-      "slug": "sony-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:49PUS7909/12",
-      "brandId": "sony",
-      "modelCode": "49PUS7909/12",
-      "slug": "sony-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "sony:49XG7005",
       "brandId": "sony",
       "modelCode": "49XG7005",
@@ -3865,18 +3060,6 @@
       "brandId": "sony",
       "modelCode": "49XG9005",
       "slug": "sony-49xg9005",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:50PUK6809/12",
-      "brandId": "sony",
-      "modelCode": "50PUK6809/12",
-      "slug": "sony-50puk6809-12",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -3985,30 +3168,6 @@
       "brandId": "sony",
       "modelCode": "KDL-49WE665",
       "slug": "sony-kdl-49we665",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:UE40JU6070U",
-      "brandId": "sony",
-      "modelCode": "UE40JU6070U",
-      "slug": "sony-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "sony:UE50MU7000U",
-      "brandId": "sony",
-      "modelCode": "UE50MU7000U",
-      "slug": "sony-ue50mu7000u",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
@@ -4151,128 +3310,7 @@
       }
     }
   ],
-  "tcl": [
-    {
-      "id": "tcl:42PFK6309/12",
-      "brandId": "tcl",
-      "modelCode": "42PFK6309/12",
-      "slug": "tcl-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:43PUS6262/12",
-      "brandId": "tcl",
-      "modelCode": "43PUS6262/12",
-      "slug": "tcl-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:43PUS6401/12",
-      "brandId": "tcl",
-      "modelCode": "43PUS6401/12",
-      "slug": "tcl-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:47LA660S",
-      "brandId": "tcl",
-      "modelCode": "47LA660S",
-      "slug": "tcl-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:47LB652V",
-      "brandId": "tcl",
-      "modelCode": "47LB652V",
-      "slug": "tcl-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:49PUS6561/12",
-      "brandId": "tcl",
-      "modelCode": "49PUS6561/12",
-      "slug": "tcl-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:49PUS7909/12",
-      "brandId": "tcl",
-      "modelCode": "49PUS7909/12",
-      "slug": "tcl-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:50PUK6809/12",
-      "brandId": "tcl",
-      "modelCode": "50PUK6809/12",
-      "slug": "tcl-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:UE40JU6070U",
-      "brandId": "tcl",
-      "modelCode": "UE40JU6070U",
-      "slug": "tcl-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "tcl:UE50MU7000U",
-      "brandId": "tcl",
-      "modelCode": "UE50MU7000U",
-      "slug": "tcl-ue50mu7000u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    }
-  ],
+  "tcl": [],
   "telefunken": [
     {
       "id": "telefunken:32TF6520A",
@@ -4405,126 +3443,6 @@
         "zeroteknik": true,
         "solobu": false
       }
-    },
-    {
-      "id": "telefunken:42PFK6309/12",
-      "brandId": "telefunken",
-      "modelCode": "42PFK6309/12",
-      "slug": "telefunken-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:43PUS6262/12",
-      "brandId": "telefunken",
-      "modelCode": "43PUS6262/12",
-      "slug": "telefunken-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:43PUS6401/12",
-      "brandId": "telefunken",
-      "modelCode": "43PUS6401/12",
-      "slug": "telefunken-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:47LA660S",
-      "brandId": "telefunken",
-      "modelCode": "47LA660S",
-      "slug": "telefunken-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:47LB652V",
-      "brandId": "telefunken",
-      "modelCode": "47LB652V",
-      "slug": "telefunken-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:49PUS6561/12",
-      "brandId": "telefunken",
-      "modelCode": "49PUS6561/12",
-      "slug": "telefunken-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:49PUS7909/12",
-      "brandId": "telefunken",
-      "modelCode": "49PUS7909/12",
-      "slug": "telefunken-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:50PUK6809/12",
-      "brandId": "telefunken",
-      "modelCode": "50PUK6809/12",
-      "slug": "telefunken-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:UE40JU6070U",
-      "brandId": "telefunken",
-      "modelCode": "UE40JU6070U",
-      "slug": "telefunken-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "telefunken:UE50MU7000U",
-      "brandId": "telefunken",
-      "modelCode": "UE50MU7000U",
-      "slug": "telefunken-ue50mu7000u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
     }
   ],
   "toshiba": [
@@ -5131,42 +4049,6 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "vestel:42PFK6309/12",
-      "brandId": "vestel",
-      "modelCode": "42PFK6309/12",
-      "slug": "vestel-42pfk6309-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:43PUS6262/12",
-      "brandId": "vestel",
-      "modelCode": "43PUS6262/12",
-      "slug": "vestel-43pus6262-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:43PUS6401/12",
-      "brandId": "vestel",
-      "modelCode": "43PUS6401/12",
-      "slug": "vestel-43pus6401-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "vestel:43UD8350",
       "brandId": "vestel",
       "modelCode": "43UD8350",
@@ -5191,94 +4073,10 @@
       "note": "Solobu başlığından otomatik çıkarım"
     },
     {
-      "id": "vestel:47LA660S",
-      "brandId": "vestel",
-      "modelCode": "47LA660S",
-      "slug": "vestel-47la660s",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:47LB652V",
-      "brandId": "vestel",
-      "modelCode": "47LB652V",
-      "slug": "vestel-47lb652v",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:49PUS6561/12",
-      "brandId": "vestel",
-      "modelCode": "49PUS6561/12",
-      "slug": "vestel-49pus6561-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:49PUS7909/12",
-      "brandId": "vestel",
-      "modelCode": "49PUS7909/12",
-      "slug": "vestel-49pus7909-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:50PUK6809/12",
-      "brandId": "vestel",
-      "modelCode": "50PUK6809/12",
-      "slug": "vestel-50puk6809-12",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
       "id": "vestel:TVISION",
       "brandId": "vestel",
       "modelCode": "TVISION",
       "slug": "vestel-tvision",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:UE40JU6070U",
-      "brandId": "vestel",
-      "modelCode": "UE40JU6070U",
-      "slug": "vestel-ue40ju6070u",
-      "screenType": "tv",
-      "sources": {
-        "zeroteknik": false,
-        "solobu": true
-      },
-      "note": "Solobu başlığından otomatik çıkarım"
-    },
-    {
-      "id": "vestel:UE50MU7000U",
-      "brandId": "vestel",
-      "modelCode": "UE50MU7000U",
-      "slug": "vestel-ue50mu7000u",
       "screenType": "tv",
       "sources": {
         "zeroteknik": false,
