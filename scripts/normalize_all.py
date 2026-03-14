@@ -1,176 +1,173 @@
-from __future__ import annotations
-import os
-import re
-from typing import Dict, List, Any
+"""
+normalize_all.py  v6
+====================
+raw/solobu/ + raw/zeroteknik/ → data/normalized/
 
-from scripts._shared import read_json, write_json, tv_only_filter, make_slug, model_slug, normalize_panel_code
+Temizlik:
+  - source_url'de marka slug'u geçmiyorsa → sidebar kalıntısı → sil
+  - Çöp model kodları → sil
+  - İki kaynaktan gelen aynı model → birleştir (sources alanına işaretle)
+"""
 
-RAW_SOLOBU = "raw/solobu"
-RAW_ZERO   = "raw/zeroteknik"
-OUT_DATA   = "data"
+import json, os, re
 
-# ── Veri Doğrulama Sabitleri ──────────────────────────────────────────────────
+SOLOBU_DIR   = "raw/solobu"
+ZERO_DIR     = "raw/zeroteknik"
+OUT_DIR      = "data/normalized"
 
-KNOWN_BRANDS = {
-    "samsung", "lg", "philips", "sony", "vestel", "beko", "arcelik",
-    "toshiba", "sharp", "panasonic", "grundig", "hitachi", "tcl",
-    "telefunken", "blaupunkt", "hisense", "skyworth", "finlux",
-    "regal", "profilo", "altus", "nordmende", "onvo",
-}
-
-JUNK_WORDS = [
-    "kvkk", "privacy", "cookie", "policy", "gdpr",
-    "4654", "6698", "kanun", "aydinlatma",
-]
-
-MIN_MODEL_LEN = 4
-
-# ── Yardımcı Fonksiyonlar ─────────────────────────────────────────────────────
-
-def load_raw_files(folder: str) -> List[Any]:
-    items = []
-    if not os.path.exists(folder):
-        return items
-    for fn in os.listdir(folder):
-        if fn.endswith(".json"):
-            items.append(read_json(os.path.join(folder, fn)))
-    return items
+JUNK_WORDS = ["kvkk", "privacy", "cookie", "policy", "gdpr", "kanun", "aydinlatma"]
+JUNK_EXACT = {"yeni", "yeni!", "kampanya", "indirim", "stok", "new"}
+MIN_LEN    = 3
 
 
-def is_valid_model_code(brand_slug: str, model_code: str) -> tuple[bool, str]:
-    """
-    Model kodunun geçerli olup olmadığını kontrol eder.
-    (True, "") geçerli → işleme al
-    (False, sebep) geçersiz → atla
-    """
-    mc = model_code.strip()
-    mc_lower = mc.lower()
-
-    # Boş
-    if not mc:
-        return False, "boş model kodu"
-
-    # Çok kısa
-    if len(mc) < MIN_MODEL_LEN:
-        return False, f"çok kısa ({len(mc)} karakter)"
-
-    # Sadece rakam
-    if mc.isdigit():
-        return False, "sadece rakam"
-
-    # Çöp kelime içeriyor mu?
-    for junk in JUNK_WORDS:
-        if junk in mc_lower:
-            return False, f"çöp kelime: '{junk}'"
-
-    # Marka adının kendisi model kodu olarak mı girilmiş?
-    if mc_lower in KNOWN_BRANDS:
-        return False, f"marka adı model kodu olarak: '{mc}'"
-
-    return True, ""
+def is_junk(mc):
+    s = mc.strip()
+    if not s:                    return True
+    if len(s) < MIN_LEN:        return True
+    if s.isdigit():              return True
+    if s.lower() in JUNK_EXACT: return True
+    for j in JUNK_WORDS:
+        if j in s.lower():      return True
+    return False
 
 
-# ── Pipeline Fonksiyonları ────────────────────────────────────────────────────
-
-def build_brands(raw_sources: List[Any]) -> Dict[str, Dict]:
-    brands: Dict[str, Dict] = {}
-    for blob in raw_sources:
-        rows = blob if isinstance(blob, list) else blob.get("items", [])
-        for r in rows:
-            name = (r.get("brand") or r.get("brand_name") or "").strip()
-            if not name:
-                continue
-            slug = r.get("brand_slug") or make_slug(name)
-            brands[slug] = {
-                "slug": slug,
-                "name": name,
-                "modelCount": 0,
-            }
-    return brands
+def model_slug(brand_slug, mc):
+    s = mc.lower().replace("/", "-").replace(" ", "-").replace(".", "-")
+    return f"{brand_slug}-{s}"
 
 
-def build_models(raw_sources: List[Any], brands: Dict[str, Dict]) -> Dict[str, List[Dict]]:
-    per_brand: Dict[str, List[Dict]] = {b: [] for b in brands.keys()}
-    skipped = 0
+def load_source(directory, source_name):
+    """Bir kaynaktan tüm marka dosyalarını oku."""
+    result = {}  # brand_slug → list of items
+    if not os.path.exists(directory):
+        return result
 
-    for blob in raw_sources:
-        rows = blob if isinstance(blob, list) else blob.get("items", [])
-        for r in rows:
-            brand      = (r.get("brand_slug") or "").strip()
-            brand_name = (r.get("brand") or "").strip()
+    for fn in sorted(os.listdir(directory)):
+        if fn == "brands.json" or not fn.endswith(".json"):
+            continue
+        brand_slug = fn.replace(".json", "")
+        with open(os.path.join(directory, fn), encoding="utf-8") as f:
+            items = json.load(f)
 
-            if not brand and brand_name:
-                brand = make_slug(brand_name)
-            if not brand:
+        clean = []
+        for item in items:
+            mc         = (item.get("model_code") or "").strip()
+            source_url = item.get("source_url", "").lower()
+
+            # source_url filtresi — sidebar temizliği
+            if source_url and f"/urun/{brand_slug}-" not in source_url \
+               and f"/markalar/{brand_slug}/" not in source_url:
                 continue
 
-            if brand not in per_brand:
-                per_brand[brand] = []
-                if brand not in brands:
-                    brands[brand] = {"slug": brand, "name": brand_name or brand, "modelCount": 0}
-
-            model_code = (r.get("model_code") or r.get("model") or "").strip()
-
-            # ── YENİ: Model kodu doğrulama ──
-            valid, reason = is_valid_model_code(brand, model_code)
-            if not valid:
-                skipped += 1
+            if is_junk(mc):
                 continue
 
-            # TV-only filtresi
-            if not tv_only_filter(f"{brand_name} {model_code} {r.get('title','')}"):
-                skipped += 1
-                continue
-
-            slug         = r.get("model_slug") or model_slug(brand, model_code)
-            screen_size  = r.get("screen_size")
-            year         = r.get("year")
-
-            panel_codes_raw = r.get("panel_codes") or r.get("panels") or []
-            panel_codes     = [normalize_panel_code(p) for p in panel_codes_raw if p]
-
-            per_brand[brand].append({
-                "slug":       slug,
-                "brandSlug":  brand,
-                "modelCode":  model_code,
-                "screenSize": screen_size,
-                "year":       year,
-                "panelCodes": panel_codes,
+            clean.append({
+                "brand":      item.get("brand", brand_slug.title()),
+                "brand_slug": brand_slug,
+                "model_code": mc,
+                "model_slug": item.get("model_slug") or model_slug(brand_slug, mc),
+                "source":     source_name,
             })
-            brands[brand]["modelCount"] += 1
 
-    if skipped:
-        print(f"⚠️  Doğrulama filtresi: {skipped} kayıt atlandı")
+        if clean:
+            if brand_slug not in result:
+                result[brand_slug] = []
+            result[brand_slug].extend(clean)
 
-    return per_brand
+    return result
 
 
 def main():
-    solobu  = load_raw_files(RAW_SOLOBU)
-    zero    = load_raw_files(RAW_ZERO)
-    raw_all = solobu + zero
+    os.makedirs(OUT_DIR, exist_ok=True)
 
-    brands         = build_brands(raw_all)
-    models_by_brand = build_models(raw_all, brands)
+    # Her iki kaynağı yükle
+    solobu_data = load_source(SOLOBU_DIR, "solobu")
+    zero_data   = load_source(ZERO_DIR,   "zeroteknik")
 
-    # brands.json yaz
-    write_json(
-        os.path.join(OUT_DATA, "brands.json"),
-        sorted(brands.values(), key=lambda x: x["name"].lower()),
-    )
+    print(f"Solobu    : {sum(len(v) for v in solobu_data.values())} model, {len(solobu_data)} marka")
+    print(f"Zeroteknik: {sum(len(v) for v in zero_data.values())} model, {len(zero_data)} marka")
 
-    # models/{brand}.json yaz
-    out_models_dir = os.path.join(OUT_DATA, "models")
-    os.makedirs(out_models_dir, exist_ok=True)
-    for brand, items in models_by_brand.items():
-        if not items:
-            continue
-        write_json(os.path.join(out_models_dir, f"{brand}.json"), items)
+    # Tüm markaları birleştir
+    all_brands = set(solobu_data.keys()) | set(zero_data.keys())
+    brands_out      = {}
+    models_by_brand = {}
 
-    total_models = sum(len(v) for v in models_by_brand.values() if v)
-    print("✅ normalize tamamlandı")
-    print(f"   Markalar : {len(brands)}")
-    print(f"   Modeller : {total_models}")
+    for brand_slug in sorted(all_brands):
+        solobu_items = solobu_data.get(brand_slug, [])
+        zero_items   = zero_data.get(brand_slug, [])
+
+        brand_display = (
+            (solobu_items or zero_items)[0].get("brand", brand_slug.title())
+            if (solobu_items or zero_items) else brand_slug.title()
+        )
+
+        # Model kodlarını merge et
+        merged = {}  # mc_upper → entry
+
+        for item in solobu_items:
+            mc = item["model_code"]
+            key = mc.upper()
+            if key not in merged:
+                merged[key] = {
+                    "id":         f"{brand_slug}:{mc}",
+                    "brandSlug":  brand_slug,
+                    "modelCode":  mc,
+                    "slug":       item["model_slug"],
+                    "screenType": "tv",
+                    "sources":    {"solobu": True, "zeroteknik": False},
+                }
+            else:
+                merged[key]["sources"]["solobu"] = True
+
+        for item in zero_items:
+            mc = item["model_code"]
+            key = mc.upper()
+            if key not in merged:
+                merged[key] = {
+                    "id":         f"{brand_slug}:{mc}",
+                    "brandSlug":  brand_slug,
+                    "modelCode":  mc,
+                    "slug":       item["model_slug"],
+                    "screenType": "tv",
+                    "sources":    {"solobu": False, "zeroteknik": True},
+                }
+            else:
+                merged[key]["sources"]["zeroteknik"] = True
+
+        model_list = list(merged.values())
+
+        if model_list:
+            models_by_brand[brand_slug] = model_list
+            brands_out[brand_slug] = {
+                "slug":       brand_slug,
+                "name":       brand_display,
+                "modelCount": len(model_list),
+            }
+
+    # Yaz
+    brands_list = sorted(brands_out.values(), key=lambda x: x["name"].lower())
+    with open(os.path.join(OUT_DIR, "brands.json"), "w", encoding="utf-8") as f:
+        json.dump(brands_list, f, ensure_ascii=False, indent=2)
+
+    with open(os.path.join(OUT_DIR, "models-by-brand.json"), "w", encoding="utf-8") as f:
+        json.dump(models_by_brand, f, ensure_ascii=False, indent=2)
+
+    total    = sum(len(v) for v in models_by_brand.values())
+    only_sol = sum(1 for ms in models_by_brand.values()
+                   for m in ms if m["sources"]["solobu"] and not m["sources"]["zeroteknik"])
+    only_zer = sum(1 for ms in models_by_brand.values()
+                   for m in ms if not m["sources"]["solobu"] and m["sources"]["zeroteknik"])
+    both     = sum(1 for ms in models_by_brand.values()
+                   for m in ms if m["sources"]["solobu"] and m["sources"]["zeroteknik"])
+
+    print(f"\n✅ Normalize tamamlandı!")
+    print(f"   Markalar          : {len(brands_out)}")
+    print(f"   Toplam model      : {total}")
+    print(f"   Sadece solobu'da  : {only_sol}")
+    print(f"   Sadece zeroteknik : {only_zer}")
+    print(f"   Her ikisinde de   : {both}")
+    print(f"\nSonraki adım: python scripts/build_search_index.py")
 
 
 if __name__ == "__main__":
