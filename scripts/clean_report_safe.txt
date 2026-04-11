@@ -1,0 +1,137 @@
+[SIL] arcelik         | 4654                           | sadece rakam
+[SIL] arcelik         | KVKK                           | cop kelime: 'kvkk'
+[SIL] arcelik         | 4310                           | sadece rakam
+[SIL] arcelik         | 5740                           | sadece rakam
+[SIL] arcelik         | 5745                           | sadece rakam
+[SIL] arcelik         | 5751                           | sadece rakam
+[SIL] arcelik         | 5845                           | sadece rakam
+[SIL] arcelik         | 5860                           | sadece rakam
+[SIL] arcelik         | 6760                           | sadece rakam
+[SIL] arcelik         | 6850                           | sadece rakam
+[SIL] arcelik         | 6945                           | sadece rakam
+[SIL] arcelik         | 8477                           | sadece rakam
+[SIL] arcelik         | 8752                           | sadece rakam
+[SIL] arcelik         | 8860                           | sadece rakam
+[SIL] arcelik         | 8900                           | sadece rakam
+[SIL] arcelik         | 9377                           | sadece rakam
+[SIL] arcelik         | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] arcelik         | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] awox            | 4654                           | sadece rakam
+[SIL] awox            | KVKK                           | cop kelime: 'kvkk'
+[SIL] axen            | 4654                           | sadece rakam
+[SIL] axen            | KVKK                           | cop kelime: 'kvkk'
+[SIL] beko            | 4654                           | sadece rakam
+[SIL] beko            | 8965                           | sadece rakam
+[SIL] beko            | KVKK                           | cop kelime: 'kvkk'
+[SIL] beko            | 5531                           | sadece rakam
+[SIL] beko            | 5533                           | sadece rakam
+[SIL] beko            | 5740                           | sadece rakam
+[SIL] beko            | 6652                           | sadece rakam
+[SIL] beko            | 6750                           | sadece rakam
+[SIL] beko            | 6760                           | sadece rakam
+[SIL] beko            | 8467                           | sadece rakam
+[SIL] beko            | 8477                           | sadece rakam
+[SIL] beko            | 8752                           | sadece rakam
+[SIL] beko            | 8840                           | sadece rakam
+[SIL] beko            | 8850                           | sadece rakam
+[SIL] beko            | 8860                           | sadece rakam
+[SIL] beko            | 8870                           | sadece rakam
+[SIL] beko            | 9682                           | sadece rakam
+[SIL] beko            | 9785                           | sadece rakam
+[SIL] beko            | 9880                           | sadece rakam
+[SIL] beko            | 9890                           | sadece rakam
+[SIL] beko            | BEKO                           | marka adi model kodu olarak: 'BEKO'
+[SIL] beko            | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] beko            | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] blaupunkt       | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] blaupunkt       | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] botech          | 4654                           | sadece rakam
+[SIL] botech          | KVKK                           | cop kelime: 'kvkk'
+[SIL] finlux          | 4654                           | sadece rakam
+[SIL] finlux          | KVKK                           | cop kelime: 'kvkk'
+[SIL] grundig         | 4654                           | sadece rakam
+[SIL] grundig         | 6000                           | sadece rakam
+[SIL] grundig         | 6500                           | sadece rakam
+[SIL] grundig         | 6950                           | sadece rakam
+[SIL] grundig         | 7000                           | sadece rakam
+[SIL] grundig         | 7500                           | sadece rakam
+[SIL] grundig         | 7880                           | sadece rakam
+[SIL] grundig         | 8000                           | sadece rakam
+[SIL] grundig         | 8500                           | sadece rakam
+[SIL] grundig         | KVKK                           | cop kelime: 'kvkk'
+[SIL] grundig         | 4537                           | sadece rakam
+[SIL] grundig         | 5525                           | sadece rakam
+[SIL] grundig         | 5537                           | sadece rakam
+[SIL] grundig         | 5730                           | sadece rakam
+[SIL] grundig         | 6535                           | sadece rakam
+[SIL] grundig         | 6730                           | sadece rakam
+[SIL] grundig         | 6830                           | sadece rakam
+[SIL] grundig         | 7730                           | sadece rakam
+[SIL] grundig         | 7810                           | sadece rakam
+[SIL] grundig         | 7900                           | sadece rakam
+[SIL] grundig         | 8586                           | sadece rakam
+[SIL] grundig         | 8589                           | sadece rakam
+[SIL] grundig         | 8600                           | sadece rakam
+[SIL] grundig         | 8650                           | sadece rakam
+[SIL] grundig         | 9750                           | sadece rakam
+[SIL] grundig         | 9800                           | sadece rakam
+[SIL] grundig         | 9900                           | sadece rakam
+[SIL] grundig         | GRUNDIG                        | marka adi model kodu olarak: 'GRUNDIG'
+[SIL] grundig         | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] grundig         | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] hi-level        | 4654                           | sadece rakam
+[SIL] hi-level        | KVKK                           | cop kelime: 'kvkk'
+[SIL] hisense         | 4654                           | sadece rakam
+[SIL] hisense         | KVKK                           | cop kelime: 'kvkk'
+[SIL] jvc             | 4654                           | sadece rakam
+[SIL] jvc             | KVKK                           | cop kelime: 'kvkk'
+[SIL] lg              | 4654                           | sadece rakam
+[SIL] lg              | KVKK                           | cop kelime: 'kvkk'
+[SIL] lg              | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] lg              | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] next            | 22020                          | sadece rakam
+[SIL] next            | 4654                           | sadece rakam
+[SIL] next            | KVKK                           | cop kelime: 'kvkk'
+[SIL] philips         | 4654                           | sadece rakam
+[SIL] philips         | KVKK                           | cop kelime: 'kvkk'
+[SIL] philips         | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] philips         | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] profilo         | 4654                           | sadece rakam
+[SIL] profilo         | KVKK                           | cop kelime: 'kvkk'
+[SIL] regal           | 4654                           | sadece rakam
+[SIL] regal           | KVKK                           | cop kelime: 'kvkk'
+[SIL] samsung         | 4654                           | sadece rakam
+[SIL] samsung         | KVKK                           | cop kelime: 'kvkk'
+[SIL] samsung         | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] samsung         | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] sony            | 4654                           | sadece rakam
+[SIL] sony            | KVKK                           | cop kelime: 'kvkk'
+[SIL] sony            | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] sony            | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] sony            | SONY                           | marka adi model kodu olarak: 'SONY'
+[SIL] sunny           | 4654                           | sadece rakam
+[SIL] sunny           | KVKK                           | cop kelime: 'kvkk'
+[SIL] tcl             | 4654                           | sadece rakam
+[SIL] tcl             | KVKK                           | cop kelime: 'kvkk'
+[SIL] tcl             | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] tcl             | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] telefunken      | 4654                           | sadece rakam
+[SIL] telefunken      | KVKK                           | cop kelime: 'kvkk'
+[SIL] telefunken      | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] telefunken      | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] toshiba         | 4654                           | sadece rakam
+[SIL] toshiba         | KVKK                           | cop kelime: 'kvkk'
+[SIL] vestel          | 4654                           | sadece rakam
+[SIL] vestel          | KVKK                           | cop kelime: 'kvkk'
+[SIL] vestel          | PHILIPS                        | marka adi model kodu olarak: 'PHILIPS'
+[SIL] vestel          | SAMSUNG                        | marka adi model kodu olarak: 'SAMSUNG'
+[SIL] vestel          | VESTEL                         | marka adi model kodu olarak: 'VESTEL'
+[SIL] xiaomi          | 4654                           | sadece rakam
+[SIL] xiaomi          | KVKK                           | cop kelime: 'kvkk'
+
+============================================================
+OZET
+============================================================
+Silinen  : 130
+Kalan    : 453
+Markalar : 21

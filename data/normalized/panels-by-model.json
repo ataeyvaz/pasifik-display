@@ -1,0 +1,2301 @@
+{
+  "32GGH6950B": {
+    "panels": [
+      {
+        "newPanel": "HV320WHB-F55",
+        "oldPanel": "V320BJ08"
+      }
+    ]
+  },
+  "32H9510": {
+    "panels": [
+      {
+        "newPanel": "PT320AT01",
+        "oldPanel": "PT320AT01"
+      }
+    ]
+  },
+  "32HB5000": {
+    "panels": [
+      {
+        "newPanel": "CV320HF01"
+      }
+    ]
+  },
+  "32OV5000H": {
+    "panels": [
+      {
+        "newPanel": "CV320HF01",
+        "oldPanel": "LSC320AN10"
+      }
+    ]
+  },
+  "32OV6001H": {
+    "panels": [
+      {
+        "newPanel": "CV320HF01",
+        "oldPanel": "ST3151A07-1"
+      }
+    ]
+  },
+  "32OVF9000H": {
+    "panels": [
+      {
+        "newPanel": "PT320AT02"
+      }
+    ]
+  },
+  "32PF7175": {
+    "panels": [
+      {
+        "newPanel": "HV320FHB-F40",
+        "oldPanel": "LC320EUJ"
+      }
+    ]
+  },
+  "32PFK4100/12": {
+    "panels": [
+      {
+        "newPanel": "HV320FHB-F40",
+        "oldPanel": "LC320EUJ"
+      }
+    ]
+  },
+  "32PFS4132/62": {
+    "panels": [
+      {
+        "newPanel": "HV320FHB-F40",
+        "oldPanel": "HV320FHB-F40"
+      }
+    ]
+  },
+  "32PFS6805/62": {
+    "panels": [
+      {
+        "newPanel": "HV320FHB-F40",
+        "oldPanel": "LSC320AN10"
+      }
+    ]
+  },
+  "32PHS4503/12": {
+    "panels": [
+      {
+        "newPanel": "LC320DXY(SJ)A7",
+        "oldPanel": "LC320EUJ"
+      }
+    ]
+  },
+  "32SBH740": {
+    "panels": [
+      {
+        "newPanel": "PT320AT02",
+        "oldPanel": "PT320AT01"
+      }
+    ]
+  },
+  "32TD3200": {
+    "panels": [
+      {
+        "newPanel": "CV320HF01",
+        "oldPanel": "V320BJ08"
+      }
+    ]
+  },
+  "40FA8100": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSC400HN02"
+      }
+    ]
+  },
+  "40PFK4201/12": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSC400HN02"
+      }
+    ]
+  },
+  "40PFK5500": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSC400HN02"
+      }
+    ]
+  },
+  "40PFK6510/12": {
+    "panels": [
+      {
+        "newPanel": "LSF400HN03",
+        "oldPanel": "LSC400HF07"
+      }
+    ]
+  },
+  "40PFL5507H/12": {
+    "panels": [
+      {
+        "newPanel": "LSF400HN03"
+      }
+    ]
+  },
+  "40PFL5507K/12": {
+    "panels": [
+      {
+        "newPanel": "LSF400HN03",
+        "oldPanel": "LSF400HF04"
+      }
+    ]
+  },
+  "40VLE6830BP": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSC400HN02"
+      }
+    ]
+  },
+  "42FA7500": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "LC420DUJ(SG)E1/6870S-1681B"
+      }
+    ]
+  },
+  "42LA620S": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "6870S-1734A"
+      }
+    ],
+    "variants": [
+      "42LA620S-ZA"
+    ]
+  },
+  "42LA660S": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "6870S-1533A"
+      }
+    ],
+    "variants": [
+      "42LA660S-ZA"
+    ]
+  },
+  "42LA860V": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "6870S-1734A"
+      }
+    ],
+    "variants": [
+      "42LA860V-ZA"
+    ]
+  },
+  "42LB652V": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "6870S-1734A"
+      }
+    ],
+    "variants": [
+      "42LB652V-ZA"
+    ]
+  },
+  "42LF650V": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "6870S-1734A"
+      }
+    ],
+    "variants": [
+      "42LF650V-ZB"
+    ]
+  },
+  "42LM660S": {
+    "panels": [
+      {
+        "newPanel": "6870S-1352B",
+        "oldPanel": "6870S-1352B"
+      }
+    ],
+    "variants": [
+      "42LM660S-ZA"
+    ]
+  },
+  "42LM671S": {
+    "panels": [
+      {
+        "newPanel": "6870S-1352B",
+        "oldPanel": "6870S-1352B"
+      }
+    ],
+    "variants": [
+      "42LM671S-ZB"
+    ]
+  },
+  "42LW5500": {
+    "panels": [
+      {
+        "newPanel": "6870S-1352B",
+        "oldPanel": "6870S-1533A"
+      }
+    ]
+  },
+  "42PF3022": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "6870S-1533A"
+      }
+    ]
+  },
+  "42PFK5209/12": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "LC420DUJ(SG)E1 /6870S-1681B"
+      }
+    ]
+  },
+  "42PFL7696H/12": {
+    "panels": [
+      {
+        "newPanel": "6870S-1352A",
+        "oldPanel": "6870S-1352A"
+      }
+    ]
+  },
+  "42PUS7809/12": {
+    "panels": [
+      {
+        "newPanel": "LC420EGY(SH)M1 /6870S-1824A",
+        "oldPanel": "LC420EGY(SH)M1 /6870S-1824A"
+      }
+    ]
+  },
+  "43DG27000": {
+    "panels": [
+      {
+        "newPanel": "T430HVN01.2",
+        "oldPanel": "ST4251B05-2"
+      }
+    ]
+  },
+  "43F9500": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "HV430FHB-F90"
+      }
+    ]
+  },
+  "43F9510": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "CC430PV1D"
+      }
+    ]
+  },
+  "43GFU7900A": {
+    "panels": [
+      {
+        "newPanel": "ST4251D01-7",
+        "oldPanel": "HV430QUB-F70"
+      }
+    ]
+  },
+  "43GGF6970B": {
+    "panels": [
+      {
+        "newPanel": "T430HVN01.2",
+        "oldPanel": "LC430DUY(SK)A3"
+      }
+    ]
+  },
+  "43LK5900PLA": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "LC430DUY(SK)A3"
+      }
+    ]
+  },
+  "43PFS5507/62": {
+    "panels": [
+      {
+        "newPanel": "HV430FHB-F91",
+        "oldPanel": "HV430FHB-F90"
+      }
+    ]
+  },
+  "43PUS6262/12": {
+    "panels": [
+      {
+        "newPanel": "HV430QUB-F70",
+        "oldPanel": "LC430EQY(SH)M1"
+      }
+    ]
+  },
+  "43PUS6401": {
+    "panels": [
+      {
+        "newPanel": "LD430EQY(SH)M1"
+      }
+    ]
+  },
+  "43PUS6412/12": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "LC430EGY(SH)M1"
+      },
+      {
+        "newPanel": "ST4251D01-7",
+        "oldPanel": "LC430EGY(SH)M1"
+      }
+    ]
+  },
+  "43PUS6501": {
+    "panels": [
+      {
+        "newPanel": "LC430EQL(SL)A1",
+        "oldPanel": "LC430EQL(SL)A1"
+      }
+    ]
+  },
+  "43PUS6503/12": {
+    "panels": [
+      {
+        "newPanel": "LC430DQC(SP)A1",
+        "oldPanel": "T430QVN04.6"
+      }
+    ]
+  },
+  "43PUS7009/62": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "V430DJQ01"
+      }
+    ]
+  },
+  "43PUS8007/62": {
+    "panels": [
+      {
+        "newPanel": "LD430EQY(SH)M1"
+      }
+    ]
+  },
+  "43PUS8108/62": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "V430DJQ01"
+      }
+    ]
+  },
+  "43PUS8309/62": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "V430DJQ01"
+      }
+    ]
+  },
+  "43SBU700": {
+    "panels": [
+      {
+        "newPanel": "HV430QUB-N1A",
+        "oldPanel": "HV430QUB-N1A"
+      }
+    ]
+  },
+  "43U9500": {
+    "panels": [
+      {
+        "newPanel": "LD430EQY(SN)A3",
+        "oldPanel": "CC430PV2D"
+      }
+    ]
+  },
+  "43UA9600": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "LC430EQQ(SM)A1"
+      },
+      {
+        "newPanel": "LD430EQY(SH)M1",
+        "oldPanel": "6870S-0805A"
+      }
+    ]
+  },
+  "43UA9631": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "HV430QUB-F70"
+      }
+    ]
+  },
+  "43UH610V": {
+    "panels": [
+      {
+        "newPanel": "LD430EQY(SH)M1",
+        "oldPanel": "6870S-2116A"
+      }
+    ],
+    "variants": [
+      "43UH610V-ZB"
+    ]
+  },
+  "43UM7100PLB": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "LC430DGJ(SL)A2"
+      }
+    ]
+  },
+  "43UN71006LB": {
+    "panels": [
+      {
+        "newPanel": "LC430EQY(SH)M1",
+        "oldPanel": "HV430QUB-N4E"
+      }
+    ]
+  },
+  "47LA740S": {
+    "panels": [
+      {
+        "newPanel": "6870S-1600A",
+        "oldPanel": "6870S-1581B"
+      }
+    ],
+    "variants": [
+      "47LA740S-ZB"
+    ]
+  },
+  "47LA860V": {
+    "panels": [
+      {
+        "newPanel": "6870S-1746A",
+        "oldPanel": "6870S-1600B"
+      }
+    ],
+    "variants": [
+      "47LA860V-ZA"
+    ]
+  },
+  "47LB652V": {
+    "panels": [
+      {
+        "newPanel": "6870S-1746A",
+        "oldPanel": "6870S-1765B"
+      }
+    ],
+    "variants": [
+      "47LB652V-ZA"
+    ]
+  },
+  "47LB670V": {
+    "panels": [
+      {
+        "newPanel": "6870S-1746A",
+        "oldPanel": "6870S-1765B"
+      }
+    ],
+    "variants": [
+      "47LB670V-ZA"
+    ]
+  },
+  "47LB730V-ZD": {
+    "panels": [
+      {
+        "newPanel": "6870S-1746A",
+        "oldPanel": "6870S-1765B"
+      }
+    ]
+  },
+  "47PFK7109/12": {
+    "panels": [
+      {
+        "newPanel": "6870S-1746C",
+        "oldPanel": "6870S-1746C"
+      }
+    ]
+  },
+  "47PFL6907K/12": {
+    "panels": [
+      {
+        "newPanel": "6870S-1746A",
+        "oldPanel": "6870S-1332A"
+      }
+    ]
+  },
+  "49F9400": {
+    "panels": [
+      {
+        "newPanel": "LC490EQY(SH)M1 /6870S-1953F",
+        "oldPanel": "LC490EQY(SH)M1"
+      },
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490HN02"
+      }
+    ]
+  },
+  "49LB620V-ZE": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490DUY(SH)A1"
+      }
+    ]
+  },
+  "49LH604V": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490DUY(SH)A1"
+      }
+    ],
+    "variants": [
+      "49LH604V-ZB"
+    ]
+  },
+  "49LJ594V": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490DUY(SH)A1"
+      }
+    ],
+    "variants": [
+      "49LJ594V-ZA"
+    ]
+  },
+  "49LK5900PLA": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490DUY(SH)A2"
+      }
+    ]
+  },
+  "49LL2A63DT": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80"
+      }
+    ]
+  },
+  "49PUS6101/12": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "LC490EQY(SH)M1"
+      }
+    ]
+  },
+  "49PUS6401/12": {
+    "panels": [
+      {
+        "newPanel": "LC490DGJ(SL)A2",
+        "oldPanel": "6870S-1953B"
+      }
+    ]
+  },
+  "49PUS6412/12": {
+    "panels": [
+      {
+        "newPanel": "6870S-1953F",
+        "oldPanel": "LC490EQY(SH)M1"
+      },
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "LC490EQY(SH)M1"
+      }
+    ]
+  },
+  "49PUS6551/12": {
+    "panels": [
+      {
+        "newPanel": "LC490EQL(SL)A1",
+        "oldPanel": "LC490EQL(SL)A2"
+      }
+    ]
+  },
+  "49PUS6561/12": {
+    "panels": [
+      {
+        "newPanel": "LC490EQL(SL)A1",
+        "oldPanel": "LC490EQL(SL)A2"
+      }
+    ]
+  },
+  "49PUS7502/12": {
+    "panels": [
+      {
+        "newPanel": "LC490EQR(SM)A1",
+        "oldPanel": "LC490EQL(SL)A2"
+      }
+    ]
+  },
+  "49PUS7503/62": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "LC490EQY(SH)M1"
+      }
+    ]
+  },
+  "49PUS7909/12": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "6870S-1811B"
+      }
+    ]
+  },
+  "49UB8300": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "LC490EQY(SH)M1"
+      }
+    ]
+  },
+  "49UB9100": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "LC490EQY(SH)M1"
+      }
+    ]
+  },
+  "49UD8860": {
+    "panels": [
+      {
+        "newPanel": "6870S-1953F",
+        "oldPanel": "LSC490FN01"
+      }
+    ]
+  },
+  "49UH610N": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "LC490EQY(SH)M1"
+      }
+    ],
+    "variants": [
+      "49UH610N-ZB"
+    ]
+  },
+  "49UH650V": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "6870S-2109A"
+      }
+    ],
+    "variants": [
+      "49UH650V-ZB"
+    ]
+  },
+  "49UJ630V": {
+    "panels": [
+      {
+        "newPanel": "DV490QUB-P10",
+        "oldPanel": "LC490DGJ(SK)A4"
+      }
+    ],
+    "variants": [
+      "49UJ630V-ZA"
+    ]
+  },
+  "49UJ701V-ZC": {
+    "panels": [
+      {
+        "newPanel": "LC490EQY(SH)M1 /6870S-1953F",
+        "oldPanel": "HV490QUB-N8D"
+      },
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "6870S-2440"
+      }
+    ]
+  },
+  "49UK6470PLC": {
+    "panels": [
+      {
+        "newPanel": "LC490DGJ(SL)A1",
+        "oldPanel": "LC490DGJ(SL)A1"
+      }
+    ]
+  },
+  "49UM7100PLB": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "6870S-2675A"
+      }
+    ]
+  },
+  "50FA8200": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "LC500DUJ(SG)E1"
+      }
+    ]
+  },
+  "50GGU7900B": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D1",
+        "oldPanel": "PT500GT01-1"
+      }
+    ]
+  },
+  "50GHU7500B": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D1",
+        "oldPanel": "HF500QUB-F20"
+      }
+    ]
+  },
+  "50GHU9000": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "PT500GT01-1"
+      }
+    ]
+  },
+  "50OVF9001UQ": {
+    "panels": [
+      {
+        "newPanel": "HF500QUB-F20",
+        "oldPanel": "HF500QUB-F20"
+      }
+    ]
+  },
+  "50P615": {
+    "panels": [
+      {
+        "newPanel": "CV500U2",
+        "oldPanel": "CV500U2"
+      }
+    ]
+  },
+  "50PUS6262/12": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "T500QVN07.5"
+      }
+    ]
+  },
+  "50PUS6503/12": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "CV500U1"
+      }
+    ]
+  },
+  "50PUS6704/62": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CV500U1"
+      }
+    ]
+  },
+  "50PUS7304/62": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CV500U1"
+      }
+    ]
+  },
+  "50PUS7556/62": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CC500PV7D"
+      }
+    ]
+  },
+  "50PUS7607/62": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "HF500QUB-F20"
+      }
+    ]
+  },
+  "50PUS7805/62": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D1",
+        "oldPanel": "CV500U1"
+      }
+    ]
+  },
+  "50PUS8007/62": {
+    "panels": [
+      {
+        "newPanel": "HF500QUB-F20",
+        "oldPanel": "CV500U1"
+      },
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "HF500QUB-F20"
+      }
+    ]
+  },
+  "50PUS8505/62": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "PT500GT01-1"
+      }
+    ]
+  },
+  "50PUS8507/62": {
+    "panels": [
+      {
+        "newPanel": "HF500QUB-F20",
+        "oldPanel": "HF500QUB-F20"
+      }
+    ]
+  },
+  "50U9700": {
+    "panels": [
+      {
+        "newPanel": "HF500QUB-F20",
+        "oldPanel": "CC500PV7D"
+      }
+    ]
+  },
+  "50UA2063DT": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "CC500PV7D"
+      }
+    ]
+  },
+  "50UH635V": {
+    "panels": [
+      {
+        "newPanel": "V500DK2",
+        "oldPanel": "V500DK2"
+      }
+    ],
+    "variants": [
+      "50UH635V-ZA"
+    ]
+  },
+  "50UL2163DT": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "CV500U1"
+      }
+    ]
+  },
+  "50UN73006LA": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "V500DJ7-QE1 REV.C6"
+      }
+    ]
+  },
+  "50UT9840": {
+    "panels": [
+      {
+        "newPanel": "HF500QUB-F20",
+        "oldPanel": "CC500PV7D"
+      }
+    ]
+  },
+  "55C655": {
+    "panels": [
+      {
+        "newPanel": "ST5461D18-2",
+        "oldPanel": "ST5461D18-2"
+      }
+    ]
+  },
+  "55GFU8960B": {
+    "panels": [
+      {
+        "newPanel": "DV550QUB-L1A",
+        "oldPanel": "LC550EQQ(SM)A4"
+      }
+    ]
+  },
+  "55GGU9760AE": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "LC550EQQ(SM)A4"
+      }
+    ]
+  },
+  "55GHU7000B": {
+    "panels": [
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "T650QVN05.6"
+      }
+    ]
+  },
+  "55GHU8500A": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "PT550GT01-1"
+      },
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "T550QVN10.0"
+      }
+    ]
+  },
+  "55P8M": {
+    "panels": [
+      {
+        "newPanel": "ST5461D07-4",
+        "oldPanel": "ST5461D07-7"
+      }
+    ]
+  },
+  "55PA525E": {
+    "panels": [
+      {
+        "newPanel": "HV550QUB-N5A",
+        "oldPanel": "ST5461D07-1"
+      }
+    ]
+  },
+  "55PUK6400/12": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "T550QVN05.7"
+      }
+    ]
+  },
+  "55PUS6561/12": {
+    "panels": [
+      {
+        "newPanel": "LC550EQR(SM)A1",
+        "oldPanel": "LC550EQR(SM)A1"
+      }
+    ]
+  },
+  "55PUS7304/62": {
+    "panels": [
+      {
+        "newPanel": "DV550QUB-L1A",
+        "oldPanel": "T550QVR05.1"
+      }
+    ]
+  },
+  "55PUS7608/62": {
+    "panels": [
+      {
+        "newPanel": "LC550EQQ(SM)A4",
+        "oldPanel": "HV550QUB-F70"
+      }
+    ]
+  },
+  "55PUS7800/62": {
+    "panels": [
+      {
+        "newPanel": "DV550QUB-L1A",
+        "oldPanel": "T550QVN07.B"
+      }
+    ]
+  },
+  "55PUS7805/62": {
+    "panels": [
+      {
+        "newPanel": "LC550EQQ(SM)A4",
+        "oldPanel": "HV550QUB-F70"
+      }
+    ]
+  },
+  "55PUS8508/62": {
+    "panels": [
+      {
+        "newPanel": "PT550GT01-2",
+        "oldPanel": "ST5461D18-2"
+      },
+      {
+        "newPanel": "PT550GT02-1",
+        "oldPanel": "ST5461D18-3"
+      }
+    ]
+  },
+  "55PUS8602/12": {
+    "panels": [
+      {
+        "newPanel": "HV550QUB-E1D",
+        "oldPanel": "LSC550FJ11"
+      }
+    ]
+  },
+  "55PUS8808/62": {
+    "panels": [
+      {
+        "newPanel": "HV550QUB-E1D",
+        "oldPanel": "HV550QUB-E1D"
+      }
+    ]
+  },
+  "55PUS8909/62": {
+    "panels": [
+      {
+        "newPanel": "HV550QUB-E1D",
+        "oldPanel": "HV550QUB-E10"
+      }
+    ]
+  },
+  "55R754U": {
+    "panels": [
+      {
+        "newPanel": "LSF550FN01",
+        "oldPanel": "LC550EQQ(SM)A4"
+      },
+      {
+        "newPanel": "6870S-2706",
+        "oldPanel": "6870S-2706"
+      }
+    ]
+  },
+  "55UG9750": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "PT550GT01-1"
+      }
+    ]
+  },
+  "55UH615V": {
+    "panels": [
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "6870S-1956B"
+      }
+    ],
+    "variants": [
+      "55UH615V-ZB"
+    ]
+  },
+  "55UK6100PLB": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "6870S-2561A"
+      }
+    ]
+  },
+  "55UN74006LB": {
+    "panels": [
+      {
+        "newPanel": "PT550GT02-1",
+        "oldPanel": "HV550QUB-N8D"
+      }
+    ]
+  },
+  "55UP81006LA": {
+    "panels": [
+      {
+        "newPanel": "PT550GT01-2",
+        "oldPanel": "LC550EQQ(SM)A4"
+      }
+    ]
+  },
+  "55UQ81006LB": {
+    "panels": [
+      {
+        "newPanel": "DV550QUB-L1A",
+        "oldPanel": "HV550QUB-F1D"
+      }
+    ]
+  },
+  "55UR91006LA": {
+    "panels": [
+      {
+        "newPanel": "HV550QUB-F1D",
+        "oldPanel": "HV550QUB-F1D"
+      }
+    ]
+  },
+  "55UU661H": {
+    "panels": [
+      {
+        "newPanel": "LC550EQQ(SM)A4",
+        "oldPanel": "6870S-2706"
+      }
+    ],
+    "variants": [
+      "55UU661H-ZA"
+    ]
+  },
+  "55V6863DAT": {
+    "panels": [
+      {
+        "newPanel": "PT550GT02-1",
+        "oldPanel": "LSC550FN11"
+      }
+    ]
+  },
+  "58DS8500": {
+    "panels": [
+      {
+        "newPanel": "CC580PV6D VER0.1",
+        "oldPanel": "CC580PV6D VER0.1"
+      }
+    ]
+  },
+  "58GCU8905B": {
+    "panels": [
+      {
+        "newPanel": "CV580U1",
+        "oldPanel": "V580DJ2"
+      }
+    ]
+  },
+  "58PUS7304/12": {
+    "panels": [
+      {
+        "newPanel": "CV580U1",
+        "oldPanel": "CV580U2"
+      }
+    ]
+  },
+  "58PUS8506/62": {
+    "panels": [
+      {
+        "newPanel": "CC580PV6D VER0.1",
+        "oldPanel": "CV580U1"
+      },
+      {
+        "newPanel": "PT580GT03-1",
+        "oldPanel": "CV580U3"
+      }
+    ]
+  },
+  "58PUS8507/62": {
+    "panels": [
+      {
+        "newPanel": "CC580PV6D VER0.1",
+        "oldPanel": "HF580QUB-F20"
+      },
+      {
+        "newPanel": "PT580GT03-1",
+        "oldPanel": "HF580QUB-F20"
+      }
+    ]
+  },
+  "58U9510": {
+    "panels": [
+      {
+        "newPanel": "CV580U1",
+        "oldPanel": "CC580PV7D"
+      }
+    ]
+  },
+  "58UA3D63DT": {
+    "panels": [
+      {
+        "newPanel": "CV580U1",
+        "oldPanel": "HF580QUB-F20"
+      }
+    ]
+  },
+  "65GHU9000": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.V",
+        "oldPanel": "HV650QUB-F70"
+      }
+    ]
+  },
+  "65GJU7505B": {
+    "panels": [
+      {
+        "newPanel": "HV650QUB-F70",
+        "oldPanel": "HV650QUB-F70"
+      }
+    ]
+  },
+  "65OV9000U": {
+    "panels": [
+      {
+        "newPanel": "LSF650FF20",
+        "oldPanel": "V650DQJ"
+      }
+    ]
+  },
+  "65P7K": {
+    "panels": [
+      {
+        "newPanel": "ST6451D06-3",
+        "oldPanel": "ST6451D06-3"
+      }
+    ]
+  },
+  "65PUS7304/12": {
+    "panels": [
+      {
+        "newPanel": "LD650EQJ(SR)A1"
+      }
+    ]
+  },
+  "65PUS7506/12": {
+    "panels": [
+      {
+        "newPanel": "HV650QUB-E9E",
+        "oldPanel": "HV650QUB-F90"
+      }
+    ]
+  },
+  "65PUS7906/62": {
+    "panels": [
+      {
+        "newPanel": "HV650QUB-F9L",
+        "oldPanel": "HV650QUB-F70"
+      },
+      {
+        "newPanel": "T650QVN08.V",
+        "oldPanel": "HV650QUB-F70"
+      }
+    ]
+  },
+  "65PUS8309/62": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.C",
+        "oldPanel": "ST6451D06-3"
+      }
+    ]
+  },
+  "65PUS8506/62": {
+    "panels": [
+      {
+        "newPanel": "LSF650FF20",
+        "oldPanel": "T650QVN05.7"
+      }
+    ]
+  },
+  "65PUS8548/62": {
+    "panels": [
+      {
+        "newPanel": "LSF650FF20",
+        "oldPanel": "HV650QUB-F70"
+      }
+    ]
+  },
+  "65PUS8602/12": {
+    "panels": [
+      {
+        "newPanel": "LC650EQP(SP)A1",
+        "oldPanel": "LC650EQL(SL)A1"
+      }
+    ]
+  },
+  "65QNED80T6A": {
+    "panels": [
+      {
+        "newPanel": "HV650QUB-F9L",
+        "oldPanel": "HV650QUB-F9E"
+      }
+    ]
+  },
+  "65ST1104": {
+    "panels": [
+      {
+        "newPanel": "LSF650FF20",
+        "oldPanel": "LC650DQJ"
+      }
+    ]
+  },
+  "65UA2363DT": {
+    "panels": [
+      {
+        "newPanel": "HV650QUB-F9C",
+        "oldPanel": "PT650GT01"
+      }
+    ]
+  },
+  "65UJ750V": {
+    "panels": [
+      {
+        "newPanel": "LC650EQQ(SM)A4",
+        "oldPanel": "LC650EQQ(SM)A4"
+      },
+      {
+        "newPanel": "T650QVN08.V",
+        "oldPanel": "LC650EQQ(SM)A4"
+      }
+    ],
+    "variants": [
+      "65UJ750V-ZB"
+    ]
+  },
+  "65UK6470PLC": {
+    "panels": [
+      {
+        "newPanel": "HV650QUB-F9L",
+        "oldPanel": "HV650QUB-N90"
+      },
+      {
+        "newPanel": "HV650QUB-E9E",
+        "oldPanel": "HV650QUB-N9E"
+      }
+    ]
+  },
+  "65UT8100": {
+    "panels": [
+      {
+        "newPanel": "LSF650FF20",
+        "oldPanel": "HV650QUB-F9E"
+      }
+    ]
+  },
+  "75GHU8500A": {
+    "panels": [
+      {
+        "newPanel": "JR745R3HB2K",
+        "oldPanel": "HV750QUB-F91"
+      }
+    ]
+  },
+  "75GHU9000": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-E7F",
+        "oldPanel": "HV750QUB-F91"
+      }
+    ]
+  },
+  "75PUS7906": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-F9E",
+        "oldPanel": "HV750QUB-F91"
+      }
+    ]
+  },
+  "75PUS8848/12": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-E7F",
+        "oldPanel": "HV750QUB-E9D"
+      }
+    ]
+  },
+  "75QNED8EA6B": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-F9F",
+        "oldPanel": "ST7461D03-7"
+      }
+    ]
+  },
+  "75UR81006LJ": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-F9E",
+        "oldPanel": "ST7461D01-8"
+      }
+    ]
+  },
+  "A32B685A": {
+    "panels": [
+      {
+        "newPanel": "HV320WHB-F55",
+        "oldPanel": "V320BJ08"
+      }
+    ]
+  },
+  "A43A800B": {
+    "panels": [
+      {
+        "newPanel": "LD430EQY(SH)M1",
+        "oldPanel": "V430DJ1-QE1 REV.D1"
+      }
+    ]
+  },
+  "A43L58454B": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "HV430FHB-N10"
+      }
+    ]
+  },
+  "A43L66525B": {
+    "panels": [
+      {
+        "newPanel": "T430HVN01.2",
+        "oldPanel": "LC430DUY(SK)A3"
+      }
+    ]
+  },
+  "A43L69455B": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "HV430FHB-N10"
+      }
+    ]
+  },
+  "A49L57404B": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490DUY(SH)A1"
+      }
+    ]
+  },
+  "A49L87525S": {
+    "panels": [
+      {
+        "newPanel": "LC490DGJ(SL)A1",
+        "oldPanel": "LSC490FN02"
+      }
+    ]
+  },
+  "A49L89005A": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "6870S-1953B"
+      }
+    ]
+  },
+  "A49LB8477": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490DUY(SH)A1"
+      }
+    ]
+  },
+  "A50B880B": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "PT500GT02"
+      }
+    ]
+  },
+  "A50C865B": {
+    "panels": [
+      {
+        "newPanel": "HF500QUB-F20",
+        "oldPanel": "LC500DQC(SP)A1"
+      },
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "HF500QUB-F20"
+      }
+    ]
+  },
+  "A50E895A": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "PT500GT01-1"
+      }
+    ]
+  },
+  "A55D790B": {
+    "panels": [
+      {
+        "newPanel": "6870S-2706A",
+        "oldPanel": "LC550EQQ(SM)A4"
+      }
+    ]
+  },
+  "A55L87525S": {
+    "panels": [
+      {
+        "newPanel": "DV550QUB-L1A",
+        "oldPanel": "LSC550FN11"
+      },
+      {
+        "newPanel": "HV550QUB-H11",
+        "oldPanel": "LSC550FN11"
+      }
+    ]
+  },
+  "A55LB8477": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "LSF550HN02"
+      }
+    ]
+  },
+  "A55Q987A": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "T550QVN10.0"
+      },
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "T550QVN05.6"
+      }
+    ]
+  },
+  "A75D790B": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-F9E",
+        "oldPanel": "HV750QUB-F91"
+      }
+    ]
+  },
+  "AL40L55314B": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSC400HN02"
+      }
+    ]
+  },
+  "B32L57454B": {
+    "panels": [
+      {
+        "newPanel": "HV320WHB-F55",
+        "oldPanel": "T320HVN04.5"
+      }
+    ]
+  },
+  "B40A675A": {
+    "panels": [
+      {
+        "newPanel": "V400HJ9",
+        "oldPanel": "V400HJ9"
+      }
+    ]
+  },
+  "B43B880": {
+    "panels": [
+      {
+        "newPanel": "LD430EQY(SH)M1",
+        "oldPanel": "T430QVN01.2"
+      }
+    ]
+  },
+  "B49L67505B": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LC490DUY(SH)A1"
+      }
+    ]
+  },
+  "B49L89005A": {
+    "panels": [
+      {
+        "newPanel": "LC490EGY(SK)M5",
+        "oldPanel": "6870S-0805A"
+      }
+    ]
+  },
+  "B50C865B": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "PT500GT02-4"
+      }
+    ]
+  },
+  "B55-LS-9378": {
+    "panels": [
+      {
+        "newPanel": "6870S-2706D",
+        "oldPanel": "6870S-2706D"
+      }
+    ]
+  },
+  "B55C885A": {
+    "panels": [
+      {
+        "newPanel": "LC550EQQ(SM)A4",
+        "oldPanel": "HV550QUB-F70"
+      }
+    ]
+  },
+  "B55L55314B2": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "T550HVN05.1"
+      }
+    ]
+  },
+  "B65B880B": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.V",
+        "oldPanel": "6870S-9109A"
+      }
+    ]
+  },
+  "BT-43ATV-FS-LDF": {
+    "panels": [
+      {
+        "newPanel": "HV430FHB-F91",
+        "oldPanel": "ST4251D01-1"
+      }
+    ]
+  },
+  "FW-55XD8501": {
+    "panels": [
+      {
+        "newPanel": "LC550EQR(SM)A1",
+        "oldPanel": "LC550EQL(SL)A1"
+      }
+    ]
+  },
+  "HG43ET690UXXTK/BA01": {
+    "panels": [
+      {
+        "newPanel": "HV430QUB-F1A",
+        "oldPanel": "HV430QUB-F1A"
+      }
+    ]
+  },
+  "HG49EJ690UBXTK": {
+    "panels": [
+      {
+        "newPanel": "LC490EQY(SH)M1 /6870S-1953F",
+        "oldPanel": "LSF490FN01"
+      }
+    ],
+    "variants": [
+      "HG49EJ690UBXTK/FA01"
+    ]
+  },
+  "KD-49XF8577": {
+    "panels": [
+      {
+        "newPanel": "LC490EQL(SL)A1",
+        "oldPanel": "LSY490FF01"
+      }
+    ]
+  },
+  "KD-65X7055": {
+    "panels": [
+      {
+        "newPanel": "LSF650FF20",
+        "oldPanel": "ST6451D02-E"
+      }
+    ]
+  },
+  "KDL-40W705C": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSC400HF01"
+      }
+    ]
+  },
+  "KDL-43W805C": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "T430QVN01.2"
+      }
+    ]
+  },
+  "KDL-50W807C": {
+    "panels": [
+      {
+        "newPanel": "T500HVN08.5",
+        "oldPanel": "T500HVN08.5"
+      }
+    ]
+  },
+  "LH65QMCEBGCXTK/CA01": {
+    "panels": [
+      {
+        "newPanel": "ST6451D03-E",
+        "oldPanel": "SG6451D02-2"
+      }
+    ]
+  },
+  "MRT-43": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "QV430FHB-N10"
+      }
+    ]
+  },
+  "OV43250": {
+    "panels": [
+      {
+        "newPanel": "T430HVN01.2",
+        "oldPanel": "V430DJ01"
+      }
+    ]
+  },
+  "QE50Q60AAUXTK": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "CC500PV6D VER0.1"
+      },
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CC500PV6D VER0.1"
+      }
+    ],
+    "variants": [
+      "QE50Q60AAUXTK/YB01"
+    ]
+  },
+  "QE50Q60TAUXTK": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CC500PV6D VER0.1"
+      }
+    ],
+    "variants": [
+      "QE50Q60TAUXTK/YA02"
+    ]
+  },
+  "QE55Q70AATXTK/CB01": {
+    "panels": [
+      {
+        "newPanel": "LC550EQC(SP)A1",
+        "oldPanel": "ST5461D11-6"
+      }
+    ]
+  },
+  "QE55Q70TATXTK/FF04": {
+    "panels": [
+      {
+        "newPanel": "LSF550FF16",
+        "oldPanel": "LSF550FF16"
+      }
+    ]
+  },
+  "QE55Q7CAMTXTK": {
+    "panels": [
+      {
+        "newPanel": "LSF550FJ08",
+        "oldPanel": "LSF550FN04"
+      }
+    ],
+    "variants": [
+      "QE55Q7CAMTXTK/FA01"
+    ]
+  },
+  "QE55Q7FNATXTK/AA02": {
+    "panels": [
+      {
+        "newPanel": "LSF550FJ08",
+        "oldPanel": "T550QVR08.4"
+      }
+    ]
+  },
+  "QE65Q60BAUXTK/WC03": {
+    "panels": [
+      {
+        "newPanel": "LSF650FF20",
+        "oldPanel": "LC650EQC(SP)A2"
+      }
+    ]
+  },
+  "QE65Q60TAUXTK/CA01": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.C",
+        "oldPanel": "ST6451D02-C"
+      }
+    ]
+  },
+  "QE65Q70BATXTK/CA01": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.V",
+        "oldPanel": "ST6451D07-1"
+      }
+    ]
+  },
+  "QE65Q70TATXTK/FF03": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.V",
+        "oldPanel": "LSF650FF16"
+      }
+    ]
+  },
+  "QE75LS03TAUXTK/CA02": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-F9E"
+      }
+    ]
+  },
+  "QE75Q7F5AU": {
+    "panels": [
+      {
+        "newPanel": "JR745R3HB2K",
+        "oldPanel": "JR745R3HB2K"
+      }
+    ]
+  },
+  "QE75QN90BATXTK/CA01": {
+    "panels": [
+      {
+        "newPanel": "ST7461D04-3",
+        "oldPanel": "ST7461D04-3"
+      }
+    ]
+  },
+  "SN43DAL540-0276": {
+    "panels": [
+      {
+        "newPanel": "HV430FHB-F91",
+        "oldPanel": "PT430CT02"
+      }
+    ]
+  },
+  "SN43DLK023/1022": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "LC430DUY(SH)A3"
+      }
+    ]
+  },
+  "SN43LEDH6886/0266": {
+    "panels": [
+      {
+        "newPanel": "LD430EQY(SH)M1",
+        "oldPanel": "PT430GT01"
+      }
+    ]
+  },
+  "SN49DAL27/0216": {
+    "panels": [
+      {
+        "newPanel": "LSC490HN02",
+        "oldPanel": "LC490DUY(SH)A1"
+      }
+    ]
+  },
+  "SN50FMN242-0246": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "PT500GT01-1"
+      }
+    ]
+  },
+  "SN55CRE88/0227": {
+    "panels": [
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "T550QVN05.6"
+      }
+    ]
+  },
+  "SN55FMN243-0246": {
+    "panels": [
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "LC550EQY"
+      }
+    ]
+  },
+  "SN55FMN601/0266": {
+    "panels": [
+      {
+        "newPanel": "PT550GT01-2",
+        "oldPanel": "6870S-2706"
+      }
+    ]
+  },
+  "SN58LEDJ203/0216": {
+    "panels": [
+      {
+        "newPanel": "CV580U1",
+        "oldPanel": "PT580GT03-1"
+      }
+    ]
+  },
+  "SN75LEDB252": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-F9E",
+        "oldPanel": "HV750QUB-F91"
+      }
+    ]
+  },
+  "SST-4345T": {
+    "panels": [
+      {
+        "newPanel": "DV430FHB-N10",
+        "oldPanel": "PT430CT02"
+      }
+    ]
+  },
+  "UE32F5070SSXTK": {
+    "panels": [
+      {
+        "newPanel": "HV320FHB-F40"
+      }
+    ],
+    "variants": [
+      "UE32F5070SSXTK/HS03"
+    ]
+  },
+  "UE32T5300AUXTK/FB02": {
+    "panels": [
+      {
+        "newPanel": "CV320HF01",
+        "oldPanel": "LSC320AN10"
+      }
+    ]
+  },
+  "UE40EH5000WXTK": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSF400FJ03"
+      }
+    ],
+    "variants": [
+      "UE40EH5000WXTK/HS02"
+    ]
+  },
+  "UE40H4200AWXTK/TS01": {
+    "panels": [
+      {
+        "newPanel": "LSF400HN03",
+        "oldPanel": "LSF400HN04"
+      }
+    ]
+  },
+  "UE40H6290ASXTK/TS01": {
+    "panels": [
+      {
+        "newPanel": "LSF400HN03",
+        "oldPanel": "LSF400HN04"
+      }
+    ]
+  },
+  "UE42F5070SSXTK": {
+    "panels": [
+      {
+        "newPanel": "LC420DUJ(SG)E1 /6870S-1681B",
+        "oldPanel": "T420HVN04.2"
+      }
+    ],
+    "variants": [
+      "UE42F5070SSXTK/AS01"
+    ]
+  },
+  "UE43AU7000UXTK/AD02": {
+    "panels": [
+      {
+        "newPanel": "ST4251D07-1",
+        "oldPanel": "T430QVN03.N"
+      }
+    ]
+  },
+  "UE43CU8000UXTK/DB02": {
+    "panels": [
+      {
+        "newPanel": "ST4251D07-1",
+        "oldPanel": "V430DJ1-QE1 REV.D1"
+      }
+    ]
+  },
+  "UE43TU7000": {
+    "panels": [
+      {
+        "newPanel": "ST4251D07-1",
+        "oldPanel": "ST4251D07-1"
+      }
+    ]
+  },
+  "UE43TU7000UXTK/CB01": {
+    "panels": [
+      {
+        "newPanel": "ST4251D01-7",
+        "oldPanel": "ST4251D01-7"
+      }
+    ]
+  },
+  "UE48H5203AWXTK/ES01": {
+    "panels": [
+      {
+        "newPanel": "HV480FHB-F40",
+        "oldPanel": "HV480FHB-F40"
+      }
+    ]
+  },
+  "UE49MU7500UXTK": {
+    "panels": [
+      {
+        "newPanel": "LC490DGJ(SL)A2",
+        "oldPanel": "LSF490FN01"
+      }
+    ],
+    "variants": [
+      "UE49MU7500UXTK/FA01"
+    ]
+  },
+  "UE49N5300AUXTK": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LSF490HN01"
+      }
+    ],
+    "variants": [
+      "UE49N5300AUXTK/FA01"
+    ]
+  },
+  "UE49RU7300UXTK": {
+    "panels": [
+      {
+        "newPanel": "LC490EQY(SH)M1 /6870S-1953F",
+        "oldPanel": "LSF490FN06"
+      }
+    ],
+    "variants": [
+      "UE49RU7300UXTK/FA01"
+    ]
+  },
+  "UE50AU7000UXTK/GI03": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CV500U3-L01"
+      }
+    ]
+  },
+  "UE50AU8000": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "CC500PV6D VER0.1"
+      }
+    ]
+  },
+  "UE50AU8000UXTK": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D8",
+        "oldPanel": "CC500PV6D VER0.1"
+      },
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CC500PV6D VER0.1"
+      },
+      {
+        "newPanel": "HF500QUB-F20",
+        "oldPanel": "CC500PV6D VER0.1"
+      }
+    ],
+    "variants": [
+      "UE50AU8000UXTK/YA02"
+    ]
+  },
+  "UE50DU8072UXXH/04": {
+    "panels": [
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CC500PV6D VER0.1"
+      }
+    ]
+  },
+  "UE50NU7400UXTK/AA02": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.D2"
+      }
+    ]
+  },
+  "UE50TU8000UXTK": {
+    "panels": [
+      {
+        "newPanel": "V500DJ7-QE1 REV.E7",
+        "oldPanel": "CC500PV6D VER0.1"
+      },
+      {
+        "newPanel": "T500QVN04.0",
+        "oldPanel": "CC500PV6D VER0.1"
+      }
+    ],
+    "variants": [
+      "UE50TU8000UXTK/YA01"
+    ]
+  },
+  "UE55BU8100UXTK/XB01": {
+    "panels": [
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "PT550GT02-1"
+      }
+    ]
+  },
+  "UE55K6000AUXTK/CB04": {
+    "panels": [
+      {
+        "newPanel": "LC550EQQ(SM)A4",
+        "oldPanel": "LSF550HN04"
+      }
+    ]
+  },
+  "UE55MU7500UXTK/AA02": {
+    "panels": [
+      {
+        "newPanel": "PT550GT01-2",
+        "oldPanel": "T550QVR08.4"
+      }
+    ]
+  },
+  "UE55NU8000TXTK/CA03": {
+    "panels": [
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "ST5461D10-1"
+      }
+    ]
+  },
+  "UE55RU7100UXTK": {
+    "panels": [
+      {
+        "newPanel": "PT550GT02-1",
+        "oldPanel": "LSF550FN09"
+      }
+    ],
+    "variants": [
+      "UE55RU7100UXTK/FA01"
+    ]
+  },
+  "UE55TU8500UXTK/AC01": {
+    "panels": [
+      {
+        "newPanel": "T550QVN07.H",
+        "oldPanel": "T550QVN07.C"
+      }
+    ]
+  },
+  "UE58J5270ASXTK/IS01": {
+    "panels": [
+      {
+        "newPanel": "PT580GT03-1",
+        "oldPanel": "V580HJ08"
+      }
+    ]
+  },
+  "UE65AU7200": {
+    "panels": [
+      {
+        "newPanel": "HV650QUB-E9E",
+        "oldPanel": "PT650GT01-3"
+      }
+    ]
+  },
+  "UE65DU7000UXTK/UA01": {
+    "panels": [
+      {
+        "newPanel": "JR645R3HB1K",
+        "oldPanel": "JR645R3HB1K"
+      }
+    ]
+  },
+  "UE65KS8090TXZG/02": {
+    "panels": [
+      {
+        "newPanel": "LSF650FJ11",
+        "oldPanel": "LSF650FJ12"
+      }
+    ]
+  },
+  "UE65MU7500UXTK/AA02": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.V",
+        "oldPanel": "T650QVN08.C"
+      }
+    ]
+  },
+  "UE65RU7100UXTK": {
+    "panels": [
+      {
+        "newPanel": "T650QVN08.C",
+        "oldPanel": "LSF650FF16"
+      }
+    ],
+    "variants": [
+      "UE65RU7100UXTK/FA01"
+    ]
+  },
+  "UE75MU8000TXTK/FB02": {
+    "panels": [
+      {
+        "newPanel": "LSF750FF02",
+        "oldPanel": "LSF750FF02"
+      }
+    ]
+  },
+  "UE75TU7100UXTK/FB01": {
+    "panels": [
+      {
+        "newPanel": "HV750QUB-F7E",
+        "oldPanel": "LSF750FN01"
+      }
+    ]
+  },
+  "WN40DLK010/0202": {
+    "panels": [
+      {
+        "newPanel": "LSC400HN02",
+        "oldPanel": "LSC400HN02"
+      }
+    ]
+  },
+  "WN49FAL27/0216": {
+    "panels": [
+      {
+        "newPanel": "HV490FHB-N80",
+        "oldPanel": "LSC490HN02"
+      }
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+[
+  {
+    "slug": "altus",
+    "name": "Altus",
+    "modelCount": 18
+  },
+  {
+    "slug": "arcelik",
+    "name": "Arçelik",
+    "modelCount": 76
+  },
+  {
+    "slug": "awox",
+    "name": "Awox",
+    "modelCount": 10
+  },
+  {
+    "slug": "axen",
+    "name": "Axen",
+    "modelCount": 37
+  },
+  {
+    "slug": "beko",
+    "name": "Beko",
+    "modelCount": 73
+  },
+  {
+    "slug": "blaupunkt",
+    "name": "Blaupunkt",
+    "modelCount": 10
+  },
+  {
+    "slug": "botech",
+    "name": "Botech",
+    "modelCount": 10
+  },
+  {
+    "slug": "daewoo",
+    "name": "Daewoo",
+    "modelCount": 10
+  },
+  {
+    "slug": "delta",
+    "name": "Delta",
+    "modelCount": 10
+  },
+  {
+    "slug": "dextel",
+    "name": "Dextel",
+    "modelCount": 10
+  },
+  {
+    "slug": "digipoll",
+    "name": "Digipoll",
+    "modelCount": 10
+  },
+  {
+    "slug": "dijitsu",
+    "name": "Dijitsu",
+    "modelCount": 13
+  },
+  {
+    "slug": "dijitv",
+    "name": "DijiTV",
+    "modelCount": 10
+  },
+  {
+    "slug": "dikom",
+    "name": "Dikom",
+    "modelCount": 10
+  },
+  {
+    "slug": "dreamstar",
+    "name": "Dreamstar",
+    "modelCount": 10
+  },
+  {
+    "slug": "eas",
+    "name": "EAS",
+    "modelCount": 10
+  },
+  {
+    "slug": "electromaster",
+    "name": "ElectroMaster",
+    "modelCount": 10
+  },
+  {
+    "slug": "elton",
+    "name": "Elton",
+    "modelCount": 10
+  },
+  {
+    "slug": "fenoti",
+    "name": "Fenoti",
+    "modelCount": 10
+  },
+  {
+    "slug": "finlux",
+    "name": "Finlux",
+    "modelCount": 11
+  },
+  {
+    "slug": "fivo",
+    "name": "Fivo",
+    "modelCount": 10
+  },
+  {
+    "slug": "fobem",
+    "name": "Fobem",
+    "modelCount": 10
+  },
+  {
+    "slug": "goldmaster",
+    "name": "Goldmaster",
+    "modelCount": 10
+  },
+  {
+    "slug": "grundig",
+    "name": "Grundig",
+    "modelCount": 90
+  },
+  {
+    "slug": "hello",
+    "name": "Hello",
+    "modelCount": 10
+  },
+  {
+    "slug": "hi-level",
+    "name": "Hi-Level",
+    "modelCount": 10
+  },
+  {
+    "slug": "hitachi",
+    "name": "Hitachi",
+    "modelCount": 10
+  },
+  {
+    "slug": "hyundai",
+    "name": "Hyundai",
+    "modelCount": 10
+  },
+  {
+    "slug": "jameson",
+    "name": "Jameson",
+    "modelCount": 10
+  },
+  {
+    "slug": "jvc",
+    "name": "JVC",
+    "modelCount": 10
+  },
+  {
+    "slug": "kamosonic",
+    "name": "Kamosonic",
+    "modelCount": 10
+  },
+  {
+    "slug": "keysmart",
+    "name": "Keysmart",
+    "modelCount": 10
+  },
+  {
+    "slug": "lg",
+    "name": "LG",
+    "modelCount": 236
+  },
+  {
+    "slug": "luxor",
+    "name": "Luxor",
+    "modelCount": 10
+  },
+  {
+    "slug": "morio",
+    "name": "Morio",
+    "modelCount": 10
+  },
+  {
+    "slug": "navitech",
+    "name": "Navitech",
+    "modelCount": 30
+  },
+  {
+    "slug": "nexon",
+    "name": "Nexon",
+    "modelCount": 10
+  },
+  {
+    "slug": "next",
+    "name": "Next",
+    "modelCount": 10
+  },
+  {
+    "slug": "nordmende",
+    "name": "Nordmende",
+    "modelCount": 10
+  },
+  {
+    "slug": "olimpia",
+    "name": "Olimpia",
+    "modelCount": 10
+  },
+  {
+    "slug": "onvo",
+    "name": "Onvo",
+    "modelCount": 10
+  },
+  {
+    "slug": "panasonic",
+    "name": "Panasonic",
+    "modelCount": 33
+  },
+  {
+    "slug": "peaq",
+    "name": "PEAQ",
+    "modelCount": 13
+  },
+  {
+    "slug": "philips",
+    "name": "Philips",
+    "modelCount": 123
+  },
+  {
+    "slug": "piranha",
+    "name": "Piranha",
+    "modelCount": 10
+  },
+  {
+    "slug": "practica",
+    "name": "Practica",
+    "modelCount": 10
+  },
+  {
+    "slug": "premier",
+    "name": "Premier",
+    "modelCount": 10
+  },
+  {
+    "slug": "preo",
+    "name": "Preo",
+    "modelCount": 10
+  },
+  {
+    "slug": "profilo",
+    "name": "Profilo",
+    "modelCount": 10
+  },
+  {
+    "slug": "quax",
+    "name": "Quax",
+    "modelCount": 10
+  },
+  {
+    "slug": "redline",
+    "name": "Redline",
+    "modelCount": 10
+  },
+  {
+    "slug": "regal",
+    "name": "Regal",
+    "modelCount": 53
+  },
+  {
+    "slug": "rose",
+    "name": "Rose",
+    "modelCount": 10
+  },
+  {
+    "slug": "rowell",
+    "name": "Rowell",
+    "modelCount": 10
+  },
+  {
+    "slug": "saba",
+    "name": "Saba",
+    "modelCount": 10
+  },
+  {
+    "slug": "samsung",
+    "name": "Samsung",
+    "modelCount": 230
+  },
+  {
+    "slug": "seg",
+    "name": "SEG",
+    "modelCount": 22
+  },
+  {
+    "slug": "sharp",
+    "name": "Sharp",
+    "modelCount": 11
+  },
+  {
+    "slug": "sheen",
+    "name": "Sheen",
+    "modelCount": 10
+  },
+  {
+    "slug": "simfer",
+    "name": "Simfer",
+    "modelCount": 10
+  },
+  {
+    "slug": "skytech",
+    "name": "Skytech",
+    "modelCount": 10
+  },
+  {
+    "slug": "sony",
+    "name": "Sony",
+    "modelCount": 178
+  },
+  {
+    "slug": "strong",
+    "name": "Strong",
+    "modelCount": 10
+  },
+  {
+    "slug": "sungate",
+    "name": "Sungate",
+    "modelCount": 10
+  },
+  {
+    "slug": "sunny",
+    "name": "Sunny",
+    "modelCount": 51
+  },
+  {
+    "slug": "tcl",
+    "name": "TCL",
+    "modelCount": 10
+  },
+  {
+    "slug": "teba",
+    "name": "Teba",
+    "modelCount": 10
+  },
+  {
+    "slug": "techwood",
+    "name": "Techwood",
+    "modelCount": 10
+  },
+  {
+    "slug": "telefox",
+    "name": "Telefox",
+    "modelCount": 10
+  },
+  {
+    "slug": "telefunken",
+    "name": "Telefunken",
+    "modelCount": 10
+  },
+  {
+    "slug": "telenova",
+    "name": "Telenova",
+    "modelCount": 10
+  },
+  {
+    "slug": "toshiba",
+    "name": "Toshiba",
+    "modelCount": 14
+  },
+  {
+    "slug": "ventus",
+    "name": "Ventus",
+    "modelCount": 10
+  },
+  {
+    "slug": "vestel",
+    "name": "Vestel",
+    "modelCount": 122
+  },
+  {
+    "slug": "vox",
+    "name": "Vox",
+    "modelCount": 10
+  },
+  {
+    "slug": "weston",
+    "name": "Weston",
+    "modelCount": 10
+  },
+  {
+    "slug": "woon",
+    "name": "Woon",
+    "modelCount": 10
+  },
+  {
+    "slug": "xiaomi",
+    "name": "Xiaomi",
+    "modelCount": 10
+  },
+  {
+    "slug": "yumatu",
+    "name": "Yumatu",
+    "modelCount": 10
+  }
+]

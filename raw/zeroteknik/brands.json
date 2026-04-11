@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "samsung",
+    "name": "Samsung",
+    "modelCount": 12
+  },
+  {
+    "slug": "lg",
+    "name": "LG",
+    "modelCount": 12
+  },
+  {
+    "slug": "sony",
+    "name": "Sony",
+    "modelCount": 12
+  },
+  {
+    "slug": "philips",
+    "name": "Philips",
+    "modelCount": 12
+  },
+  {
+    "slug": "vestel",
+    "name": "Vestel",
+    "modelCount": 12
+  },
+  {
+    "slug": "arcelik",
+    "name": "Arçelik",
+    "modelCount": 12
+  },
+  {
+    "slug": "beko",
+    "name": "Beko",
+    "modelCount": 12
+  },
+  {
+    "slug": "grundig",
+    "name": "Grundig",
+    "modelCount": 12
+  },
+  {
+    "slug": "toshiba",
+    "name": "Toshiba",
+    "modelCount": 12
+  },
+  {
+    "slug": "hisense",
+    "name": "Hisense",
+    "modelCount": 12
+  },
+  {
+    "slug": "telefunken",
+    "name": "Telefunken",
+    "modelCount": 12
+  },
+  {
+    "slug": "panasonic",
+    "name": "Panasonic",
+    "modelCount": 12
+  },
+  {
+    "slug": "finlux",
+    "name": "Finlux",
+    "modelCount": 9
+  },
+  {
+    "slug": "regal",
+    "name": "Regal",
+    "modelCount": 12
+  },
+  {
+    "slug": "profilo",
+    "name": "Profilo",
+    "modelCount": 12
+  },
+  {
+    "slug": "sunny",
+    "name": "Sunny",
+    "modelCount": 12
+  },
+  {
+    "slug": "next",
+    "name": "Next",
+    "modelCount": 12
+  },
+  {
+    "slug": "axen",
+    "name": "Axen",
+    "modelCount": 12
+  },
+  {
+    "slug": "awox",
+    "name": "Awox",
+    "modelCount": 10
+  },
+  {
+    "slug": "xiaomi",
+    "name": "Xiaomi",
+    "modelCount": 3
+  }
+]

@@ -1,266 +1,132 @@
 [
   {
-    "id": "arcelik",
+    "slug": "altus",
+    "name": "Altus",
+    "modelCount": 8
+  },
+  {
     "slug": "arcelik",
     "name": "Arçelik",
-    "modelCount": 44,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 78
   },
   {
-    "id": "awox",
     "slug": "awox",
     "name": "Awox",
-    "modelCount": 12,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 10
   },
   {
-    "id": "axen",
     "slug": "axen",
     "name": "Axen",
-    "modelCount": 12,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 37
   },
   {
-    "id": "beko",
     "slug": "beko",
     "name": "Beko",
-    "modelCount": 43,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 75
   },
   {
-    "id": "blaupunkt",
-    "slug": "blaupunkt",
-    "name": "Blaupunkt",
-    "modelCount": 12,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": false,
-      "solobu": true
-    }
+    "slug": "dijitsu",
+    "name": "Dijitsu",
+    "modelCount": 3
   },
   {
-    "id": "botech",
-    "slug": "botech",
-    "name": "Botech",
-    "modelCount": 7,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
-  },
-  {
-    "id": "finlux",
     "slug": "finlux",
     "name": "Finlux",
-    "modelCount": 11,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 10
   },
   {
-    "id": "grundig",
     "slug": "grundig",
     "name": "Grundig",
-    "modelCount": 42,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 92
   },
   {
-    "id": "hi-level",
-    "slug": "hi-level",
-    "name": "Hi-Level",
-    "modelCount": 2,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
-  },
-  {
-    "id": "hisense",
     "slug": "hisense",
     "name": "Hisense",
-    "modelCount": 14,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 12
   },
   {
-    "id": "jvc",
-    "slug": "jvc",
-    "name": "JVC",
-    "modelCount": 2,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
-  },
-  {
-    "id": "lg",
     "slug": "lg",
     "name": "LG",
-    "modelCount": 54,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 238
   },
   {
-    "id": "next",
+    "slug": "navitech",
+    "name": "Navitech",
+    "modelCount": 20
+  },
+  {
     "slug": "next",
     "name": "Next",
-    "modelCount": 13,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 12
   },
   {
-    "id": "philips",
+    "slug": "panasonic",
+    "name": "Panasonic",
+    "modelCount": 35
+  },
+  {
+    "slug": "peaq",
+    "name": "PEAQ",
+    "modelCount": 3
+  },
+  {
     "slug": "philips",
     "name": "Philips",
-    "modelCount": 50,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 131
   },
   {
-    "id": "profilo",
     "slug": "profilo",
     "name": "Profilo",
-    "modelCount": 14,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 12
   },
   {
-    "id": "regal",
     "slug": "regal",
     "name": "Regal",
-    "modelCount": 14,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 55
   },
   {
-    "id": "samsung",
     "slug": "samsung",
     "name": "Samsung",
-    "modelCount": 54,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 225
   },
   {
-    "id": "sony",
+    "slug": "seg",
+    "name": "SEG",
+    "modelCount": 12
+  },
+  {
+    "slug": "sharp",
+    "name": "Sharp",
+    "modelCount": 1
+  },
+  {
     "slug": "sony",
     "name": "Sony",
-    "modelCount": 55,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 180
   },
   {
-    "id": "sunny",
     "slug": "sunny",
     "name": "Sunny",
-    "modelCount": 14,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 51
   },
   {
-    "id": "tcl",
-    "slug": "tcl",
-    "name": "TCL",
-    "modelCount": 14,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
-  },
-  {
-    "id": "telefunken",
     "slug": "telefunken",
     "name": "Telefunken",
-    "modelCount": 26,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 12
   },
   {
-    "id": "toshiba",
     "slug": "toshiba",
     "name": "Toshiba",
-    "modelCount": 14,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 16
   },
   {
-    "id": "vestel",
     "slug": "vestel",
     "name": "Vestel",
-    "modelCount": 58,
-    "isFeatured": true,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": true
-    }
+    "modelCount": 124
   },
   {
-    "id": "xiaomi",
     "slug": "xiaomi",
     "name": "Xiaomi",
-    "modelCount": 2,
-    "isFeatured": false,
-    "sources": {
-      "zeroteknik": true,
-      "solobu": false
-    }
+    "modelCount": 3
   }
 ]

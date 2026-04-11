@@ -1,0 +1,26 @@
+[
+  {
+    "brand": "Xiaomi",
+    "brand_slug": "xiaomi",
+    "model_code": "MITVP155",
+    "model_slug": "xiaomi-mi-tv-p1-55",
+    "source_url": "https://www.zeroteknik.com/markalar/xiaomi/mi-tv-p1-55",
+    "source": "zeroteknik"
+  },
+  {
+    "brand": "Xiaomi",
+    "brand_slug": "xiaomi",
+    "model_code": "MITVQ175",
+    "model_slug": "xiaomi-mi-tv-q1-75",
+    "source_url": "https://www.zeroteknik.com/markalar/xiaomi/mi-tv-q1-75",
+    "source": "zeroteknik"
+  },
+  {
+    "brand": "Xiaomi",
+    "brand_slug": "xiaomi",
+    "model_code": "TVP1E55",
+    "model_slug": "xiaomi-tv-p1e-55",
+    "source_url": "https://www.zeroteknik.com/markalar/xiaomi/tv-p1e-55",
+    "source": "zeroteknik"
+  }
+]

@@ -1,0 +1,610 @@
+[
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "LG 47LB652V",
+    "model_slug": "lg-47lb652v",
+    "source_url": "https://www.solobu.com/urun/lg-47lb652v-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Philips 43PUS6262/12",
+    "model_slug": "philips-43pus6262-12",
+    "source_url": "https://www.solobu.com/urun/philips-43pus6262-12-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Samsung UE50MU7000U",
+    "model_slug": "samsung-ue50mu7000u",
+    "source_url": "https://www.solobu.com/urun/samsung-ue50mu7000u-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Philips 50PUK6809/12",
+    "model_slug": "philips-50puk6809-12",
+    "source_url": "https://www.solobu.com/urun/philips-50puk6809-12-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Philips 49PUS6561/12",
+    "model_slug": "philips-49pus6561-12",
+    "source_url": "https://www.solobu.com/urun/philips-49pus6561-12-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Philips 43PUS6401/12",
+    "model_slug": "philips-43pus6401-12",
+    "source_url": "https://www.solobu.com/urun/philips-43pus6401-12-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Samsung UE40JU6070U",
+    "model_slug": "samsung-ue40ju6070u",
+    "source_url": "https://www.solobu.com/urun/samsung-ue40ju6070u-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Philips 42PFK6309/12",
+    "model_slug": "philips-42pfk6309-12",
+    "source_url": "https://www.solobu.com/urun/philips-42pfk6309-12-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "Philips 49PUS7909/12",
+    "model_slug": "philips-49pus7909-12",
+    "source_url": "https://www.solobu.com/urun/philips-49pus7909-12-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "LG 47LA660S",
+    "model_slug": "lg-47la660s",
+    "source_url": "https://www.solobu.com/urun/lg-47la660s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 6945 5B",
+    "model_slug": "arcelik-a32l-6945-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-6945-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 6850 5W",
+    "model_slug": "arcelik-a32l-6850-5w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-6850-5w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 6850 5B",
+    "model_slug": "arcelik-a32l-6850-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-6850-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 6760 D",
+    "model_slug": "arcelik-a32l-6760-d",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-6760-d-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 6760 5W",
+    "model_slug": "arcelik-a32l-6760-5w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-6760-5w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 6760 5B",
+    "model_slug": "arcelik-a32l-6760-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-6760-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 5845 4B",
+    "model_slug": "arcelik-a32l-5845-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-5845-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 5751 D",
+    "model_slug": "arcelik-a32l-5751-d",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-5751-d-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32L 5745 4B",
+    "model_slug": "arcelik-a32l-5745-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32l-5745-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32K 580 B2B",
+    "model_slug": "arcelik-a32k-580-b2b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32k-580-b2b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A32 LB 4310",
+    "model_slug": "arcelik-a32-lb-4310",
+    "source_url": "https://www.solobu.com/urun/arcelik-a32-lb-4310-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A40L 6760 D",
+    "model_slug": "arcelik-a40l-6760-d",
+    "source_url": "https://www.solobu.com/urun/arcelik-a40l-6760-d-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A40L 6760 5W",
+    "model_slug": "arcelik-a40l-6760-5w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a40l-6760-5w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A40L 6760 5B",
+    "model_slug": "arcelik-a40l-6760-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a40l-6760-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A40L 5751 D",
+    "model_slug": "arcelik-a40l-5751-d",
+    "source_url": "https://www.solobu.com/urun/arcelik-a40l-5751-d-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A40L 5745 4B",
+    "model_slug": "arcelik-a40l-5745-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a40l-5745-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A42 LW 8477",
+    "model_slug": "arcelik-a42-lw-8477",
+    "source_url": "https://www.solobu.com/urun/arcelik-a42-lw-8477-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A42 LB 9377",
+    "model_slug": "arcelik-a42-lb-9377",
+    "source_url": "https://www.solobu.com/urun/arcelik-a42-lb-9377-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 8900 5A",
+    "model_slug": "arcelik-a43l-8900-5a",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-8900-5a-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 8860 5S",
+    "model_slug": "arcelik-a43l-8860-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-8860-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 8752 5S",
+    "model_slug": "arcelik-a43l-8752-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-8752-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 6945 5B",
+    "model_slug": "arcelik-a43l-6945-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-6945-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 6760 D",
+    "model_slug": "arcelik-a43l-6760-d",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-6760-d-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 6760 5W",
+    "model_slug": "arcelik-a43l-6760-5w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-6760-5w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 6760 5B",
+    "model_slug": "arcelik-a43l-6760-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-6760-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 5860 4W",
+    "model_slug": "arcelik-a43l-5860-4w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-5860-4w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 5860 4B",
+    "model_slug": "arcelik-a43l-5860-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-5860-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 5845 4B",
+    "model_slug": "arcelik-a43l-5845-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-5845-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 5740 D",
+    "model_slug": "arcelik-a43l-5740-d",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-5740-d-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 5740 4W",
+    "model_slug": "arcelik-a43l-5740-4w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-5740-4w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 5740 4B",
+    "model_slug": "arcelik-a43l-5740-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-5740-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43K 580 B2B",
+    "model_slug": "arcelik-a43k-580-b2b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43k-580-b2b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 8752",
+    "model_slug": "arcelik-a43l-8752",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-8752-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A43L 6652 5B",
+    "model_slug": "arcelik-a43l-6652-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a43l-6652-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A47 LW 9377",
+    "model_slug": "arcelik-a47-lw-9377",
+    "source_url": "https://www.solobu.com/urun/arcelik-a47-lw-9377-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A48 LW 6436",
+    "model_slug": "arcelik-a48-lw-6436",
+    "source_url": "https://www.solobu.com/urun/arcelik-a48-lw-6436-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A48L 9562",
+    "model_slug": "arcelik-a48l-9562",
+    "source_url": "https://www.solobu.com/urun/arcelik-a48l-9562-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A48 6060",
+    "model_slug": "arcelik-a48-6060",
+    "source_url": "https://www.solobu.com/urun/arcelik-a48-6060-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A50L 8870 5S",
+    "model_slug": "arcelik-a50l-8870-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a50l-8870-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 9785 5S",
+    "model_slug": "arcelik-a55l-9785-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-9785-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 8900 5A",
+    "model_slug": "arcelik-a55l-8900-5a",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-8900-5a-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 8860 5S",
+    "model_slug": "arcelik-a55l-8860-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-8860-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 8850 5B",
+    "model_slug": "arcelik-a55l-8850-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-8850-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 8840 5W",
+    "model_slug": "arcelik-a55l-8840-5w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-8840-5w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 8840 5B",
+    "model_slug": "arcelik-a55l-8840-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-8840-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 8752 5S",
+    "model_slug": "arcelik-a55l-8752-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-8752-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 5531 4B2",
+    "model_slug": "arcelik-a55l-5531-4b2",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-5531-4b2-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55 OLED 9890 5B",
+    "model_slug": "arcelik-a55-oled-9890-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55-oled-9890-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A55L 9672 5B",
+    "model_slug": "arcelik-a55l-9672-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a55l-9672-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A22 LW 5533",
+    "model_slug": "arcelik-a22-lw-5533",
+    "source_url": "https://www.solobu.com/urun/arcelik-a22-lw-5533-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A22 LB 5533",
+    "model_slug": "arcelik-a22-lb-5533",
+    "source_url": "https://www.solobu.com/urun/arcelik-a22-lb-5533-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A24L 5845 4B",
+    "model_slug": "arcelik-a24l-5845-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a24l-5845-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 8900 5A",
+    "model_slug": "arcelik-a49l-8900-5a",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-8900-5a-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 8860 5",
+    "model_slug": "arcelik-a49l-8860-5",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-8860-5-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 8850 5B",
+    "model_slug": "arcelik-a49l-8850-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-8850-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 8840 5W",
+    "model_slug": "arcelik-a49l-8840-5w",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-8840-5w-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 8840 5B",
+    "model_slug": "arcelik-a49l-8840-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-8840-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 8752 5S",
+    "model_slug": "arcelik-a49l-8752-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-8752-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 6750 5B",
+    "model_slug": "arcelik-a49l-6750-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-6750-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A49L 5740 4B",
+    "model_slug": "arcelik-a49l-5740-4b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a49l-5740-4b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A65L 9785 5S",
+    "model_slug": "arcelik-a65l-9785-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a65l-9785-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A65L 8900 5A",
+    "model_slug": "arcelik-a65l-8900-5a",
+    "source_url": "https://www.solobu.com/urun/arcelik-a65l-8900-5a-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A65L 8752 5S",
+    "model_slug": "arcelik-a65l-8752-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a65l-8752-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A65 OLED 9890 5B",
+    "model_slug": "arcelik-a65-oled-9890-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a65-oled-9890-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A65 OLED 9795 5S",
+    "model_slug": "arcelik-a65-oled-9795-5s",
+    "source_url": "https://www.solobu.com/urun/arcelik-a65-oled-9795-5s-led-tv-ekran-degisimi",
+    "source": "solobu"
+  },
+  {
+    "brand": "Arçelik",
+    "brand_slug": "arcelik",
+    "model_code": "A75L 8870 5B",
+    "model_slug": "arcelik-a75l-8870-5b",
+    "source_url": "https://www.solobu.com/urun/arcelik-a75l-8870-5b-led-tv-ekran-degisimi",
+    "source": "solobu"
+  }
+]

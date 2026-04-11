@@ -1,0 +1,250 @@
+"""
+brand_model_formats.py
+======================
+Araştırmaya dayalı TV marka model numarası format referansı.
+Kaynak: tab-tv.com, flatpanelshd.com, alphr.com, expertreviews.co.uk
+
+Her marka için:
+  - Format açıklaması
+  - Örnek model kodları
+  - Regex pattern (validasyon için)
+  - Önemli notlar
+"""
+
+BRAND_FORMATS = {
+
+    # ─────────────────────────────────────────────────────────────────
+    # SAMSUNG
+    # Format: [Bölge][Ekran Boyutu][Seri][Model No][Suffix]
+    # Örnek:  UE55NU7100  QE65Q80C  QN55Q60T
+    # Bölge:  UE=Avrupa, UN=ABD/Kanada, QE=Avrupa QLED, QN=ABD QLED
+    # ─────────────────────────────────────────────────────────────────
+    "samsung": {
+        "description": "Samsung TV model numarası bölge + ekran boyutu + seri harfleri + model no",
+        "examples": ["UE55NU7100", "UE40JU6070U", "QE65Q80C", "QN55Q60TAFXZA", "UN49M5300"],
+        "pattern": r"^(UE|UN|QE|QN|LS|LH)\d{2}[A-Z]{1,4}\d{3,5}[A-Z0-9]*$",
+        "notes": [
+            "UE = Avrupa pazarı LED/UHD",
+            "UN = ABD/Kanada pazarı",
+            "QE = Avrupa QLED",
+            "QN = ABD QLED",
+            "2. ve 3. karakter ekran boyutu (inç)",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # PHILIPS
+    # Format: [Ekran Boyutu][Seri Tipi][Seri No][/Bölge]
+    # Örnek:  43PUS6262/12  55OLED706/12  65PFL5008
+    # P=TV, U=UHD/4K, S=DVB-S2 tuner, /12=Avrupa
+    # ─────────────────────────────────────────────────────────────────
+    "philips": {
+        "description": "Philips: ekran boyutu + P(TV) + çözünürlük + tuner + seri + /bölge",
+        "examples": ["43PUS6262/12", "55PUS7303/12", "65OLED706/12", "32PHS5507/12", "43PFS5302/12"],
+        "pattern": r"^\d{2,3}(P[UFHML][SKCT]\d{4}|OLED\d{3}|PFL\d{4}|PML\d{4})(/\d{2})?$",
+        "notes": [
+            "P = TV kategorisi",
+            "U = UHD/4K, F = Full HD, H = HD",
+            "S = DVB-S2, K = DVB-C, T = DVB-T2",
+            "/12 = Avrupa, /60 = Asya",
+            "OLED prefix = OLED panel",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # LG
+    # Format: [Ekran Boyutu][Panel Tipi][Seri][Model No][Suffix]
+    # Örnek:  32LB582V  55OLED65B3  43UR80006LJ  OLED55C3
+    # ─────────────────────────────────────────────────────────────────
+    "lg": {
+        "description": "LG: ekran boyutu + panel tipi harfleri + seri + model no",
+        "examples": ["32LB582V", "55LF630V", "43UK6300PLB", "55OLED65B3PSA", "OLED55C3PSA"],
+        "pattern": r"^(\d{2,3}[A-Z]{2,4}\d{3,5}[A-Z0-9]*|OLED\d{2}[A-Z]\d[A-Z0-9]*)$",
+        "notes": [
+            "LB, LF, LH, LK, LM = LED seriler (yıla göre)",
+            "UK, UM, UN, UR = UHD seriler",
+            "OLED prefix = OLED panel",
+            "Nano = NanoCell serisi",
+            "2024 modelleri: C4, G4, M4 gibi kısa isimler",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # SONY
+    # Format: KD-[Ekran Boyutu][Seri]  veya  XR-[Ekran Boyutu][Seri]
+    # Örnek:  KD-55X85J  XR-65A80J  KDL-32WD603
+    # ─────────────────────────────────────────────────────────────────
+    "sony": {
+        "description": "Sony: KD- veya XR- prefix + ekran boyutu + seri harfleri",
+        "examples": ["KD-55X85J", "KD-43XH8096", "XR-65A80J", "KDL-32WD603", "KDL-40WD653"],
+        "pattern": r"^(KD-|KDL-|XR-|KV-)\d{2}[A-Z0-9]+$",
+        "notes": [
+            "KD- = 4K LCD",
+            "KDL- = Full HD LCD",
+            "XR- = Cognitive Processor XR serisi (premium)",
+            "KV- = eski CRT modeller",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # VESTEL
+    # (Vestel aynı zamanda Telefunken, Finlux, Regal, Profilo OEM üreticisi)
+    # Format: [Ekran Boyutu][Seri Harf][Model No]
+    # Örnek:  32F7000  43U9500  55Q9530  40FB7300
+    # ─────────────────────────────────────────────────────────────────
+    "vestel": {
+        "description": "Vestel: ekran boyutu + seri tipi + model no",
+        "examples": ["32F7000", "40FB7300", "43U9500", "55Q9530", "32HB7070"],
+        "pattern": r"^\d{2}[A-Z]{1,3}\d{4,5}$",
+        "notes": [
+            "F = Full HD",
+            "U = UHD/4K",
+            "Q = QLED",
+            "H = HD",
+            "Aynı format: Telefunken, Finlux, Regal, Profilo",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # ARÇELİK
+    # Format: [Ekran Boyutu][Seri][Model No]
+    # Örnek:  32A650  55A975  43B950  65C8950
+    # ─────────────────────────────────────────────────────────────────
+    "arcelik": {
+        "description": "Arçelik: ekran boyutu + seri harfi + model no",
+        "examples": ["32A650", "55A975", "43B950", "65C8950", "50A675"],
+        "pattern": r"^\d{2}[A-Z]\d{3,4}[A-Z0-9]*$",
+        "notes": [
+            "A, B, C = farklı seri seviyeleri",
+            "Beko ile aynı üretici (Arçelik A.Ş.)",
+            "DİKKAT: Hisense de A serisi kullanır (43A5K gibi)",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # BEKO
+    # Format: Arçelik ile aynı fabrika, benzer format
+    # Örnek:  B32L5700  B43L8750  B40L6736
+    # ─────────────────────────────────────────────────────────────────
+    "beko": {
+        "description": "Beko: B prefix + ekran boyutu + seri + model no",
+        "examples": ["B32L5700", "B43L8750", "B40L6736", "B55D896B"],
+        "pattern": r"^B\d{2}[A-Z]\d{3,5}[A-Z0-9]*$",
+        "notes": [
+            "Genellikle B ile başlar",
+            "Arçelik A.Ş. bünyesinde üretilir",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # GRUNDIG
+    # Format: [Ekran Boyutu][Seri Harfleri][Model No]
+    # Örnek:  43GUB8960  55VLX9792  40GFB6820
+    # ─────────────────────────────────────────────────────────────────
+    "grundig": {
+        "description": "Grundig: ekran boyutu + G veya V + çözünürlük + model no",
+        "examples": ["43GUB8960", "55VLX9792", "40GFB6820", "65GUW8960"],
+        "pattern": r"^\d{2}[GV][A-Z]{2}[0-9]{4}[A-Z0-9]*$",
+        "notes": [
+            "G = Almanya pazarı (daha yüksek kalite)",
+            "V = diğer Avrupa ülkeleri",
+            "U = UHD, F = Full HD, X = UHD (V serisi)",
+            "Arçelik A.Ş. bünyesinde (Koç Holding)",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # HISENSE
+    # Format: [Ekran Boyutu][Seri][Model No][Suffix]
+    # Örnek:  43A5K  55U7KQ  65A7HQ  43E7KQ
+    # ─────────────────────────────────────────────────────────────────
+    "hisense": {
+        "description": "Hisense: ekran boyutu + seri harfi + model no",
+        "examples": ["43A5K", "55U7KQ", "65A7HQ", "43E7KQ", "50A6BG"],
+        "pattern": r"^\d{2}[A-Z]\d[A-Z]{1,3}[A-Z0-9]*$",
+        "notes": [
+            "A serisi = entry-level (Arçelik ile çakışıyor!)",
+            "U serisi = premium ULED",
+            "E serisi = orta segment",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # TCL
+    # Format: [Ekran Boyutu][Seri][Model No]
+    # Örnek:  43S5400A  55C845  65QLED890
+    # ─────────────────────────────────────────────────────────────────
+    "tcl": {
+        "description": "TCL: ekran boyutu + seri harfi + model no",
+        "examples": ["43S5400A", "55C845", "65P635", "43S4300", "55QLED890"],
+        "pattern": r"^\d{2}[A-Z]\d{2,4}[A-Z0-9]*$",
+        "notes": [
+            "S serisi = entry/mid level",
+            "C serisi = premium",
+            "P serisi = 4K entry",
+        ]
+    },
+
+    # ─────────────────────────────────────────────────────────────────
+    # TOSHIBA
+    # Format: [Ekran Boyutu][Seri][Model No]
+    # Örnek:  32WA3B63DT  43UA2263DT  50UL2063DT
+    # ─────────────────────────────────────────────────────────────────
+    "toshiba": {
+        "description": "Toshiba: ekran boyutu + W/U/L + A/L seri + model no + DT suffix",
+        "examples": ["32WA3B63DT", "43UA2263DT", "50UL2063DT", "43L2163DT"],
+        "pattern": r"^\d{2}([A-Z]{2}\d[A-Z]\d{2}|[A-Z]\d{4})DT$",
+        "notes": [
+            "W = HD, U = UHD, L = Full HD",
+            "DT suffix = Türkiye versiyonu",
+            "DİKKAT: LG de L harfiyle başlayan modeller var",
+        ]
+    },
+}
+
+
+# ── Yardımcı Fonksiyon ────────────────────────────────────────────────────────
+
+def get_brand_pattern(brand_slug: str):
+    """Marka için regex pattern döner, bilinmeyen marka için None."""
+    info = BRAND_FORMATS.get(brand_slug)
+    if info:
+        return info["pattern"]
+    return None
+
+
+def validate_model_for_brand(brand_slug: str, model_code: str) -> tuple[bool, str]:
+    """
+    Model kodunun markaya uygun formatta olup olmadığını kontrol eder.
+    Pattern yoksa (bilinmeyen marka) True döner — şüpheyle silme.
+    """
+    import re
+    pattern = get_brand_pattern(brand_slug)
+    if not pattern:
+        return True, "bilinmeyen marka, atla"
+    if re.match(pattern, model_code.upper()):
+        return True, ""
+    return False, f"format uyumsuz ({brand_slug} için beklenen: {BRAND_FORMATS[brand_slug]['examples'][0]} gibi)"
+
+
+if __name__ == "__main__":
+    # Hızlı test
+    tests = [
+        ("samsung",  "UE55NU7100",   True),
+        ("samsung",  "PHILIPS",      False),
+        ("philips",  "43PUS6262/12", True),
+        ("philips",  "SAMSUNG",      False),
+        ("arcelik",  "32A650",       True),
+        ("arcelik",  "UE50MU7000U",  False),
+        ("lg",       "32LB582V",     True),
+        ("vestel",   "32F7000",      True),
+        ("grundig",  "43GUB8960",    True),
+        ("toshiba",  "43L2163DT",    True),
+    ]
+
+    print("Format Validasyon Testi:")
+    print("-" * 60)
+    for brand, model, expected in tests:
+        result, reason = validate_model_for_brand(brand, model)
+        status = "✅" if result == expected else "❌ YANLIŞ"
+        print(f"{status} {brand:12} | {model:20} | {'GEÇERLİ' if result else 'GEÇERSİZ'} {reason}")

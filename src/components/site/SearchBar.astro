@@ -1,15 +1,8 @@
 ---
-// src/components/site/SearchBar.astro
-// Header'da kullanım: <SearchBar variant="light" />
-// Koyu arka plan için: <SearchBar /> (varsayılan)
-
 const { variant = "dark" } = Astro.props;
-
 const inputClass = variant === "light"
   ? "w-full pl-9 pr-9 py-2 text-sm bg-gray-100 text-gray-800 placeholder-gray-400 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:bg-white transition-all"
   : "w-full pl-9 pr-9 py-2 text-sm bg-white/10 text-white placeholder-gray-300 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/40 focus:bg-white/20 transition-all";
-
-const iconClass = variant === "light" ? "text-gray-400" : "text-gray-400";
 const clearClass = variant === "light"
   ? "absolute inset-y-0 right-2 flex items-center text-gray-400 hover:text-gray-700 hidden"
   : "absolute inset-y-0 right-2 flex items-center text-gray-400 hover:text-white hidden";
@@ -17,7 +10,7 @@ const clearClass = variant === "light"
 
 <div id="search-wrapper" class="relative w-full max-w-sm">
   <div class="relative">
-    <span class={`absolute inset-y-0 left-3 flex items-center pointer-events-none ${iconClass}`}>
+    <span class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-gray-400">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
       </svg>
@@ -25,7 +18,7 @@ const clearClass = variant === "light"
     <input
       id="search-input"
       type="text"
-      placeholder="Model ara: UE55NU7100..."
+      placeholder="Model veya seri no ara..."
       autocomplete="off"
       spellcheck="false"
       class={inputClass}
@@ -37,11 +30,27 @@ const clearClass = variant === "light"
     </button>
   </div>
 
-  <div
-    id="search-dropdown"
-    class="hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50 max-h-96 overflow-y-auto"
-    style="min-width: 340px;"
-  >
+  <div id="search-dropdown" class="hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50 max-h-96 overflow-y-auto" style="min-width: 340px;">
+
+    <!-- Seri no eşleşme bandı -->
+    <div id="serial-match" class="hidden px-4 py-3 bg-emerald-50 border-b border-emerald-100">
+      <div class="flex items-center gap-2 mb-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+        </svg>
+        <span class="text-xs font-semibold text-emerald-800">Seri Numarası Eşleşti</span>
+      </div>
+      <a id="serial-match-link" href="#" class="flex items-center justify-between rounded-lg bg-white border border-emerald-200 px-3 py-2 hover:bg-emerald-50 transition-colors cursor-pointer">
+        <div>
+          <p id="serial-match-model" class="text-sm font-semibold text-gray-900 font-mono"></p>
+          <p id="serial-match-brand" class="text-xs text-gray-500"></p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
     <!-- Format tespiti bandı -->
     <div id="search-format-hint" class="hidden px-4 py-2 bg-blue-50 border-b border-blue-100 text-xs text-blue-700 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -70,17 +79,14 @@ const clearClass = variant === "light"
       </select>
     </div>
 
-    <!-- Sonuçlar -->
     <ul id="search-results" class="divide-y divide-gray-50"></ul>
 
-    <!-- Boş durum -->
     <div id="search-empty" class="hidden px-4 py-6 text-center">
       <div class="text-3xl mb-2">🔍</div>
       <p class="text-sm font-medium text-gray-700">Sonuç bulunamadı</p>
-      <p class="text-xs text-gray-400 mt-1">Model numarasını veya marka adını deneyin</p>
+      <p class="text-xs text-gray-400 mt-1">Model numarası veya seri numarası deneyin</p>
     </div>
 
-    <!-- Daha fazla -->
     <div id="search-more" class="hidden px-4 py-2 bg-gray-50 border-t border-gray-100 text-center">
       <span class="text-xs text-gray-500"></span>
     </div>
@@ -88,11 +94,13 @@ const clearClass = variant === "light"
 </div>
 
 <script is:inline>
-var INDEX_URL   = "/search-index.json";
+var INDEX_URL  = "/search-index.json";
+var SERIAL_URL = "/serial-lookup.json";
 var MAX_RESULTS = 8;
 var DEBOUNCE_MS = 180;
 
-var BRAND_PATTERNS = {
+// Model kodu format regex'leri (seri no DEĞİL)
+var MODEL_PATTERNS = {
   "Samsung":    /^(UE|UN|QE|QN|LS|LH)\d{2}[A-Z]{1,4}\d{3,5}[A-Z0-9]*$/i,
   "Philips":    /^\d{2,3}(P[UFHML][SKCT]\d{4}|PFL\d{4}|PML\d{4}|FK\d{4}|OLED\d{3})(\/\d{2})?$/i,
   "LG":         /^(\d{2,3}[A-Z]{2,4}\d{3,5}[A-Z0-9]*|OLED\d{2}[A-Z]\d[A-Z0-9]*)$/i,
@@ -107,10 +115,27 @@ var BRAND_PATTERNS = {
   "Telefunken": /^\d{2}[A-Z]{2}\d{4}[A-Z]?$/i,
 };
 
-var searchIndex   = null;
-var fuseInstance  = null;
+// Seri no format regex'leri → marka tespiti
+var SERIAL_PATTERNS = [
+  { brand: "Samsung",  name: "Samsung",  re: /^[A-Z0-9]{4}[A-Z0-9]{3}[A-Z0-9]{3}[A-Z0-9]{5}$/i },  // 15 kar
+  { brand: "philips",  name: "Philips",  re: /^[A-Z]{2}[0-9][A-Z][0-9]{10}$/i },                    // AT2A2107000791 14 kar
+  { brand: "lg",       name: "LG",       re: /^\d{3}[A-Z]{4}[A-Z0-9]{5}$/i },                       // 403WRMH4U099 12 kar
+  { brand: "arcelik",  name: "Arçelik",  re: /^\d{8,9}$/ },                                          // 70701409 8-9 rakam
+  { brand: "beko",     name: "Beko",     re: /^\d{6,8}$/ },                                          // 71100890 6-8 rakam (vestel ile çakışır)
+  { brand: "sony",     name: "Sony",     re: /^\d{7}$/ },                                             // 5101919 tam 7 rakam
+];
+
+var BRAND_DISPLAY = {
+  samsung: "Samsung", philips: "Philips", lg: "LG", sony: "Sony",
+  vestel: "Vestel", arcelik: "Arçelik", beko: "Beko", grundig: "Grundig",
+  hisense: "Hisense", toshiba: "Toshiba", tcl: "TCL", telefunken: "Telefunken",
+};
+
+var searchIndex  = null;
+var serialLookup = null;
+var fuseInstance = null;
 var debounceTimer = null;
-var activeIndex   = -1;
+var activeIndex  = -1;
 
 var input       = document.getElementById("search-input");
 var dropdown    = document.getElementById("search-dropdown");
@@ -122,27 +147,37 @@ var formatHint  = document.getElementById("search-format-hint");
 var formatText  = document.getElementById("search-format-text");
 var filterBrand = document.getElementById("filter-brand");
 var filterSize  = document.getElementById("filter-size");
+var serialMatch = document.getElementById("serial-match");
+var serialLink  = document.getElementById("serial-match-link");
+var serialModel = document.getElementById("serial-match-model");
+var serialBrand = document.getElementById("serial-match-brand");
 
+// ── Index yükleme ─────────────────────────────────────────────────────────────
 function loadIndex() {
-  if (searchIndex) return Promise.resolve();
-  return fetch(INDEX_URL)
-    .then(function(res) { return res.json(); })
-    .then(function(data) {
-      searchIndex = data;
-      var brands = [];
-      data.forEach(function(e) {
-        if (brands.indexOf(e.brandId) < 0) brands.push(e.brandId);
-      });
-      brands.sort().forEach(function(b) {
-        var opt = document.createElement("option");
-        opt.value = b;
-        opt.textContent = b.charAt(0).toUpperCase() + b.slice(1);
-        filterBrand.appendChild(opt);
-      });
-      return loadFuse();
-    })
-    .then(function() { initFuse(); })
-    .catch(function(e) { console.error("Index yuklenemedi:", e); });
+  if (searchIndex && serialLookup) return Promise.resolve();
+  return Promise.all([
+    fetch(INDEX_URL).then(function(r) { return r.json(); }),
+    fetch(SERIAL_URL).then(function(r) { return r.json(); }),
+  ]).then(function(results) {
+    searchIndex  = results[0];
+    serialLookup = results[1];
+    var brands = [];
+    searchIndex.forEach(function(e) {
+      if (brands.indexOf(e.brandSlug) < 0) brands.push(e.brandSlug);
+    });
+    brands.sort().forEach(function(b) {
+      var found = searchIndex.find(function(x) { return x.brandSlug === b; });
+      var opt = document.createElement("option");
+      opt.value = b;
+      opt.textContent = (found && found.brand) ? found.brand : b;
+      filterBrand.appendChild(opt);
+    });
+    return loadFuse();
+  }).then(function() {
+    initFuse();
+  }).catch(function(e) {
+    console.error("Index yuklenemedi:", e);
+  });
 }
 
 function loadFuse() {
@@ -150,8 +185,7 @@ function loadFuse() {
   return new Promise(function(resolve, reject) {
     var s = document.createElement("script");
     s.src = "https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js";
-    s.onload = resolve;
-    s.onerror = reject;
+    s.onload = resolve; s.onerror = reject;
     document.head.appendChild(s);
   });
 }
@@ -161,25 +195,53 @@ function initFuse() {
     keys: [
       { name: "modelCode",  weight: 0.7 },
       { name: "modelLower", weight: 0.7 },
-      { name: "brandId",    weight: 0.3 },
+      { name: "brand",      weight: 0.3 },
     ],
-    threshold: 0.3,
-    includeScore: true,
-    ignoreLocation: true,
-    minMatchCharLength: 2,
+    threshold: 0.3, includeScore: true, ignoreLocation: true, minMatchCharLength: 2,
   });
 }
 
-function detectFormat(query) {
+// ── Seri no tespiti ───────────────────────────────────────────────────────────
+function checkSerialNumber(query) {
+  var q = query.trim().toUpperCase();
+  if (q.length < 6) return null;
+
+  // 1. Kesin eşleşme — lookup tablosundan
+  if (serialLookup && serialLookup[q]) {
+    return { type: "exact", data: serialLookup[q] };
+  }
+  // Büyük/küçük harf fark etmeden dene
+  if (serialLookup) {
+    var keys = Object.keys(serialLookup);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i].toUpperCase() === q) {
+        return { type: "exact", data: serialLookup[keys[i]] };
+      }
+    }
+  }
+
+  // 2. Format eşleşmesi — markayı tahmin et
+  for (var j = 0; j < SERIAL_PATTERNS.length; j++) {
+    var p = SERIAL_PATTERNS[j];
+    if (p.re.test(q)) {
+      return { type: "brand", brandSlug: p.brand, brandName: p.name };
+    }
+  }
+  return null;
+}
+
+// ── Model kodu format tespiti ─────────────────────────────────────────────────
+function detectModelFormat(query) {
   if (query.length < 4) return null;
   var q = query.toUpperCase();
   var matches = [];
-  Object.keys(BRAND_PATTERNS).forEach(function(brand) {
-    if (BRAND_PATTERNS[brand].test(q)) matches.push(brand);
+  Object.keys(MODEL_PATTERNS).forEach(function(brand) {
+    if (MODEL_PATTERNS[brand].test(q)) matches.push(brand);
   });
   return matches.length > 0 ? matches : null;
 }
 
+// ── Yardımcılar ───────────────────────────────────────────────────────────────
 function sizeLabel(size) {
   if (!size) return "";
   return '<span class="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-mono">' + size + '"</span>';
@@ -191,11 +253,11 @@ function highlight(text, query) {
   if (idx < 0) return text;
   return text.slice(0, idx) +
     '<mark class="bg-yellow-100 text-yellow-900 rounded px-0.5">' +
-    text.slice(idx, idx + query.length) +
-    "</mark>" +
+    text.slice(idx, idx + query.length) + "</mark>" +
     text.slice(idx + query.length);
 }
 
+// ── Ana arama ─────────────────────────────────────────────────────────────────
 function doSearch() {
   var raw   = input.value.trim();
   var query = raw.toLowerCase();
@@ -209,14 +271,38 @@ function doSearch() {
     return;
   }
 
-  var detected = query.length >= 4 ? detectFormat(raw) : null;
-  if (detected) {
-    formatText.textContent = "Seri no formatı: " + detected.join(", ") + " modeli olabilir";
-    formatHint.classList.remove("hidden");
+  // Seri no kontrolü
+  var serialResult = checkSerialNumber(raw);
+  if (serialResult) {
+    if (serialResult.type === "exact") {
+      var d = serialResult.data;
+      serialModel.textContent = d.modelCode;
+      serialBrand.textContent = (BRAND_DISPLAY[d.brandSlug] || d.brandSlug) + " · Seri eşleşmesi bulundu";
+      serialLink.href = d.url;
+      serialMatch.classList.remove("hidden");
+      formatHint.classList.add("hidden");
+    } else {
+      // Sadece marka tespiti
+      serialModel.textContent = serialResult.brandName + " seri numarası";
+      serialBrand.textContent = "Marka sayfasına git";
+      serialLink.href = "/markalar/" + serialResult.brandSlug + "/";
+      serialMatch.classList.remove("hidden");
+      formatHint.classList.add("hidden");
+    }
   } else {
-    formatHint.classList.add("hidden");
+    serialMatch.classList.add("hidden");
+
+    // Model kodu format tespiti
+    var detected = query.length >= 4 ? detectModelFormat(raw) : null;
+    if (detected) {
+      formatText.textContent = "Seri no formatı: " + detected.join(", ") + " modeli olabilir";
+      formatHint.classList.remove("hidden");
+    } else {
+      formatHint.classList.add("hidden");
+    }
   }
 
+  // Normal arama
   var results = [];
   if (fuseInstance && raw.length >= 2) {
     results = fuseInstance.search(raw).map(function(r) { return r.item; });
@@ -224,16 +310,14 @@ function doSearch() {
     results = searchIndex.slice();
   }
 
-  if (brand) results = results.filter(function(r) { return r.brandId === brand; });
-  if (size)  results = results.filter(function(r) {
-    var m = r.modelCode.match(/^(\d{2,3})/);
-    return m && m[1] === size;
-  });
+  if (brand) results = results.filter(function(r) { return r.brandSlug === brand; });
+  if (size)  results = results.filter(function(r) { return r.size === size; });
 
   renderResults(results, raw);
   openDropdown();
 }
 
+// ── Render ────────────────────────────────────────────────────────────────────
 function renderResults(results, query) {
   resultsList.innerHTML = "";
   activeIndex = -1;
@@ -247,9 +331,7 @@ function renderResults(results, query) {
   emptyEl.classList.add("hidden");
 
   shown.forEach(function(item, i) {
-    var itemUrl = "/modeller/" + item.slug;
-    var sizeMatch = item.modelCode.match(/^(\d{2,3})/);
-    var itemSize = sizeMatch ? sizeMatch[1] : null;
+    var itemUrl = item.url || ("/markalar/" + item.brandSlug + "/" + item.slug + "/");
     var li = document.createElement("li");
     li.dataset.url = itemUrl;
     li.className = "flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-blue-50 transition-colors";
@@ -257,18 +339,18 @@ function renderResults(results, query) {
       '<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">' +
         '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">' +
           '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>' +
-        "</svg>" +
-      "</div>" +
+        '</svg>' +
+      '</div>' +
       '<div class="flex-1 min-w-0">' +
         '<div class="flex items-center gap-2">' +
-          '<span class="font-mono text-sm font-semibold text-gray-900">' + highlight(item.modelCode, query) + "</span>" +
-          sizeLabel(itemSize) +
-        "</div>" +
-        '<p class="text-xs text-gray-500">' + item.brandId.charAt(0).toUpperCase() + item.brandId.slice(1) + "</p>" +
-      "</div>" +
+          '<span class="font-mono text-sm font-semibold text-gray-900">' + highlight(item.modelCode, query) + '</span>' +
+          sizeLabel(item.size) +
+        '</div>' +
+        '<p class="text-xs text-gray-500">' + (item.brand || item.brandSlug) + '</p>' +
+      '</div>' +
       '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">' +
         '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>' +
-      "</svg>";
+      '</svg>';
     li.addEventListener("click", function() { window.location.href = itemUrl; });
     li.addEventListener("mouseenter", function() { setActive(i); });
     resultsList.appendChild(li);
@@ -293,51 +375,42 @@ function openDropdown()  { dropdown.classList.remove("hidden"); }
 function closeDropdown() {
   dropdown.classList.add("hidden");
   formatHint.classList.add("hidden");
+  serialMatch.classList.add("hidden");
 }
 
 input.addEventListener("keydown", function(e) {
   var items = resultsList.querySelectorAll("li");
-  if (e.key === "ArrowDown") {
-    e.preventDefault();
-    setActive(Math.min(activeIndex + 1, items.length - 1));
-  } else if (e.key === "ArrowUp") {
-    e.preventDefault();
-    setActive(Math.max(activeIndex - 1, 0));
-  } else if (e.key === "Enter") {
-    var active = items[activeIndex];
-    if (activeIndex >= 0 && active && active.dataset.url) {
-      window.location.href = active.dataset.url;
+  if (e.key === "ArrowDown") { e.preventDefault(); setActive(Math.min(activeIndex + 1, items.length - 1)); }
+  else if (e.key === "ArrowUp") { e.preventDefault(); setActive(Math.max(activeIndex - 1, 0)); }
+  else if (e.key === "Enter") {
+    // Seri eşleşmesi varsa oraya git
+    if (!serialMatch.classList.contains("hidden") && serialLink.href) {
+      window.location.href = serialLink.href; return;
     }
-  } else if (e.key === "Escape") {
-    closeDropdown();
-    input.blur();
+    var active = items[activeIndex];
+    if (activeIndex >= 0 && active && active.dataset.url) window.location.href = active.dataset.url;
   }
+  else if (e.key === "Escape") { closeDropdown(); input.blur(); }
 });
 
 input.addEventListener("focus", function() {
   loadIndex();
   if (input.value.trim().length >= 2) openDropdown();
 });
-
 input.addEventListener("input", function() {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(doSearch, DEBOUNCE_MS);
 });
-
 filterBrand.addEventListener("change", doSearch);
-filterSize.addEventListener("change", doSearch);
-
+filterSize.addEventListener("change",  doSearch);
 clearBtn.addEventListener("click", function() {
   input.value = "";
   clearBtn.classList.add("hidden");
   closeDropdown();
   input.focus();
 });
-
 document.addEventListener("click", function(e) {
   var wrapper = document.getElementById("search-wrapper");
-  if (wrapper && e.target instanceof Node && !wrapper.contains(e.target)) {
-    closeDropdown();
-  }
+  if (wrapper && e.target instanceof Node && !wrapper.contains(e.target)) closeDropdown();
 });
 </script>
